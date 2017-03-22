@@ -16,7 +16,7 @@ def houses():
     return render_template('houses.html')
 
 @application.route('/regions')
-def houses():
+def regions():
     return render_template('regionss.html')
 
 if __name__ == '__main__':

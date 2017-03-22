@@ -1,9 +1,6 @@
-html{
-	background-color: #686766;
-}
-
 .index{
 	background-color: #9E8469;
+	font-family: serif;
 }
 
 .featurette-heading{
@@ -11,14 +8,52 @@ html{
 }
 
 .lighter{
-	color: #b7b7b6;
+	color: #a2482e;
 }
 
 .background-img{
-	max-width: 100%;
+	max-width: 102%;
 	max-height: 1500px;
 }
 
 .pull-right a{
 	color: #a2482e;
 }
+
+.col-lg-4{
+	text-align: center;
+}
+
+.col-lg-4 h2{
+	color: #a2482e;
+}
+
+.col-md-push-5{
+	padding-top: 45px;
+	text-align: center;
+}
+
+.col-md-push-5 p{
+	padding-right: 25px;
+}
+
+.image { 
+   position: relative; 
+}
+
+.image h2 { 
+   position: absolute; 
+   top: 15%; 
+   left: 10%; 
+   width: 50%; 
+}
+
+.image p {
+	position: ;
+	top: 23%;
+	left: 45%;
+	width: 50%;
+	font-style: italic;
+	font-size: 20px;
+}
+

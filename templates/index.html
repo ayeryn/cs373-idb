@@ -36,7 +36,20 @@
     </div>
 
     <div class="image">
+        <script src="typed.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                Typed.new('.element', {
+                    strings: ["First sentence.", "Second sentence."],
+                    typeSpeed: 0
+                });
+            });
+        </script>
         <h2>"When you play a Game of Thrones you win or you die."</h2>
+        <div class="element">
+
+        </div>
+
         <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
     </div>
     <!-- START THE FEATURETTES -->

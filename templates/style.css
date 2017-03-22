@@ -13,6 +13,10 @@ html{
     src: url(got.ttf);
 }
 
+#navbar a:hover {
+	color: #a2482e;
+	background-color: black;
+}
 .page-header {
     font-family: got-font;
     text-align: center;
@@ -20,6 +24,25 @@ html{
 
 .info-table{
     width: 80%;
+}
+
+.navbar-brand {
+	font-family: got-font;
+	color: #B7B7B6;
+}
+
+.navbar-brand:hover{
+	color: #a2482e;
+}
+
+.nav{
+	background-color: black;
+	color: #B7B7B6;
+	border-color: #e7e7e7;
+}
+
+.navbar-collapse a{
+	color: #B7B7B6;
 }
 
 .info-table tr:nth-child(1) {width: 30%}

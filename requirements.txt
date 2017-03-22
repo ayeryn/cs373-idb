@@ -1,0 +1,15 @@
+appdirs==1.4.3
+boto==2.28.0
+Flask==0.10.1
+Flask-SQLAlchemy==2.0
+Flask-WTF==0.10.3
+itsdangerous==0.24
+Jinja2==2.7.3
+MarkupSafe==0.23
+packaging==16.8
+PyMySQL==0.6.3
+pyparsing==2.2.0
+six==1.10.0
+SQLAlchemy==0.9.8
+Werkzeug==0.9.6
+WTForms==2.0.1

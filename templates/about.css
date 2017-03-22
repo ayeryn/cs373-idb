@@ -1,0 +1,70 @@
+body {
+	background-color: #686766;
+}
+
+/*.center {
+	display: block;
+	margin: auto;
+	width: 90%;
+	padding-left: 3.5%;
+}*/
+.members {
+	display: block;
+	margin: auto;
+	width: 90%;
+	padding-left: 3.5%;
+}
+
+.project-info {
+	display: block;
+	margin: auto;
+	width: 70%;
+	padding-left: 11%;
+}
+
+.group-member {
+	display: inline-block;
+	width: 16em;
+	vertical-align: top;
+}
+
+.group-member .member-name {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #B7B7B6;
+}
+
+.group-member .member-bio {
+	text-align: center;
+	color: #B7B7B6;
+}
+
+.details {
+	text-align: center;
+	color: #B7B7B6;
+}
+
+.group-member img {
+	width: 100%;
+	border-radius: 90%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.info-section {
+	display: inline-block;
+	width: 16em;
+	vertical-align: top;
+}
+
+.details a {
+	/*color: #A2482E;*/
+	color: #FFFFFF;
+}
+
+/* Things to move to style.css */
+.section-header {
+	font-family: got-font;
+	text-align: center;
+}

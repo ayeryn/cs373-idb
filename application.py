@@ -15,7 +15,7 @@ def characters():
 def houses():
     return render_template('houses.html')
 
-@application.route('regions/')
+@application.route('/regions')
 def houses():
     return render_template('regionss.html')
 

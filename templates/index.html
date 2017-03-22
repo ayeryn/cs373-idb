@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +13,8 @@
     <title>You Know Nothing</title>
 
     <!-- Include CSS stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
 
     <!-- Include Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
@@ -27,11 +27,8 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Custom styles for this template -->
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='carousel.css') }}">
-  </head>
 
+</head>
 
   <body class="index">
     <div ng-app>
@@ -39,74 +36,64 @@
     </div>
 
     <div class="image">
-      <h2>"When you play a Game of Thrones you win or you die."</h2>
-      <p>-Cersei Lannister</p>
-      <img class="background-img" src="{{url_for('static', filename=
-      'css/images/background.jpg')}}">
+        <h2>"When you play a Game of Thrones you win or you die."</h2>
+        <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
     </div>
-      <!-- START THE FEATURETTES -->
-      <div class="row featurette">
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
-          <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+            <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block"
-          src="{{url_for('static', filename='css/images/logo.png')}}" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="{{url_for('static', filename='css/images/logo.png')}}" alt="Generic placeholder image">
         </div>
-      </div>
+    </div>
 
-      <hr class="featurette-divider">
+    <hr class="featurette-divider">
 
-      <!-- /END THE FEATURETTES -->
+    <!-- /END THE FEATURETTES -->
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img" src="{{url_for('static',
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img" src="{{url_for('static',
           filename='css/images/1490230031_Streamline-19.png')}}" alt="Lannister Sigil" width="100" height="100">
-          <h2>Regions</h2>
-          <p>Explore the land of Fire and Ice Westeros, Essos, and Sothoryos</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img" src="{{url_for('static',
-          filename='css/images/1490230015_Streamline-57.png')}}" alt="Lannister Sigil"width="100" height="100">
-          <h2>Houses</h2>
-          <p>See these ancient houses and learn their history.</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img" src="{{url_for('static',
+                <h2>Regions</h2>
+                <p>Explore the land of Fire and Ice Westeros, Essos, and Sothoryos</p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img" src="{{url_for('static',
+          filename='css/images/1490230015_Streamline-57.png')}}" alt="Lannister Sigil" width="100" height="100">
+                <h2>Houses</h2>
+                <p>See these ancient houses and learn their history.</p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img" src="{{url_for('static',
           filename='css/images/1490230041_Streamline-62.png')}}" alt="person" width="100" height="100">
-          <h2>Characters</h2>
-          <p>Learn more about the lives of your favorite charaters, and see connections that you weren't able to see before.</p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+                <h2>Characters</h2>
+                <p>Learn more about the lives of your favorite charaters, and see connections that you weren't able to see before.</p>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a class="foot" href="#">Back to top</a></p>
-      </footer>
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a class="foot" href="#">Back to top</a></p>
+        </footer>
 
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </div>
+    <!-- /.container -->
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
   </body>
+
 </html>

@@ -1,8 +1,26 @@
+html{
+/*    background-color: #141311;*/
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 @font-face {
     font-family: got-font;
     src: url(got.ttf);
 }
 
-header{
+.page-header {
     font-family: got-font;
+    text-align: center;
 }
+
+.info-table{
+    width: 80%;
+}
+
+.info-table tr:nth-child(1) {width: 30%}
+.info-table tr:nth-child(2) {width: 70%}

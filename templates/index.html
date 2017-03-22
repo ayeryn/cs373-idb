@@ -27,17 +27,17 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
-
-<body class="index">
-
+  <body class="index">
+    <div ng-app>
+      <nav class="navbar"><div ng-include src="'navWell.html'"></div></nav>
+    </div>
 
     <div class="image">
         <h2>"When you play a Game of Thrones you win or you die."</h2>
-        <p>-Cersei Lannister</p>
-        <img class="background-img" src="{{url_for('static', filename=
-      'css/images/background.jpg')}}">
+        <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
     </div>
     <!-- START THE FEATURETTES -->
     <div class="row featurette">
@@ -59,8 +59,6 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <img class="img" src="{{url_for('static',
@@ -94,20 +92,8 @@
     </div>
     <!-- /.container -->
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-
-    </script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
+  </body>
 
 </html>

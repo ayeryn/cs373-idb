@@ -4,13 +4,13 @@
 	<title>Episodes</title>
 
 	<!-- Include CSS stylesheet -->
-  <link rel="stylesheet" href="{{url_for('static',
-  filename='css/style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',
+	filename='css/style.css')}}">
 
 	<!-- Page Specific stylesheet -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
 
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<!-- Include Bootstrap CDN -->
 	<!-- Latest compiled and minified CSS -->
@@ -31,61 +31,62 @@
 			<thead>
 				<tr>
 					<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></th>
-					<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
-					<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
-					<th> revious Episode <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
-					<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
-					<th> Characters <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
-				</tr>
-			</thead>
-		</table>
-	</div>
-	<div class = "tbl-content">
-		<table id = "myTable2" cellpadding="0" cellspacing="0" border="0">
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td><a href="/s1e1">Winter Is Coming</td>
-						<td>1</td>
-						<td>N/A</td>
-						<td><a href="/s1e2">The Kingsroad</td>
-						<td>Benjen Stark,
-							Jhiqui,
-							Mycah
-							Eddard Stark
-							Jon Snow
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td><a href="/s1e2">The Kingsroad</td>
-							<td>1</td>
-							<td><a href="/s1e1">Winter Is Coming</td>
-							<td><a href="/s1e3">Lord Snow</td>
-							<td>Viserys Targaryen,
-								Catelyn Stark,
-								Cersei Lannister,
-								Jaime Lannister,
-								Eddard Stark</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td><a href="/s1e3">Lord Snow</td>
-									<td>1</td>
-									<td><a href="/s1e2">The Kingsroad</td>
-									<td>Cripples, Bastards, and Broken Things</td>
-									<td>Eddard Stark,
-										Robert Baratheon,
-										Jaime Lannister,
-										Catelyn Stark,
-										Cersei Lannister</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-            <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
-						<!-- Latest compiled and minified JavaScript -->
-						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-					</body>
-					</html>
+						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
+							<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
+								<th> revious Episode <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
+									<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
+										<th> Characters <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class = "tbl-content">
+								<table id = "myTable2" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td><a href="/s1e1">Winter Is Coming</td>
+												<td>1</td>
+												<td>N/A</td>
+												<td><a href="/s1e2">The Kingsroad</td>
+													<td>Benjen Stark,
+														Eddard Stark,
+														<a href="cerseilannister" class="link">Cersei Lannister</a>,
+														<a href="jonsnow" class="link">Jon Snow</a>,
+														<a href="tommenbaratheon" class="link">Tommen Baratheon</a>,
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td><a href="/s1e2">The Kingsroad</td>
+														<td>1</td>
+														<td><a href="/s1e1">Winter Is Coming</td>
+															<td><a href="/s1e3">Lord Snow</td>
+																<td><a href="cerseilannister" class="link">Cersei Lannister</a>
+																	<a href="jonsnow" class="link">Jon Snow</a>,
+																	<a href="tommenbaratheon" class="link">Tommen Baratheon</a>,
+																	Jaime Lannister,
+																	Eddard Stark
+																</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td><a href="/s1e3">Lord Snow</td>
+																	<td>1</td>
+																	<td><a href="/s1e2">The Kingsroad</td>
+																		<td>Cripples, Bastards, and Broken Things</td>
+																		<td>Eddard Stark,
+																			Robert Baratheon,
+																			<a href="cerseilannister" class="link">Cersei Lannister</a>,
+																			<a href="jonsnow" class="link">Jon Snow</a>,
+																			<a href="tommenbaratheon" class="link">Tommen Baratheon</a></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
+															<!-- Latest compiled and minified JavaScript -->
+															<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+															<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+														</body>
+														</html>

@@ -21,7 +21,7 @@ def jon_snow():
 
 @application.route('/cerseilannister')
 def cersei_lannister():
-    return render_template('cersei_lannnister.html')
+    return render_template('cersei_lannister.html')
 
 @application.route('/daenerystargaryen')
 def daenerys_targaryen():

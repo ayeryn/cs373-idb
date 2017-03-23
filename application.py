@@ -36,7 +36,7 @@ def house_stark():
     return render_template('house_stark.html')
 
 @application.route('/housetargaryen')
-def house_baratheon():
+def house_targaryen():
     return render_template('house_targaryen.html')
 
 @application.route('/houselannister')

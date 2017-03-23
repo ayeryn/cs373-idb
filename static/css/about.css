@@ -1,5 +1,5 @@
 body {
-	background-color: #686766;
+	background-color: #9E8469;
 }
 
 /*.center {
@@ -9,17 +9,19 @@ body {
 	padding-left: 3.5%;
 }*/
 .members {
-	display: block;
+	display: inline-flex;
 	margin: auto;
-	width: 90%;
-	padding-left: 3.5%;
+	width: 100%;
+	padding-left: 7%;
+	padding-right: 7%;
 }
 
 .project-info {
-	display: block;
+	display: inline-flex;
 	margin: auto;
-	width: 70%;
-	padding-left: 11%;
+	width: 100%;
+	padding-left: 32.5%;
+	padding-right: 32.5%;
 }
 
 .group-member {

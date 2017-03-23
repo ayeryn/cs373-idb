@@ -6,6 +6,7 @@
 
     <!-- Include CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/individual.css') }}">
 
     <!-- Include Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
@@ -18,11 +19,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
-<body id="home">
+<body id="ind-home">
     <div ng-app>
-        <nav class="navbar">{% include 'navWell.html' %}</nav>
+        <nav class="navbar" style="margin: 0;>"{% include 'navWell.html' %}</nav>
     </div>
-    <div class="col-md-offset-1 col-md-10" style="height:100%; background-color: black;">
+    <div class="col-md-offset-1 col-md-10" style="height:calc(100% - 50px); background-color: black;">
         <header class="title-header">
             <h1>Winter Is Coming</h1>
         </header>

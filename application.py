@@ -53,11 +53,11 @@ def s1e1():
 
 @application.route('/s1e2')
 def s1e2():
-    return render_template('house_targaryen.html')
+    return render_template('episodes1e2.html')
 
 @application.route('/s1e3')
 def s1e3():
-    return render_template('house_lannister.html')
+    return render_template('episodes1e3.html')
 
 if __name__ == '__main__':
     application.run()

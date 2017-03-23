@@ -4,7 +4,7 @@ html{
 
 #home {
     margin:0;
-    background-color: #141311;
+    background-color: #fff;
     height: inherit;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -43,7 +43,7 @@ html{
     width: 100%;
     font-family: sans-serif;
     font-size: 12pt;
-    color: #B7B7B6;
+    color: #9E8469;
     border-collapse: collapse;
 }
 
@@ -56,7 +56,7 @@ html{
 
 .navbar-brand {
 	font-family: got-font;
-	color: #B7B7B6;
+	color: #9E8469;
 }
 
 .navbar-brand:hover{
@@ -65,10 +65,13 @@ html{
 
 .nav{
 	background-color: black;
-	color: #B7B7B6;
-	border-color: #e7e7e7;
+	color: #9E8469;
+}
+
+#top-nav{
+    margin-bottom: 0;
 }
 
 .navbar-collapse a{
-	color: #B7B7B6;
+	color: #9E8469;
 }

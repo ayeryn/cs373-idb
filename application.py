@@ -15,6 +15,18 @@ def about():
 def characters():
     return render_template('characters.html')
 
+@application.route('/jonsnow')
+def jon_snow():
+    return render_template('jon_snow.html')
+
+@application.route('/cerseilannister')
+def cersei_lannister():
+    return render_template('cersei_lannnister.html')
+
+@application.route('/daenerystargaryen')
+def daenerys_targaryen():
+    return render_template('daenerys_targaryen.html')
+
 @application.route('/houses')
 def houses():
     return render_template('houses.html')

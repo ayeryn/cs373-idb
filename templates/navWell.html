@@ -10,8 +10,8 @@
     <meta name="author" content="Sarah Gorring">
 
     <!-- Include CSS stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../static/hover.css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}" media="all">
 
     <!-- Include Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
@@ -42,9 +42,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a class="hvr-underline-from-center" href="#">Home</a></li>
                     <li><a class="hvr-underline-from-center" href="#about">About</a></li>
-                    <li><a class="hvr-underline-from-center" href="#region">Region</a></li>
-                    <li><a class="hvr-underline-from-center" href="#house">House</a></li>
-                    <li><a class="hvr-underline-from-center" href="#character">Character</a></li>
+                    <li><a class="hvr-underline-from-center" href="#episodes">Episodes</a></li>
+                    <li><a class="hvr-underline-from-center" href="#houses">Houses</a></li>
+                    <li><a class="hvr-underline-from-center" href="#characters">Characters</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

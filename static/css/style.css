@@ -63,6 +63,10 @@ html{
 	color: #a2482e;
 }
 
+.navbar-fixed-top {
+    width: 100%;
+}
+
 .nav{
 	background-color: black;
 	color: #9E8469;

@@ -33,14 +33,16 @@
     <div ng-app>
       <nav class="navbar" style="margin:0;">{% include 'navWell.html' %}</nav>
     </div>
-
-    <div class="image">
+    <div>
+        <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
+    </div>
+    <div class="scroll">
         <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
         <script src="typed.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(){
                 Typed.new(".element", {
-                    strings: ["You know nothing, Jon Snow.", "When you play a Game of Thrones, you win or you die.", "What's dead may never die.", "Valar Morghulis"],
+                    strings: ["You know nothing, Jon Snow.", "When you play a Game of Thrones, you win or you die.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today", "Hodor", "I drink and I know things"],
                     typeSpeed: 75,
                     backSpeed: 35,
                     backDelay: 1250,
@@ -49,11 +51,8 @@
             });
         </script>
         <span class="element"></span>
-
-        </div>
-
-        <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
     </div>
+
     <!-- START THE FEATURETTES -->
     <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
@@ -83,7 +82,7 @@
                 <img class="img" src="{{url_for('static',
           filename='css/images/1490230015_Streamline-57.png')}}" alt="Lannister Sigil" width="100" height="100">
                 <a href="/houses"><h2 class="hvr-underline-from-center">Houses</h2></a>
-                <p>See these ancient houses and learn their history.</p>
+                <p>Dive into the history of these ancient houses.</p>
             </div>
             <!-- /.col-lg-4 -->
             <div class="col-lg-4">

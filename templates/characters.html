@@ -3,8 +3,9 @@
 <head>
     <title>Characters</title>
 
-    <!-- Include CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+        <!-- Include CSS stylesheet -->
+        <link rel="stylesheet" href="{{url_for('static',
+        filename='css/style.css')}}">
 
     <!-- Page Specific stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
@@ -80,86 +81,11 @@
                     <td>Callum Wharry, Dean-Charles Chapman</td>
                 </tr>
             </tbody>
-        </table>
-    </div>
-    <script>
-    function sortTable(n) {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        table = document.getElementById("myTable2");
-        switching = true;
-
-        //Set the sorting direction to ascending:
-        dir = "asc";
-        /*Make a loop that will continue until
-        no switching has been done:*/
-        while (switching) {
-            //start by saying: no switching is done:
-            switching = false;
-            rows = table.getElementsByTagName("TR");
-            /*Loop through all table rows (except the
-            first, which contains table headers):*/
-            for (i = 0; i < (rows.length - 1); i++) {
-                //start by saying there should be no switching:
-                shouldSwitch = false;
-                /*Get the two elements you want to compare,
-                one from current row and one from the next:*/
-                x = rows[i].getElementsByTagName("TD")[n];
-                y = rows[i + 1].getElementsByTagName("TD")[n];
-                /*check if the two rows should switch place,
-                based on the direction, asc or desc:*/
-                if (dir == "asc") {
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        //if so, mark as a switch and break the loop:
-                        shouldSwitch= true;
-                        break;
-                    }
-                } else if (dir == "desc") {
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                        //if so, mark as a switch and break the loop:
-                        shouldSwitch= true;
-                        break;
-                    }
-                }
-            }
-            if (shouldSwitch) {
-                /*If a switch has been marked, make the switch
-                and mark that a switch has been done:*/
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-                //Each time a switch is done, increase this count by 1:
-                switchcount ++;
-            } else {
-                /*If no switching has been done AND the direction is "asc",
-                set the direction to "desc" and run the while loop again.*/
-                if (switchcount == 0 && dir == "asc") {
-                    dir = "desc";
-                    switching = true;
-                }
-            }
-        }
-    }
-    </script>
-    <script>
-    function myFunction(n) {
-        var ars, x, j = 0;
-        ars = document.getElementsByClassName('fa');
-        x = ars[n];
-        if (x.className === 'fa fa-caret-down') {
-            x.className = 'fa fa-caret-up';
-        } else {
-            x.className = 'fa fa-caret-down';
-        }
-        for (j = 0; j < ars.length; j++) {
-            if (j != n) {
-                if (ars[j].className === 'fa fa-caret-up') {
-                    ars[j].className = 'fa fa-caret-down'
-                }
-            }
-        }
-    }
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-</body>
+          </table>
+        </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  </body>
 </html>

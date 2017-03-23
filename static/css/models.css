@@ -23,19 +23,16 @@ table{
 
 .tbl-header{
   background-color: rgba(255,255,255,0.3);
-  border-top: 1px solid #FBE3A7;
-  border-left: 1px solid #FBE3A7;
-  border-right: 1px solid #9E8469;
-   margin-left: 50px;
-  margin-right:50px;
+  margin-left: 5%;
+  margin-right: 5%;
  }
 .tbl-content{
   height:300px;
   overflow-x:auto;
   margin-top: 0px;
-  margin-left: 50px;
-  margin-right:50px;
   border: 1px solid #FBE3A7;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 th{
@@ -47,7 +44,8 @@ th{
   text-transform: uppercase;
 }
 td{
-  padding: 15px;
+  padding: 20px 15px;
+  padding-left: 15px;
   text-align: left;
   vertical-align:middle;
   font-weight: 300;

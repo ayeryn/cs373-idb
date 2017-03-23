@@ -10,6 +10,8 @@
 	<!-- Page Specific stylesheet -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
 
+	 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	 
 	<!-- Include Bootstrap CDN -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -28,13 +30,13 @@
 		<table cellpadding="0" cellspacing="0" border="0">
 			<thead>
 				<tr>
-					<th onclick="sortTable(0)">#</th>
-					<th onclick="sortTable(1)">Name</th>
-					<th onclick="sortTable(2)">Region</th>
-					<th onclick="sortTable(3)">Words</th>
-					<th onclick="sortTable(4)">Current Lord</th>
-					<th onclick="sortTable(5)">Heir</th>
-					<th onclick="sortTable(6)">Overlord</th>
+					<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
+					<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></i></th>
+					<th> Region <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
+					<th> Words <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
+					<th> Current Lord <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
+					<th> Heir <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
+					<th> Overlord <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
 				</tr>
 			</thead>
 		</table>
@@ -45,91 +47,35 @@
 				<tr>
 					<td>1</td>
 					<td><a href="/housestark">House Stark of Winterfell</a></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
+                    <td>The North</td>
+                    <td>"Winter is Coming"</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td><a href="/housebaratheon">House Baratheon of King's Landing</td>
 				</tr>
 				<tr>
 					<td>2</td>
 					<td><a href="/housebaratheon">House Baratheon of King's Landing</a></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
+					<td>The Crownlands</td>
+					<td>"Ours is the Fury"</td>
+					<td>Tommen Baratheon</td>
+					<td>Myrcella Baratheon</td>
+					<td>House Baratheon of Dragonstone</td>
 				</tr>
 				<tr>
 					<td>3</td>
-					<td><a href="/houselannister">House Lannister of Casterly Rock</a></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
+                    <td><a href="/houselannister">House Lannister of Casterly Rock</a></td>
+                    <td>The Westerlands</td>
+                    <td>"Hear Me Roar!"</td>
+                    <td>Cersei Lannister</td>
+                    <td>N/A</td>
+                    <td><a href="/housebaratheon">House Baratheon of King's Landing</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<script>
-	function sortTable(n) {
-		var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-		table = document.getElementById("myTable2");
-		switching = true;
-		//Set the sorting direction to ascending:
-		dir = "asc";
-		/*Make a loop that will continue until
-		no switching has been done:*/
-		while (switching) {
-			//start by saying: no switching is done:
-			switching = false;
-			rows = table.getElementsByTagName("TR");
-			/*Loop through all table rows (except the
-			first, which contains table headers):*/
-			for (i = 0; i < (rows.length - 1); i++) {
-				//start by saying there should be no switching:
-				shouldSwitch = false;
-				/*Get the two elements you want to compare,
-				one from current row and one from the next:*/
-				x = rows[i].getElementsByTagName("TD")[n];
-				y = rows[i + 1].getElementsByTagName("TD")[n];
-				/*check if the two rows should switch place,
-				based on the direction, asc or desc:*/
-				if (dir == "asc") {
-					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch= true;
-						break;
-					}
-				} else if (dir == "desc") {
-					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch= true;
-						break;
-					}
-				}
-			}
-			if (shouldSwitch) {
-				/*If a switch has been marked, make the switch
-				and mark that a switch has been done:*/
-				rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-				switching = true;
-				//Each time a switch is done, increase this count by 1:
-				switchcount ++;
-			} else {
-				/*If no switching has been done AND the direction is "asc",
-				set the direction to "desc" and run the while loop again.*/
-				if (switchcount == 0 && dir == "asc") {
-					dir = "desc";
-					switching = true;
-				}
-			}
-		}
-	}
-	</script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-</body>
 </html>

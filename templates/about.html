@@ -4,8 +4,8 @@
 <title>About</title>
 
 <!-- Include CSS stylesheet -->
-<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-<link rel="stylesheet" type="text/css" href="../static/css/about.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
 <!-- Include Bootstrap CDN -->
 <!-- Latest compiled and minified CSS -->
@@ -16,9 +16,7 @@
 
 <body>
     <div ng-app>
-        <nav class="navbar">
-            <div ng-include src="'navWell.html'"></div>
-        </nav>
+        <nav class="navbar">{% include 'navWell.html' %}</nav>
     </div>
     <header>
         <h1 class="title-header">About</h1>

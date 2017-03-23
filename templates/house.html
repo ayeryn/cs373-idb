@@ -5,7 +5,7 @@
     <title>House Stark of Winterfell</title>
 
     <!-- Include CSS stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <!-- Include Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
@@ -20,9 +20,7 @@
 
 <body id="home">
     <div ng-app>
-        <nav class="navbar">
-            <div ng-include src="'navWell.html'"></div>
-        </nav>
+        <nav class="navbar">{% include 'navWell.html' %}</nav>
     </div>
     <div class="col-md-offset-1 col-md-10" style="height:100%; background-color: black;">
         <header class="title-header">
@@ -57,7 +55,7 @@
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </body>
 

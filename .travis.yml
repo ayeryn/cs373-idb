@@ -1,0 +1,29 @@
+language: python
+
+python:
+       - "3.5"
+
+sudo: false
+
+notifications:
+      slack: cs373f-spring-2017:SDrRah9Qf4D5M9KR2KoxxwZl
+
+install:
+      - pip install --upgrade pip
+      - pip --version
+      - pip install coverage
+      - pip install numpy
+      - pip install pylint
+      - pip install requests
+
+before_script:
+      - uname -a
+      - printenv
+      - pip list
+      - coverage --version
+      - pylint   --version
+
+script:
+      - date
+      - ls -al
+      - make test

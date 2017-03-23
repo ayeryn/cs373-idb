@@ -47,5 +47,17 @@ def house_lannister():
 def episodes():
     return render_template('episodes.html')
 
+@application.route('/s1e1')
+def s1e1():
+    return render_template('episodes1e1.html')
+
+@application.route('/s1e2')
+def s1e2():
+    return render_template('house_targaryen.html')
+
+@application.route('/s1e3')
+def s1e3():
+    return render_template('house_lannister.html')
+
 if __name__ == '__main__':
     application.run()

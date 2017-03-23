@@ -23,7 +23,7 @@
 <body id="ind-home">
     <div id="nav-row">
         <div ng-app>
-            <nav class="navbar">{% include 'navWell.html' %}</nav>
+            <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
         </div>
     </div>
     <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
@@ -31,44 +31,48 @@
             <h1>Jon Snow</h1>
         </header>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-offset-2 col-sm-8">
-                    <table class="info-table">
-                        <tr>
-                            <td>Titles</td>
-                            <td>Lord Commander of the Night's Watch</td>
-                        </tr>
-                        <tr>
-                            <td>Aliases</td>
-                            <td>"Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow"</td>
-                        </tr>
-                        <tr>
-                            <td>Father</td>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>Mother</td>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>Spouse</td>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>Allegiances</td>
-                            <td><a href="/housestark" class="hvr-pop link">House Stark of Winterfell</a></td>
-                        </tr>
-                        <tr>
-                            <td>Played By</td>
-                            <td>Kit Harington</td>
-                        </tr>
-                    </table>
+            <div id="main-content">
+                <div class="row">
+                    <div class="col-md-offset-2 col-sm-8">
+                        <table class="info-table">
+                            <tr>
+                                <td>Titles</td>
+                                <td>Lord Commander of the Night's Watch</td>
+                            </tr>
+                            <tr>
+                                <td>Aliases</td>
+                                <td>Lord Snow, Ned Stark's Bastard, The Snow of Winterfell, The Crow-Come-Over, The 998th Lord Commander of the Night's Watch, The Bastard of Winterfell, The Black Bastard of the Wall, Lord Crow</td>
+                            </tr>
+                            <tr>
+                                <td>Father</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Mother</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Spouse</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Allegiances</td>
+                                <td><a href="/housestark" class="hvr-pop link">House Stark of Winterfell</a></td>
+                            </tr>
+                            <tr>
+                                <td>Played By</td>
+                                <td>Kit Harington</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
+            <div class="return-link">
+                <div class="row"><a href="/characters" class="hvr-pop link">Back To All Characters</a></div>
+            </div>
         </div>
-    </div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-</body>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    </body>
 
-</html>
+    </html>

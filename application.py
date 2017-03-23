@@ -23,9 +23,9 @@ def jon_snow():
 def cersei_lannister():
     return render_template('cersei_lannister.html')
 
-@application.route('/daenerystargaryen')
-def daenerys_targaryen():
-    return render_template('daenerys_targaryen.html')
+@application.route('/tommenbaratheon')
+def tommen_baratheon():
+    return render_template('tommen_baratheon.html')
 
 @application.route('/houses')
 def houses():

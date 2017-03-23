@@ -16,6 +16,7 @@ class TestModels(TestCase):
     # ---------
     # Episodes
     # ---------
+
     def test_episode_insert(self):
         test_episode = {"name": "TestEpisode", "season": "3", "previous_episode": "TestPrevEp",
                         "next_episode": "TestNextEp", "characters": "Jon Snow, Benjen Stark, Eddard Stark"}
@@ -38,9 +39,16 @@ class TestModels(TestCase):
 		self.assertEqual(test_episode, None)
 
 
+	def test_next_episode(self):
+		episodes = self.session.query(Episode).all()
+		for x in range(0, len(episodes) - 1):
+			self.assertEqual(episodes[x].next_episode, episodes[x].name)
+
+
     # -------
     # Houses
     # -------
+
 	def test_house_insert(self):
         test_house = {"name": "TestHouse", "region": "Norf", "words": "DA KING OF DA NORF",
                         "current_lord": "TestLord", "heir": "TestHeir", "overlord" : "TestOverLord"}
@@ -62,6 +70,14 @@ class TestModels(TestCase):
 
 		test_house = self.session.query(House).filter(House.name == "TestHouse").first()
 		self.assertEqual(test_house, None)
+
+
+	def test_house_unique(self):
+		houses = self.session.query(House).all()
+		for x in range(0, len(houses)):
+			for y in range(0, len(houses)):
+				self.assertNotEqual(houses[x].name, houses[y].name)
+
 
     # -----------
     # Characters
@@ -91,6 +107,13 @@ class TestModels(TestCase):
 
 		test_character = self.session.query(Character).filter(Character.name == "Kieran").first()
 		self.assertEqual(test_character, None)
+
+
+	def test_character_unique(self):
+		characters = self.session.query(Character).all()
+		for x in range(0, len(characters)):
+			for y in range(0, len(characters)):
+				self.assertNotEqual(characters[x].name, characters[y].name)
 
 # ----
 # main

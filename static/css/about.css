@@ -1,13 +1,7 @@
-body {
-	background-color: #9E8469;
+html body {
+	background: #9E8469;
 }
 
-/*.center {
-	display: block;
-	margin: auto;
-	width: 90%;
-	padding-left: 3.5%;
-}*/
 .members {
 	display: inline-flex;
 	margin: auto;
@@ -34,17 +28,17 @@ body {
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
-	color: #B7B7B6;
+	color: #EEEEEE;
 }
 
 .group-member .member-bio {
 	text-align: center;
-	color: #B7B7B6;
+	color: #EEEEEE;
 }
 
 .details {
 	text-align: center;
-	color: #B7B7B6;
+	color: #EEEEEE;
 }
 
 .group-member img {

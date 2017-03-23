@@ -1,5 +1,6 @@
 html{
     height: 100%;
+    overflow-x: hidden;
 }
 
 #home {
@@ -8,6 +9,11 @@ html{
     height: inherit;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+#nav-row {
+    width:100%;
+    background-color: black;
 }
 
 .container-fluid {
@@ -74,6 +80,7 @@ html{
 
 #top-nav{
     margin-bottom: 0;
+    position: inherit;
 }
 
 .navbar-collapse a{

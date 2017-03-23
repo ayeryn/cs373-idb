@@ -1,33 +1,35 @@
 <!doctype html>
 <html>
-  <head>
-      <title>Characters</title>
+<head>
+    <title>Characters</title>
 
-        <!-- Include CSS stylesheet -->
-        <link rel="stylesheet" href="style.css">
+    <!-- Include CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-        <!-- Page Specific stylesheet -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
+    <!-- Page Specific stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
 
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 
-      <!-- Include Bootstrap CDN -->
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    </head>
-    <body>
-    <div ng-app>
-    <nav class="navbar">{% include 'navWell.html' %}</nav>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+    <div id="nav-row">
+        <div ng-app>
+            <nav class="navbar">{% include 'navWell.html' %}</nav>
+        </div>
     </div>
     <h3 class = "page-title">Characters</h3>
-            <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <thead>
-                    <tr>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
                     <th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
                     <th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1)"></i></th>
                     <th> Titles <i class="fa fa-caret-down"  onclick="sortTable(2); myFunction(2);"></i></th>
@@ -37,128 +39,128 @@
                     <th> Spouse <i class="fa fa-caret-down"  onclick="sortTable(6); myFunction(6)"></i></th>
                     <th> Allegiances <i class="fa fa-caret-down"  onclick="sortTable(7); myFunction(7)"></i></th>
                     <th> Played By <i id="arrow" class="fa fa-caret-down"  onclick="sortTable(8); myFunction(8)"></i></th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
-            <div class="tbl-content">
-            <table id="myTable2" cellpadding="0" cellspacing="0" border="0">
+    <div class="tbl-content">
+        <table id="myTable2" cellpadding="0" cellspacing="0" border="0">
             <tbody>
-              <tr>
-                <td>1</td>
-                <td><a href="/jonsnow">Jon Snow</a></td>
-                <td>Lord Commander of the Night's Watch</td>
-                <td>"Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow"</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>House Stark of Winterfell</td>
-                <td>Kit Harrington</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><a href="/cerseilannister">Cersei Lannister</a></td>
-                <td>Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Robert I Baratheon</td>
-                <td>House Lannister of Casterly Rock</td>
-                <td>Lena Headey</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><a href="/daenerystargaryen">Daenerys Targaryen</a></td>
-                <td>Princess</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>Maron Nymeros Martell</td>
-                <td>House Nymeros Martell of Sunspear, House Targaryen of King's Landing</td>
-                <td>Emilia Clark</td>
-              </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="/jonsnow">Jon Snow</a></td>
+                    <td>Lord Commander of the Night's Watch</td>
+                    <td>"Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow"</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>House Stark of Winterfell</td>
+                    <td>Kit Harrington</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="/cerseilannister">Cersei Lannister</a></td>
+                    <td>Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Robert I Baratheon</td>
+                    <td>House Lannister of Casterly Rock</td>
+                    <td>Lena Headey</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="/daenerystargaryen">Daenerys Targaryen</a></td>
+                    <td>Princess</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Maron Nymeros Martell</td>
+                    <td>House Nymeros Martell of Sunspear, House Targaryen of King's Landing</td>
+                    <td>Emilia Clark</td>
+                </tr>
             </tbody>
-          </table>
-        </div>
-        <script>
-            function sortTable(n) {
-              var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-              table = document.getElementById("myTable2");
-              switching = true;
+        </table>
+    </div>
+    <script>
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("myTable2");
+        switching = true;
 
-              //Set the sorting direction to ascending:
-              dir = "asc"; 
-              /*Make a loop that will continue until
-              no switching has been done:*/
-              while (switching) {
-                //start by saying: no switching is done:
-                switching = false;
-                rows = table.getElementsByTagName("TR");
-                /*Loop through all table rows (except the
-                first, which contains table headers):*/
-                for (i = 0; i < (rows.length - 1); i++) {
-                  //start by saying there should be no switching:
-                  shouldSwitch = false;
-                  /*Get the two elements you want to compare,
-                  one from current row and one from the next:*/
-                  x = rows[i].getElementsByTagName("TD")[n];
-                  y = rows[i + 1].getElementsByTagName("TD")[n];
-                  /*check if the two rows should switch place,
-                  based on the direction, asc or desc:*/
-                  if (dir == "asc") {
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.getElementsByTagName("TR");
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 0; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                      //if so, mark as a switch and break the loop:
-                      shouldSwitch= true;
-                      break;
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch= true;
+                        break;
                     }
-                  } else if (dir == "desc") {
+                } else if (dir == "desc") {
                     if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                      //if so, mark as a switch and break the loop:
-                      shouldSwitch= true;
-                      break;
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch= true;
+                        break;
                     }
-                  }
                 }
-                if (shouldSwitch) {
-                  /*If a switch has been marked, make the switch
-                  and mark that a switch has been done:*/
-                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                  switching = true;
-                  //Each time a switch is done, increase this count by 1:
-                  switchcount ++; 
-                } else {
-                  /*If no switching has been done AND the direction is "asc",
-                  set the direction to "desc" and run the while loop again.*/
-                  if (switchcount == 0 && dir == "asc") {
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount ++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
                     dir = "desc";
                     switching = true;
-                  }
                 }
-              }
             }
-        </script>
-        <script>
-            function myFunction(n) {
-              var ars, x, j = 0;
-              ars = document.getElementsByClassName('fa');
-              x = ars[n];
-              if (x.className === 'fa fa-caret-down') {
-                x.className = 'fa fa-caret-up';
-              } else {
-                x.className = 'fa fa-caret-down';
-              }
-              for (j = 0; j < ars.length; j++) {
-                if (j != n) {
-                  if (ars[j].className === 'fa fa-caret-up') {
+        }
+    }
+    </script>
+    <script>
+    function myFunction(n) {
+        var ars, x, j = 0;
+        ars = document.getElementsByClassName('fa');
+        x = ars[n];
+        if (x.className === 'fa fa-caret-down') {
+            x.className = 'fa fa-caret-up';
+        } else {
+            x.className = 'fa fa-caret-down';
+        }
+        for (j = 0; j < ars.length; j++) {
+            if (j != n) {
+                if (ars[j].className === 'fa fa-caret-up') {
                     ars[j].className = 'fa fa-caret-down'
-                  }
                 }
-              }
             }
-        </script>
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-  </body>
+        }
+    }
+    </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</body>
 </html>

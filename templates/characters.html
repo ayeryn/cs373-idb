@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <title>Characters</title>
+
+        <!-- Include CSS stylesheet -->
+        <link rel="stylesheet" href="{{url_for('static',
+        filename='css/style.css')}}">
+
+    <!-- Page Specific stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+    <div id="nav-row">
+        <div ng-app>
+            <nav class="navbar">{% include 'navWell.html' %}</nav>
+        </div>
+    </div>
+    <h3 class = "page-title">Characters</h3>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                    <th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
+                    <th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1)"></i></th>
+                    <th> Titles <i class="fa fa-caret-down"  onclick="sortTable(2); myFunction(2);"></i></th>
+                    <th> Aliases <i class="fa fa-caret-down"  onclick="sortTable(3); myFunction(3)"></i></th>
+                    <th> Father <i class="fa fa-caret-down"  onclick="sortTable(4); myFunction(4)"> </i></th>
+                    <th> Mother <i class="fa fa-caret-down"  onclick="sortTable(5); myFunction(5)"></i></th>
+                    <th> Spouse <i class="fa fa-caret-down"  onclick="sortTable(6); myFunction(6)"></i></th>
+                    <th> Allegiances <i class="fa fa-caret-down"  onclick="sortTable(7); myFunction(7)"></i></th>
+                    <th> Played By <i id="arrow" class="fa fa-caret-down"  onclick="sortTable(8); myFunction(8)"></i></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="tbl-content">
+        <table id="myTable2" cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="/jonsnow">Jon Snow</a></td>
+                    <td>Lord Commander of the Night's Watch</td>
+                    <td>"Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow"</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="housestark" class="link">House Stark of Winterfell</a></td>
+                    <td>Kit Harrington</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="/cerseilannister">Cersei Lannister</a></td>
+                    <td>Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Robert I Baratheon</td>
+                    <td><a href="houselannister" class="link">House Lannister of Casterly Rock</a></td>
+                    <td>Lena Headey</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="/tommenbaratheon">Tommen Baratheon</a></td>
+                    <td>King of the Andals, the Rhoynar and the First Men, Lord of the Seven Kingdoms</td>
+                    <td>The Boy King</td>
+                    <td>Robert I Baratheon</td>
+                    <td><a href="cerseilannister" class="link">Cersei Lannister</a></td>
+                    <td>Margaery Tyrell</td>
+                    <td>Callum Wharry, Dean-Charles Chapman</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  </body>
+</html>

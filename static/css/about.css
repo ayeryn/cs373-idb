@@ -1,0 +1,66 @@
+html body {
+	background: #9E8469;
+}
+
+.members {
+	display: inline-flex;
+	margin: auto;
+	width: 100%;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+.project-info {
+	display: inline-flex;
+	margin: auto;
+	width: 100%;
+	padding-left: 32.5%;
+	padding-right: 32.5%;
+}
+
+.group-member {
+	display: inline-block;
+	width: 16em;
+	vertical-align: top;
+}
+
+.group-member .member-name {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #EEEEEE;
+}
+
+.group-member .member-bio {
+	text-align: center;
+	color: #EEEEEE;
+}
+
+.details {
+	text-align: center;
+	color: #EEEEEE;
+}
+
+.group-member img {
+	width: 100%;
+	border-radius: 90%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.info-section {
+	display: inline-block;
+	width: 16em;
+	vertical-align: top;
+}
+
+.details a {
+	/*color: #A2482E;*/
+	color: #FFFFFF;
+}
+
+/* Things to move to style.css */
+.section-header {
+	font-family: got-font;
+	text-align: center;
+}

@@ -1,0 +1,695 @@
+commit 6ae44624887ce6fbcbb4fd9233c9f06c7118b953
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 17:36:32 2017 -0500
+
+    updates to about page
+
+commit 6a0e5cef2981c080142deb06e7c775a00c270a36
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 17:19:50 2017 -0500
+
+    Added makefile
+
+commit 01d53a855d2b6f1f0b1f95b4cee17f5c15c94270
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 15:41:30 2017 -0500
+
+    added character links on episode pages
+
+commit 7c09427ebf7caa5a4b4e11c93fb93b3367bf3fa4
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 15:00:11 2017 -0500
+
+    Tests done. Wont know if work properly until we have real data, but for now....
+
+commit e20cddd6ad5a496680c9a3a17f44da175c46556d
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Thu Mar 23 14:57:55 2017 -0500
+
+    UML diagram
+
+commit f2473c26d0a474cb346d9612a3e1d41d9687022f
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 14:46:20 2017 -0500
+
+    Added Deletion tests for all models
+
+commit 6bb7569ceebc54392c24ea7c879c1c32ce101bc7
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 14:28:24 2017 -0500
+
+    Added Insert tests for each model
+
+commit 4f659f1077b2ad6d9425a12dd33aadc13d50c88b
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Thu Mar 23 14:27:34 2017 -0500
+
+    data tables populated with sample data and links, everything sortable now too
+
+commit ec6c5ae02bd76edfbc7a21d5f07d04d92bd9c5b6
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 13:50:24 2017 -0500
+
+    Shell of test file made
+
+commit 389d4dbb925b6491c358772ed3d3437ec788d8b1
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 13:42:25 2017 -0500
+
+    Finally fixed background themeing for About page
+
+commit 76b61ba9e415e2d8782334b598e77a3a78d21823
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 13:35:57 2017 -0500
+
+    added back to all links for houses
+
+commit 4a0c073623a2b2d4715e9dd2aadafa6dea0312c7
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 13:30:56 2017 -0500
+
+    added back to all links on character pages and linked all possible links
+
+commit e086faedf25a876eedef43ebe4da29c17461f146
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 13:05:52 2017 -0500
+
+    added back to all link for episode pages
+
+commit e3410e30c78b0d57680327352a96a3cb90bd393e
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 12:50:29 2017 -0500
+
+    updated Jon Snow
+
+commit 905b7c5ec422e05ca0eb0132c0d2f0a3364e96e0
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 12:47:30 2017 -0500
+
+    replaced Targaryen with Baratheon and created house to house links
+
+commit 9f2a262103a8f6acab98455613b336965d61322a
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 12:24:33 2017 -0500
+
+    moved hover.css to css/ and updated references and added episode to episode links
+
+commit e7316a1074e2001fd4f26792c36ac981dfe8e966
+Merge: b377373 c9e8a26
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 12:00:39 2017 -0500
+
+    encapsulated nav bar into #nav-row to fix horizontal overflow and updated all pages
+
+commit c9e8a266f53aab992be66dc7407647b5841877de
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 11:55:39 2017 -0500
+
+    ecapsulated nav bar using #nav-row and fixed horizontal overflow on homepage
+
+commit b37737377f58315e477cabc5f00c5eb7c24bb018
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 10:39:15 2017 -0500
+
+    CSS changes to make about page scaleable
+
+commit 7171a1cfd66dfe4f861d0a850472b349e12bef2f
+Merge: 7cbee04 8e7cf9b
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Thu Mar 23 10:32:51 2017 -0500
+
+    merge
+
+commit 7cbee0417e191fa26fe969037664d89187c80abc
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Thu Mar 23 10:32:03 2017 -0500
+
+    updated character pages
+
+commit 8e7cf9b9ce3e3d9538fee2301beb2bb911f1fdf5
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 10:30:22 2017 -0500
+
+    only keeping the first 5 characters for each episode for displaying
+
+commit feaea19602899e35aa8431dd66cc100d7a51621f
+Author: Apurva Gorti <apurvagorti@wireless-10-146-77-222.public.utexas.edu>
+Date:   Thu Mar 23 09:54:03 2017 -0500
+
+    style changes to charaters.html
+
+commit 94b586e0269d41cc87b4366420ca5d01e02f21ba
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 09:41:35 2017 -0500
+
+    added css for individual pages and finished linking all episodes
+
+commit 372cd53ec04c939ff8d1049a2409edb8fb292560
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 00:40:58 2017 -0500
+
+    created links and pages for episodes
+
+commit 03b95ef919aeb54a67af3caa88e2e64dca8767db
+Merge: 1f4fd1f de4220c
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 23 00:40:27 2017 -0500
+
+    merged
+
+commit 1f4fd1f259f3550f0fc46d458160bea93999bdca
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 23 00:39:19 2017 -0500
+
+    no more gap
+
+commit de4220c12610dd01dfb19adaf2f9df36ccce2105
+Author: ktvslice <kvanderslice@sbcglobal.net>
+Date:   Thu Mar 23 00:35:48 2017 -0500
+
+    Updated Bio fields
+
+commit 84fedaad6a93d5c2123911cc719e5c0b6eb2b716
+Merge: cb088ac 3160357
+Author: Peyton Sarmiento <peytonsarmiento@2ndclass-10-144-49-236.public.utexas.edu>
+Date:   Thu Mar 23 00:27:34 2017 -0500
+
+    merge
+
+commit cb088ac4df7ae381d9dc9a655da89917cc571b91
+Author: Peyton Sarmiento <peytonsarmiento@2ndclass-10-144-49-236.public.utexas.edu>
+Date:   Thu Mar 23 00:27:10 2017 -0500
+
+    updated houses
+
+commit 3160357e77a811b2ecd89e0def6a357f5c07b3b1
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 00:25:03 2017 -0500
+
+    fixed typos
+
+commit c14045c192efa707cb46975a7c3c07f2b7ebc32e
+Merge: ef862ea 385cfc0
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 00:20:40 2017 -0500
+
+    finalized house links and styling
+
+commit ef862ea5f5a24ce07d9c7823537d62a9df70c673
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 00:19:41 2017 -0500
+
+    finalized all the house pages
+
+commit 385cfc0c8d193728c7391cc53b19a9fddc95dc67
+Author: Peyton Sarmiento <peytonsarmiento@2ndclass-10-144-49-236.public.utexas.edu>
+Date:   Thu Mar 23 00:16:13 2017 -0500
+
+    added routes for characters
+
+commit 20906490398429780a4b0d59def06f9afd85699c
+Merge: 941451a fde38f7
+Author: Peyton Sarmiento <peytonsarmiento@2ndclass-10-144-49-236.public.utexas.edu>
+Date:   Thu Mar 23 00:08:07 2017 -0500
+
+    models
+
+commit fde38f7a4d31fa89f554842b2aa7bde95d7ca7a4
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Thu Mar 23 00:06:00 2017 -0500
+
+    sortable tables for characters with arrows yayayayay
+
+commit 941451aa141ae077a8fa1b201c2ab5e745db1bd1
+Author: Peyton Sarmiento <peytonsarmiento@2ndclass-10-144-49-236.public.utexas.edu>
+Date:   Thu Mar 23 00:04:12 2017 -0500
+
+    added models
+
+commit 9921091c751c370faead18db4a80b3f415315e5e
+Merge: 7548d3a 475ab1f
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 23:54:09 2017 -0500
+
+    typing
+
+commit 7548d3abd985a7193ba8623b9d7937206b438b6a
+Merge: 795e29f abaa82c
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 23:53:11 2017 -0500
+
+    typing
+
+commit 475ab1fa2d68bbfcd7d876b5af2ac3f12c177a40
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 23:51:53 2017 -0500
+
+    finalized house individual styling
+
+commit 5524e96819df4bd1318eeab712613b2dd752c8fb
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 23:51:27 2017 -0500
+
+    updated .gitignore
+
+commit 2f0a67e658ec73b24a2d4f3f02a9d1954b0c2d24
+Merge: ed1a569 d546c42
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 22:34:18 2017 -0500
+
+    merge
+
+commit ed1a569fb3b2ce146332fb21ae2a423109634335
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 22:33:24 2017 -0500
+
+    fixed links and routes for house pages
+
+commit d546c422a55c969ecde7a967274f40e664b698d0
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 22:29:28 2017 -0500
+
+    fixed #21
+
+commit 462b21f471dd1bc2a58b5f6c71683c3b3c61b8b5
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 22:27:00 2017 -0500
+
+    empty house pages
+
+commit 6831d6a7645e287647c5526ba45fb128dd7938f8
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Wed Mar 22 22:08:33 2017 -0500
+
+    house stark
+
+commit 7717374953978665a8c36ef8f14fc7f09baddfa0
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Wed Mar 22 22:07:19 2017 -0500
+
+    navbar added to model pages
+
+commit f3c556632c623162e9a41adc15a87dc67959cf69
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Wed Mar 22 22:05:09 2017 -0500
+
+    sample house added
+
+commit 808bd4deed0c3378598055705ade127eb730363f
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:58:27 2017 -0500
+
+    updated link for home in navWell.html
+
+commit abaa82ccaa85af0a398796b2f5809711e76c3ad1
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:56:40 2017 -0500
+
+    got rid of margin around nav bar
+
+commit 795e29f79669fac77643417e1a8992602c3ec245
+Merge: b31c2a0 43c6963
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 21:53:16 2017 -0500
+
+    fixed merge
+
+commit b31c2a0e3da1d67221d3639189e603ec0043716a
+Merge: bb7d649 253b530
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 21:50:47 2017 -0500
+
+    updated path to navWell
+
+commit 43c696327c598ec520bf6e5e58d916265ccf9a4b
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 21:45:54 2017 -0500
+
+    updated so navbar links work
+
+commit 71babc7d4d4f0396ba3be8b469171c54bf41cdb6
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:41:22 2017 -0500
+
+    including css using flask
+
+commit a4fe33ca682fa2fc48d28a2d5eb01dfaf065e603
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:40:14 2017 -0500
+
+    including html using flask
+
+commit bb7d649d8127ffb1a55232b5d5a92dc0e7da7143
+Merge: b2d1d8a 382b595
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 21:24:12 2017 -0500
+
+    merge
+
+commit 253b53064db00c3521ab0d3a26a3db6019dca62b
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:22:26 2017 -0500
+
+    added .gitignore
+
+commit b2d1d8aea53be0eb9d0888eccc208afc24dce9a6
+Merge: b7ebb3d ea1320b
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 21:22:07 2017 -0500
+
+    deleted DS_store to pull
+
+commit 382b595459e16ccc9eff05b57a9847bc5950fab8
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 21:21:30 2017 -0500
+
+    deleted untitled
+
+commit b7ebb3dd727bb12423b6e108ab6c73356429c82f
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 21:20:58 2017 -0500
+
+    DS store
+
+commit ea1320b39550d0aeb3b5b019df90c3be630d70bd
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Wed Mar 22 21:19:13 2017 -0500
+
+    fixed stylesheet link
+
+commit a5305fc7692aac782209208ce7ec41b088da959b
+Author: Apurva Gorti <apurvagorti@wireless-10-145-150-139.public.utexas.edu>
+Date:   Wed Mar 22 21:10:15 2017 -0500
+
+    sortable tables
+
+commit ea8c379fb3222b441de75079515398be273b322f
+Merge: 245dd79 11872f4
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 20:56:55 2017 -0500
+
+    adding scrolling text
+
+commit 245dd7931310d52406822f38d853c747c7bd01a6
+Merge: c5f11dd fe0e6f9
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 20:55:59 2017 -0500
+
+    fixing merge conflicts
+
+commit 11872f42d6e04a3eba70db42ec2f65d3919487d5
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 20:55:47 2017 -0500
+
+    added nav bar to about.html
+
+commit c5f11dd6dd50933e1bdca340ce92194779bc9e22
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 20:54:23 2017 -0500
+
+    working on adding scrolling typing.
+
+commit fe0e6f9f5cbe7da75330c21e9e6999a9526cb727
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 20:46:52 2017 -0500
+
+    linked nav bar to model pages and changed regions to episodes
+
+commit 763950744d400255c45a537f7b44e4b9bed83c93
+Author: ktvslice <kvanderslice@sbcglobal.net>
+Date:   Wed Mar 22 20:25:33 2017 -0500
+
+    Fixing css file paths
+
+commit 2cc7f142fac7a501e4996e1871e394758534c85e
+Merge: d47ae94 2bfaebf
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:48:24 2017 -0500
+
+    merging with peyton's updates
+
+commit d47ae9456cf66ac4dd49a2bdc80b846ce7cdc269
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:46:47 2017 -0500
+
+    trying to added typed quotes
+
+commit 2bfaebfdb586a70ee4ce7fddd2d2952b5bf974de
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:40:13 2017 -0500
+
+    i make a lot of typos
+
+commit 88023840e71f2f878e4e9ad7bdda5713026dbedd
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:38:13 2017 -0500
+
+    fixed route typo
+
+commit 28c74b583c0bc859b52fa9454a4505089dd53de2
+Merge: c843bfd 2bd4c85
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:35:57 2017 -0500
+
+    links on splash page
+
+commit c843bfd8a1d88a6e3dac79b9cef697da3cda022e
+Merge: 91f234d f267f00
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:34:06 2017 -0500
+
+    links for splash page
+
+commit 91f234d34e48387b500a215284a46fc1ec010c50
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:33:42 2017 -0500
+
+    links for splash page
+
+commit 2bd4c851af1a663df11269648dd0ac9b8ecfaf44
+Merge: 2c36884 f267f00
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:30:56 2017 -0500
+
+    fixing merge conflicts
+
+commit 2c368848fdef297ba2d929d4a2209d57422666fa
+Merge: 285ab03 2e33308
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:27:22 2017 -0500
+
+    navbar not working
+
+commit f267f00af794da9a8fae581b826a0d01c143b606
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 18:26:04 2017 -0500
+
+    added nav bar to individual templates
+
+commit 285ab0312110fa8ebe776d6df7dba27fc03c7b00
+Merge: 70c4140 a145b5b
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:24:53 2017 -0500
+
+    navbar not working for index
+
+commit 2e333089b6e0f5c294a2b02f43baf3edc968a18b
+Merge: d18900a a145b5b
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:11:37 2017 -0500
+
+    updated index
+
+commit d18900acad48fcb90bc8b23b4d8803fb332e3fda
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:10:14 2017 -0500
+
+    updated css link in index
+
+commit a145b5b280dd26ae870d93a9304830f9d9421c30
+Merge: 718e696 6178ae6
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 18:05:54 2017 -0500
+
+    Merge branch 'dev' of https://github.com/ayeryn/cs373-idb into dev
+
+commit 718e696c7ece2a1460555bd9a3d9bf5d7b53d381
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 18:05:45 2017 -0500
+
+    fixed references to statc/css/ stylesheets
+
+commit 6178ae6a69f6c50799e3283905429270be6fd59d
+Merge: 7806def deb8de4
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:05:40 2017 -0500
+
+    committing merge
+
+commit 7806def4eee857591211cd5521c8f117d90c03db
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 18:03:57 2017 -0500
+
+    changed python config to serve static
+
+commit 70c4140ed228d0e58e1f71c71aa628628578b21e
+Merge: 4aaa56c deb8de4
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:01:16 2017 -0500
+
+    merging with dev
+
+commit 4aaa56c06ec42c390341b952449068629b985840
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 18:00:26 2017 -0500
+
+    added navbar to index
+
+commit deb8de45101a555c45c4690251ed219b6df37cec
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 17:51:22 2017 -0500
+
+    moved GoT font from templates to static/css
+
+commit 332c464fc70ad5223ea9907ff64525ca0ff47c14
+Merge: 6d96b6b af50639
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 17:30:36 2017 -0500
+
+    fixed merge conflict with index.html
+
+commit 6d96b6b85d73f66faa2dc4c4bf610524f09a81dd
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 17:27:17 2017 -0500
+
+    added quote to index
+
+commit af506393429bc2d4e67bd1786f615f231a8bbcda
+Merge: 65cadcb 8e1bc39
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 17:16:47 2017 -0500
+
+    changed home to landing page and updated statis files
+
+commit 65cadcb0e0cb5681ad59975e207061445973f67c
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 16:57:11 2017 -0500
+
+    moved css files to statis folder to serve
+
+commit 8e1bc39904ede5d8dbde5271171c5b143d49c062
+Author: Apurva Gorti <apurvagorti@wireless-10-147-111-49.public.utexas.edu>
+Date:   Wed Mar 22 16:47:44 2017 -0500
+
+    initial model pages
+
+commit 10c7a6894a36e567db8aecc1277ad43f9dcea47c
+Merge: fb64653 a027c31
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 16:44:31 2017 -0500
+
+    Merge branch 'dev' of https://github.com/ayeryn/cs373-idb into dev
+
+commit fb646535a81414b1ad742ddf2a12050eeed820a8
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 16:40:45 2017 -0500
+
+    filled example pages with information from API and did basic styling
+
+commit a027c31c9cbb54bcd4315c1ebd1fa3da3d2e6d3d
+Merge: 21afc44 e270a80
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 15:54:21 2017 -0500
+
+    added background image, minimal styling
+
+commit 21afc44a6be94e7658fa80f6f7362c5396b38ba5
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 15:51:53 2017 -0500
+
+    added background image, minimal styling
+
+commit e270a80a8d7ce15a45b855a779f8457881e31a35
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 15:35:05 2017 -0500
+
+    updated requirements
+
+commit 896012b46c4b7506736759ad24f2e73297dd7704
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 15:33:36 2017 -0500
+
+    changed index routes
+
+commit 99e92e32c96d0cd1f72ee661fd69ebd3c7b2dd55
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-237-161.public.utexas.edu>
+Date:   Wed Mar 22 15:26:57 2017 -0500
+
+    set homepage to about
+
+commit 823ddae323d0a7a202e716dddc6c775a3cd93222
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 14:56:14 2017 -0500
+
+    changed region.html to episode.html
+
+commit 199e25a263698693bde4084e670d6e3dadb50cef
+Author: ktvslice <kvanderslice@sbcglobal.net>
+Date:   Wed Mar 22 14:46:22 2017 -0500
+
+    First draft of about page with specific css
+
+commit f3237b2b54c229ebcab15e6d40d8bb6cdd1a11be
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 13:44:39 2017 -0500
+
+    updated style.css for navWell
+
+commit 9da29e3ff411a38f1e24360a288a2338ea59f125
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 13:09:05 2017 -0500
+
+    reemoved navWell so it it only in templates folder
+
+commit 8dc9947b65a7a99f52534899c6e593e3a34dd034
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 13:03:14 2017 -0500
+
+    updated navWell
+
+commit 4deb44af70f558d1c2f4e35d9b854205030b5ecd
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 11:59:22 2017 -0500
+
+    navWell moved to templates
+
+commit 65e5c808c8b78d75d0d1a32f9894a37b5c7ee0d6
+Merge: 54be7d6 770fd5f
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 00:07:52 2017 -0500
+
+    Merge branch 'dev' of https://github.com/ayeryn/cs373-idb into dev
+
+commit 54be7d6d2581fa0923635c6b814ef21bb7f432d0
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Mar 22 00:07:45 2017 -0500
+
+    added skeleton for individual pages
+
+commit 770fd5fb97b9cddce1427beceb8d9f472713a41b
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Tue Mar 21 22:40:35 2017 -0500
+
+    basic flask app
+
+commit 70f4189a60ae00f6843c07f5d5e85d953021ab6e
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Tue Mar 21 21:40:57 2017 -0500
+
+    made templates folder for static templates
+
+commit 9538471125beb62489d893e2e8fa4401f3e33cee
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Tue Mar 21 19:39:30 2017 -0500
+
+    Initial commit

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>House Stark of Winterfell</title>
+
+    <!-- Include CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/individual.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body id="ind-home">
+    <div id="nav-row">
+        <div ng-app>
+            <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
+        </div>
+    </div>
+    <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
+        <header class="title-header">
+            <h1>House Stark of Winterfell</h1>
+        </header>
+        <div class="container-fluid">
+            <div id="main-content">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <table class="info-table">
+                            <tr>
+                                <td>Region</td>
+                                <td>The North</td>
+                            </tr>
+                            <tr>
+                                <td>Words</td>
+                                <td>Winter is Coming</td>
+                            </tr>
+                            <tr>
+                                <td>Current Lord</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Heir</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Over Lord</td>
+                                <td><a href="/housebaratheon" class="hvr-pop link">House Baratheon of King's Landing</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-2">
+                        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="return-link">
+                <div class="row"><a href="/houses" class="hvr-pop link">Back To All Houses</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</body>
+
+</html>

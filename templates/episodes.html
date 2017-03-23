@@ -17,8 +17,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-	<div ng-app>
-		<nav class="navbar">{% include 'navWell.html' %}</nav>
+	<div id="nav-row">
+		<div ng-app>
+			<nav class="navbar">{% include 'navWell.html' %}</nav>
+		</div>
 	</div>
 	<h3 class = "page-title">Episodes</h3>
 	<div class = "tbl-header">
@@ -41,101 +43,101 @@
 				<tr>
 					<td>1</td>
 					<td><a href="/s1e1">Winter Is Coming</td>
-					<td>1</td>
-					<td>N/A</td>
-					<td>The Kingsroad</td>
-					<td>Benjen Stark,
-						Jhiqui,
-						Mycah
-						Eddard Stark
-						Jon Snow
-					</td>
+						<td>1</td>
+						<td>N/A</td>
+						<td>The Kingsroad</td>
+						<td>Benjen Stark,
+							Jhiqui,
+							Mycah
+							Eddard Stark
+							Jon Snow
+						</td>
 					</tr>
 					<tr>
 						<td>2</td>
 						<td><a href="/s1e2">The Kingsroad</td>
-						<td>1</td>
-						<td>Winter Is Coming</td>
-						<td>Lord Snow</td>
-						<td>Viserys Targaryen,
-							Catelyn Stark,
-							Cersei Lannister,
-							Jaime Lannister,
-							Eddard Stark</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td><a href="/s1e3">Lord Snow</td>
 							<td>1</td>
-							<td>The Kingsroad</td>
-							<td>Cripples, Bastards, and Broken Things</td>
-							<td>Eddard Stark,
-								Robert Baratheon,
-								Jaime Lannister,
+							<td>Winter Is Coming</td>
+							<td>Lord Snow</td>
+							<td>Viserys Targaryen,
 								Catelyn Stark,
-								Cersei Lannister</td>
+								Cersei Lannister,
+								Jaime Lannister,
+								Eddard Stark</td>
 							</tr>
-						</tbody>
-					</table>
-				</div>
-				<script>
-				function sortTable(n) {
-					var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-					table = document.getElementById("myTable2");
-					switching = true;
-					//Set the sorting direction to ascending:
-					dir = "asc";
-					/*Make a loop that will continue until
-					no switching has been done:*/
-					while (switching) {
-						//start by saying: no switching is done:
-						switching = false;
-						rows = table.getElementsByTagName("TR");
-						/*Loop through all table rows (except the
-						first, which contains table headers):*/
-						for (i = 0; i < (rows.length - 1); i++) {
-							//start by saying there should be no switching:
-							shouldSwitch = false;
-							/*Get the two elements you want to compare,
-							one from current row and one from the next:*/
-							x = rows[i].getElementsByTagName("TD")[n];
-							y = rows[i + 1].getElementsByTagName("TD")[n];
-							/*check if the two rows should switch place,
-							based on the direction, asc or desc:*/
-							if (dir == "asc") {
-								if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-									//if so, mark as a switch and break the loop:
-									shouldSwitch= true;
-									break;
-								}
-							} else if (dir == "desc") {
-								if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-									//if so, mark as a switch and break the loop:
-									shouldSwitch= true;
-									break;
-								}
-							}
-						}
-						if (shouldSwitch) {
-							/*If a switch has been marked, make the switch
-							and mark that a switch has been done:*/
-							rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+							<tr>
+								<td>3</td>
+								<td><a href="/s1e3">Lord Snow</td>
+									<td>1</td>
+									<td>The Kingsroad</td>
+									<td>Cripples, Bastards, and Broken Things</td>
+									<td>Eddard Stark,
+										Robert Baratheon,
+										Jaime Lannister,
+										Catelyn Stark,
+										Cersei Lannister</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<script>
+						function sortTable(n) {
+							var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+							table = document.getElementById("myTable2");
 							switching = true;
-							//Each time a switch is done, increase this count by 1:
-							switchcount ++;
-						} else {
-							/*If no switching has been done AND the direction is "asc",
-							set the direction to "desc" and run the while loop again.*/
-							if (switchcount == 0 && dir == "asc") {
-								dir = "desc";
-								switching = true;
+							//Set the sorting direction to ascending:
+							dir = "asc";
+							/*Make a loop that will continue until
+							no switching has been done:*/
+							while (switching) {
+								//start by saying: no switching is done:
+								switching = false;
+								rows = table.getElementsByTagName("TR");
+								/*Loop through all table rows (except the
+								first, which contains table headers):*/
+								for (i = 0; i < (rows.length - 1); i++) {
+									//start by saying there should be no switching:
+									shouldSwitch = false;
+									/*Get the two elements you want to compare,
+									one from current row and one from the next:*/
+									x = rows[i].getElementsByTagName("TD")[n];
+									y = rows[i + 1].getElementsByTagName("TD")[n];
+									/*check if the two rows should switch place,
+									based on the direction, asc or desc:*/
+									if (dir == "asc") {
+										if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+											//if so, mark as a switch and break the loop:
+											shouldSwitch= true;
+											break;
+										}
+									} else if (dir == "desc") {
+										if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+											//if so, mark as a switch and break the loop:
+											shouldSwitch= true;
+											break;
+										}
+									}
+								}
+								if (shouldSwitch) {
+									/*If a switch has been marked, make the switch
+									and mark that a switch has been done:*/
+									rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+									switching = true;
+									//Each time a switch is done, increase this count by 1:
+									switchcount ++;
+								} else {
+									/*If no switching has been done AND the direction is "asc",
+									set the direction to "desc" and run the while loop again.*/
+									if (switchcount == 0 && dir == "asc") {
+										dir = "desc";
+										switching = true;
+									}
+								}
 							}
 						}
-					}
-				}
-				</script>
-				<!-- Latest compiled and minified JavaScript -->
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-				<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-			</body>
-			</html>
+						</script>
+						<!-- Latest compiled and minified JavaScript -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+					</body>
+					</html>

@@ -1,7 +1,7 @@
 #ind-home {
     margin:0;
+    padding: 0;
     background-color: #141311;
-    height: inherit;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    height: 100%;
+    width: 100%;
 }

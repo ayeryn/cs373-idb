@@ -68,6 +68,10 @@ html{
 	border-color: #e7e7e7;
 }
 
+#top-nav{
+    margin-bottom: 0;
+}
+
 .navbar-collapse a{
 	color: #B7B7B6;
 }

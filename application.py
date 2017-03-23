@@ -19,6 +19,18 @@ def characters():
 def houses():
     return render_template('houses.html')
 
+@application.route('/housestark')
+def house_stark():
+    return render_template('house_stark.html')
+
+@application.route('/housebaratheon')
+def house_baratheon():
+    return render_template('house_baratheon.html')
+
+@application.route('/houselannister')
+def house_lannister():
+    return render_template('house_lannister.html')
+
 @application.route('/episodes')
 def episodes():
     return render_template('episodes.html')

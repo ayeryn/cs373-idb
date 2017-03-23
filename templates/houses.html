@@ -19,7 +19,7 @@
     </head>
     <body>
         <div ng-app>
-        <nav class="navbar"><div ng-include src="'navWell.html'"></div></nav>
+        <nav class="navbar">{% include 'navWell.html' %}</nav>
         </div>
         <h3 class = "page-title">Houses</h3>
             <div class="tbl-header">
@@ -42,7 +42,7 @@
                     <tbody>
                     <tr>
                         <td>1</td>
-                        <td>House 1</td>
+                        <td><a href="/housestark">House Stark of Winterfell</a></td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>House 2</td>
+                        <td><a href="/housebaratheon">House Baratheon</a></td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -60,7 +60,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>House 3</td>
+                        <td><a href="/houselannister">House Lannister</a></td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <!-- Include CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body id="home">
+    <div ng-app>
+        <nav class="navbar">{% include 'navWell.html' %}</nav>
+    </div>
+    <div class="col-md-offset-1 col-md-10" style="height:100%; background-color: black;">
+        <header class="title-header">
+            <h1>House </h1>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-offset-2 col-sm-8">
+                    <table class="info-table">
+                        <tr>
+                            <td>Region</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Words</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Current Lord</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Heir</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Over Lord</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</body>
+
+</html>

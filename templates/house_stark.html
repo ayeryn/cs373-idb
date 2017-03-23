@@ -20,15 +20,15 @@
 
 <body id="home">
     <div ng-app>
-        <nav class="navbar">{% include 'navWell.html' %}</nav>
+        <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
     </div>
-    <div class="col-md-offset-1 col-md-10" style="height:100%; background-color: black;">
+    <div class="col-md-offset-1 col-md-10" style="height:calc(100% - 50px); background-color: black">
         <header class="title-header">
             <h1>House Stark of Winterfell</h1>
         </header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-offset-2 col-sm-8">
+                <div class="col-sm-offset-2 col-sm-6">
                     <table class="info-table">
                         <tr>
                             <td>Region</td>
@@ -51,6 +51,9 @@
                             <td>House Baratheon of King's Landing</td>
                         </tr>
                     </table>
+                </div>
+                <div class="col-sm-2">
+                    <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142">
                 </div>
             </div>
         </div>

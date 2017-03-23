@@ -45,21 +45,6 @@ html{
     padding-top: 10px;
 }
 
-.info-table{
-    width: 100%;
-    font-family: sans-serif;
-    font-size: 12pt;
-    color: #9E8469;
-    border-collapse: collapse;
-}
-
-.info-table td{
-    padding: 15px;
-}
-
-.info-table td:nth-child(1) {width: 30%}
-.info-table td:nth-child(2) {width: 70%}
-
 .navbar-brand {
 	font-family: got-font;
 	color: #9E8469;

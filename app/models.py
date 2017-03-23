@@ -1,5 +1,10 @@
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
 
-
+"""
+Episode model
+Attributes: name, season, previous episode, next episode, characters
+"""
 class Episode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
@@ -15,6 +20,10 @@ class Episode(db.Model):
         self.previous_episode = previous_episode
         self.next_episode = next_episode
 
+"""
+House model
+Attributes: name, region, words, current_lord, heir, overlord
+"""
 class House(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
@@ -32,6 +41,10 @@ class House(db.Model):
         self.heir = heir
         self.overlord = overlord
 
+"""
+Characters model
+Attributes: name, titles, aliases, father, mother, spouse, allegiance, played_by
+"""
 class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)

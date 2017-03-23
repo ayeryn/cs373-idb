@@ -15,9 +15,9 @@ def characters():
 def houses():
     return render_template('houses.html')
 
-@application.route('/regions')
-def regions():
-    return render_template('regionss.html')
+@application.route('/episodes')
+def episodes():
+    return render_template('episodes.html')
 
 if __name__ == '__main__':
     application.run()

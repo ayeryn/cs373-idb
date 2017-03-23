@@ -31,20 +31,24 @@
 
   <body class="index">
     <div ng-app>
-      <nav class="navbar">{% include 'navWell.html' %}</nav>
+      <nav class="navbar" style="margin:0;">{% include 'navWell.html' %}</nav>
     </div>
 
     <div class="image">
-        <script src="js/typed.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
+        <script src="typed.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                Typed.new('.element', {
-                    strings: ["\"You know nothing, Jon Snow.\"", "\"When you play a Game of Thrones you win or you die.\"", "Valar Morghulis", "All men must die"],
-                    typeSpeed: 0
+            document.addEventListener("DOMContentLoaded", function(){
+                Typed.new(".element", {
+                    strings: ["You know nothing, Jon Snow.", "When you play a Game of Thrones, you win or you die.", "What's dead may never die.", "Valar Morghulis"],
+                    typeSpeed: 75,
+                    backSpeed: 35,
+                    backDelay: 1250,
+                    loop: true,
                 });
             });
         </script>
-        <div class="element">
+        <span class="element"></span>
 
         </div>
 
@@ -60,9 +64,6 @@
             <img class="featurette-image img-responsive center-block" src="{{url_for('static', filename='css/images/logo.png')}}" alt="Generic placeholder image">
         </div>
     </div>
-
-    <hr class="featurette-divider">
-
     <!-- /END THE FEATURETTES -->
 
     <!-- Marketing messaging and featurettes

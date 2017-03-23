@@ -42,7 +42,7 @@ html{
     width: 100%;
     font-family: sans-serif;
     font-size: 12pt;
-    color: #B7B7B6;
+    color: #9E8469;
     border-collapse: collapse;
 }
 
@@ -55,7 +55,7 @@ html{
 
 .navbar-brand {
 	font-family: got-font;
-	color: #B7B7B6;
+	color: #9E8469;
 }
 
 .navbar-brand:hover{
@@ -64,8 +64,7 @@ html{
 
 .nav{
 	background-color: black;
-	color: #B7B7B6;
-	border-color: #e7e7e7;
+	color: #9E8469;
 }
 
 #top-nav{
@@ -73,5 +72,5 @@ html{
 }
 
 .navbar-collapse a{
-	color: #B7B7B6;
+	color: #9E8469;
 }

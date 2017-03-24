@@ -7,14 +7,13 @@ nav .container{
     background-color: black;
     margin: 0;
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .navbar-default {
     border-color: transparent;
     background-color: black;
-    /*font-family: serif;*/
 }
 
 .navbar-default .navbar-brand {

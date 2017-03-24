@@ -1,6 +1,7 @@
 .index{
 	background-color: #9E8469;
 	font-family: serif;
+	overflow-x: hidden;
 }
 
 .featurette-heading{

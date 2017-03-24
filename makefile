@@ -1,7 +1,7 @@
 FILES :=                              \
     apiary.apib                       \
     IDB1.log                          \
-    app/models.html                   \
+    models.html                       \
     app/models.py                     \
     app/tests.py                      \
     UML.pdf                           \

@@ -1,80 +1,245 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# swegot
+# SWEGoT
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+SWEGoT is a simple API allowing avid fans of the Game of Thrones to view data about their favorite book and TV series!
 
-## Questions Collection [/questions]
+## Episodes Collection [/episodes]
 
-### List All Questions [GET]
+### List All Episodes [GET]
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
+        {
+            "episodes": [
+                {
+                    "id": 1
+                    "name": "Winter Is Coming",
+                    "season": "1",
+                    "previous_episode": "N/A",
+                    "next_episode": "The Kingsroad",
+                    "characters": 
+                    [
+                        
+                        { 
+                            "id":2,
+                            "name":"Cersei Lannister"
+                        },
+                        { 
+                            "id":3,
+                            "name":"Tommen Baratheon"
+                        },
+                        { 
+                            "id":1,
+                            "name":"Jon Snow"
+                        }
+                    ]
+                },
+                {
+                    "id": 2
+                    "name": "The Kingsroad",
+                    "season": "1",
+                    "previous_episode": "Winter Is Comin",
+                    "next_episode": "Lord Snow",
+                    "characters": 
+                    [
+                        { 
+                            "id":2,
+                            "name":"Cersei Lannister"
+                        },
+                        { 
+                            "id":1,
+                            "name":"Jon Snow"
+                        }
+                    ]
+                },
+                {
+                    "id": 3
+                    "name": "Lord Snow",
+                    "season": "1",
+                    "previous_episode": "The Kingsroad",
+                    "next_episode": "Cripples, Basatrds, and Broken Things",
+                    "characters": 
+                    [
+                        { 
+                            "id":1,
+                            "name":"Jon Snow"
+                        }
+                    ]
+                }
+            ]
+        }
+        
+## Specific Episode [/episodes/{id}]
 
-### Create a New Question [POST]
+### Get information about a specific episode [GET]
++ Parameters
+    + id (number) - ID of the episode in the form of an integer
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
++ Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
+            "id": 1
+            "name": "Winter Is Coming",
+            "season": "1",
+            "previous_episode": "N/A",
+            "next_episode": "The Kingsroad",
+            "characters": []
+        }
+        
+## Houses Collection [/houses]
+
+### List All Houses [GET]
+
++ Response 200 (application/json)
+
+        {
+            "houses": [
+                {
+                    "id": 1
+                    "name": "House Stark of Winterfell",
+                    "region": "The North",
+                    "words": "Winter Is Coming",
+                    "current_lord": "N/A",
+                    "heir": "N/A",
+                    "overlord": 
+                        {
+                            "id": 2,
+                            "name": "House Baratheon of King's Landing"
+                        }
+                },
+                {
+                    "id": 2
+                    "name": "House Baratheon of King's Landing",
+                    "region": "The Crownlands",
+                    "words": "Ours is the Fury",
+                    "current_lord": "Tommen Baratheon",
+                    "heir": "Myrcella Baratheon",
+                    "overlord": "N/A"
+                },
+                {
+                    "id": 3
+                    "name": "House Lannister of Casterly Rock",
+                    "region": "The Westerlands",
+                    "words": "Hear Me Roar!",
+                    "current_lord": "Cersei Lannister",
+                    "heir": "N/A",
+                    "overlord": 
+                        {
+                            "id": 2,
+                            "name": "House Baratheon of King's Landing"
+                        }
+                }
             ]
         }
 
-+ Response 201 (application/json)
+## Specific House [/houses/{id}]
 
-    + Headers
+### Get information about a specific house [GET]
++ Parameters
+    + id (number) - ID of the house in the form of an integer
 
-            Location: /questions/2
++ Response 200 (application/json)
 
-    + Body
+        {
+            "id": 1
+            "name": "House Stark of Winterfell",
+            "region": "The North",
+            "words": "Winter Is Coming",
+            "current_lord": "N/A",
+            "heir": "N/A",
+            "overlord": "House Baratheon of King's Landing"
+        }
+        
+## Characters Collection [/characters]
 
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+### List All Houses [GET]
+
++ Response 200 (application/json)
+
+        {
+            "characters": [
+                {
+                    "id": 1
+                    "name": "Jon Snow",
+                    "titles": "Lord Commander of the Night's Watch",
+                    "aliases": "Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow",
+                    "father": "N/A",
+                    "mother": "N/A",
+                    "spouse": "N/A",
+                    "allegiances":
+                    [
+                        {
+                            "id": 1,
+                            "name": "House Stark of Winterfell"
+                        }
+                    ],
+                    "played_by": "Kit Harrington"
+                },
+                {
+                    "id": 2
+                    "name": "Cersei Lannister",
+                    "titles": "Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent",
+                    "aliases": "N/A",
+                    "father": "N/A",
+                    "mother": "N/A",
+                    "spouse": "Robert Baratheon",
+                    "allegiances":
+                    [
+                        {
+                            "id": 1,
+                            "name": "House Lannister of Casterly Rock"
+                        }
+                    ],
+                    "played_by": "Lena Headey"
+                },
+                {
+                    "id": 3
+                    "name": "Tommen Baratheon",
+                    "titles": "King of the Andals, the Rhoynar and the First Men, Lord of the Seven Kingdoms",
+                    "aliases": "The Boy King",
+                    "father": "Robert I Baratheon",
+                    "mother": 
+                        {
+                            "id": 2,
+                            "name": Cersei Lannister
+                        },
+                    "spouse": "Margaery Tyrell",
+                    "allegiances":
+                    [
+                        {
+                            "id": 1,
+                            "name": "House Baratheon of King's Landing"
+                        }
+                    ],
+                    "played_by": "Callum Wharry, Dean-Charles Chapman"
+                }
+            ]
+        }
+
+## Specific Character [/characters/{id}]
+
+### Get information about a specific character [GET]
++ Parameters
+    + id (number) - ID of the character in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": 2
+            "name": "Cersei Lannister",
+            "titles": "Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent",
+            "aliases": "N/A",
+            "father": "N/A",
+            "mother": "N/A",
+            "spouse": "Robert Baratheon",
+            "allegiances":
+            [
+                {
+                    "id": 1,
+                    "name": "House Lannister of Casterly Rock"
+                }
+            ],
+            "played_by": "Lena Headey"
+        }

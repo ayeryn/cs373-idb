@@ -55,14 +55,6 @@ class Character(db.Model):
     allegiances = db.Column(db.String)
     played_by = db.Column(db.String, unique=True)
 
-    def __init__(self, name, titles, aliases, father, mother, spouse,
-            allegiances, played_by):
+    def __init__(self, name):
         self.name = name
-        self.titles = titles
-        self.aliases = aliases
-        self.father = father
-        self.mother = mother
-        self.spouse = spouse
-        self.allegiance = allegiances
-        self.played_by = played_by
 

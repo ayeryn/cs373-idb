@@ -50,46 +50,22 @@
 							</div>
 							<div class = "tbl-content">
 								<table id = "myTable2" cellpadding="0" cellspacing="0" border="0">
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td><a href="/s1e1">Winter Is Coming</td>
-												<td>1</td>
-												<td>N/A</td>
-												<td><a href="/s1e2">The Kingsroad</td>
-													<td>Benjen Stark,
-														Eddard Stark,
-														<a href="cerseilannister" class="link">Cersei Lannister</a>,
-														<a href="jonsnow" class="link">Jon Snow</a>,
-														<a href="tommenbaratheon" class="link">Tommen Baratheon</a>,
-													</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td><a href="/s1e2">The Kingsroad</td>
-														<td>1</td>
-														<td><a href="/s1e1">Winter Is Coming</td>
-															<td><a href="/s1e3">Lord Snow</td>
-																<td><a href="cerseilannister" class="link">Cersei Lannister</a>
-																	<a href="jonsnow" class="link">Jon Snow</a>,
-																	<a href="tommenbaratheon" class="link">Tommen Baratheon</a>,
-																	Jaime Lannister,
-																	Eddard Stark
-																</td>
-															</tr>
-															<tr>
-																<td>3</td>
-																<td><a href="/s1e3">Lord Snow</td>
-																	<td>1</td>
-																	<td><a href="/s1e2">The Kingsroad</td>
-																		<td>Cripples, Bastards, and Broken Things</td>
-																		<td>Eddard Stark,
-																			Robert Baratheon,
-																			<a href="cerseilannister" class="link">Cersei Lannister</a>,
-																			<a href="jonsnow" class="link">Jon Snow</a>,
-																			<a href="tommenbaratheon" class="link">Tommen Baratheon</a></td>
-																		</tr>
-																	</tbody>
+								{% block content %} 
+						            <tbody>
+						                {% for episode in episodes %}
+						                <tr>
+						                    <td>{{ episode.id }}</td>
+						                    <td><a href="{{ url_for('episode', name=episode.name)
+						                    }}">{{ episode.name }}</a></td>
+						                    <td>{{ episode.season }}</td>
+						                    <td>{{ episode.predecessor}}</td>
+						                    <td>{{ episode.successor }}</td>
+						                    <td>-</td>
+						                </tr>
+						                {%  endfor %}
+						                </tr>
+						            </tbody>
+						            {% endblock %}
 																</table>
 															</div>
 															<script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>

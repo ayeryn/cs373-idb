@@ -36,7 +36,7 @@
     </div>
     <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
         <header class="title-header">
-            <h1>Winter Is Coming</h1>
+            <h1>{{episode.name}}</h1>
         </header>
         <div class="container-fluid">
             <div id="main-content">
@@ -45,19 +45,21 @@
                         <table class="info-table">
                             <tr>
                                 <td>Season</td>
-                                <td>1</td>
+                                <td>{{episode.season}}</td>
                             </tr>
                             <tr>
                                 <td>Previous Episode</td>
-                                <td>N/A</td>
+                                <td><a href="/episodes/{{episode.predecessor}}" class="hvr-pop link">{{ episode.predecessor }}</a></td>
                             </tr>
                             <tr>
                                 <td>Next Episode</td>
-                                <td><a href="/s1e2" class="hvr-pop link">The Kingsroad</a></td>
+                                <td><a href="/episodes/{{episode.successor}}" class="hvr-pop link">{{ episode.successor }}</a></td>
+
+
                             </tr>
                             <tr>
                                 <td>Characters</td>
-                                <td>Benjen Stark, Jhiqui, Mycah, Mikken, Eddard Stark, Robert Baratheon, Jaime Lannister, Catelyn Stark, Daenerys Targaryen, <a href="cerseilannister" class="link">Cersei Lannister</a>, Jorah Mormont, Viserys Targaryen, <a href="jonsnow" class="link">Jon Snow</a>, Sansa Stark, Arya Stark, Robb Stark, Theon Greyjoy, Bran Stark, Joffrey Baratheon, Sandor Clegane, Tyrion Lannister, Jory Cassel, Doreah, Qotho, Rodrik Cassel, Irri, Ilyn Payne, <a href="tommenbaratheon" class="link">Tommen Baratheon</a>, Myrcella Baratheon</td>
+                                <td></td>
                             </tr>
                         </table>
                     </div>

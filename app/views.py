@@ -32,7 +32,13 @@ def house(name):
 
 @application.route('/episodes')
 def episodes():
-    return render_template('episodes.html')
+    episodes = models.Episode.query.all()
+    return render_template('episodes.html', episodes=episodes)
+
+@application.route('/episodes/<name>', methods=['GET', 'POST'])
+def episode(name):
+    episode = models.Episode.query.filter_by(name=name).first()
+    return render_template('episode.html', episode=episode)
 
 @application.route('/s1e1')
 def s1e1():

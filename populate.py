@@ -31,3 +31,14 @@ def get_houses():
 
         	db.session.add(c)
         	db.session.commit()
+
+def get_episodes():
+    r = requests.get("https://api.got.show/api/episodes/")
+    data = json.loads(r.content)
+    attr = dict.fromkeys(dir(models.Episode))
+    for episode in data:
+                values = attr.copy()
+                values.update(episode)
+                c = models.Episode(name=values['name'],season=values['season'], predecessor=values['predecessor'],successor=values['successor'])
+            	db.session.add(c)
+            	db.session.commit()

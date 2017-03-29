@@ -2,22 +2,21 @@ from app import db
 
 """
 Episode model
-Attributes: name, season, previous episode, next episode, characters
+Attributes: name, season, predecessor, next episode, characters
 """
 class Episode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     season = db.Column(db.Integer)
-    previous_epsiode = db.Column(db.String, unique=True)
-    next_episode = db.Column(db.String, unique=True)
+    predecessor = db.Column(db.String, unique=True)
+    successor = db.Column(db.String, unique=True)
     characters = db.Column(db.String)
 
-    def __init__(self, name, season, previous_episode, next_episode,
-            characters):
+    def __init__(self, name, season, predecessor, successor):
         self.name = name
         self.season = season
-        self.previous_episode = previous_episode
-        self.next_episode = next_episode
+        self.predecessor = predecessor
+        self.successor = successor
 
 """
 House model

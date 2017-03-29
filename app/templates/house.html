@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
-    <title>House Baratheon of King's Landing</title>
+    
+    <title>House Stark of Winterfell</title>
 
     <!-- Include CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -29,17 +29,14 @@
 </head>
 
 <body id="ind-home">
-    <header>
-        <<div id="nav-row">
-            <div ng-app>
-                <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
-            </div>
+    <div id="nav-row">
+        <div ng-app>
+            <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
         </div>
-    </header>
-
+    </div>
     <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
         <header class="title-header">
-            <h1>House Baratheon of King's Landing</h1>
+            <h1>{{house.name}}</h1>
         </header>
         <div class="container-fluid">
             <div id="main-content">
@@ -48,28 +45,28 @@
                         <table class="info-table">
                             <tr>
                                 <td>Region</td>
-                                <td>The Crownlands</td>
+                                <td>{{ house.region }}</td>
                             </tr>
                             <tr>
                                 <td>Words</td>
-                                <td>Ours is the Fury</td>
+                                <td>{{ house.words }}</td>
                             </tr>
                             <tr>
                                 <td>Current Lord</td>
-                                <td><a href="tommenbaratheon" class="hvr-pop link">Tommen Baratheon</a></td>
+                                <td>{{ house.current_lord }}</td>
                             </tr>
                             <tr>
-                                <td>Heir</td>
-                                <td>Myrcella Baratheon</td>
+                                <td>Title</td>
+                                <td>{{ house.title }}</td>
                             </tr>
                             <tr>
                                 <td>Over Lord</td>
-                                <td>House Baratheon of Dragonstone</td>
+                                <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
                             </tr>
                         </table>
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/0/00/House-Baratheon-Main-Shield.PNG/revision/latest?cb=20161206005433" alt="">
+                        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142" alt="">
                     </div>
                 </div>
             </div>

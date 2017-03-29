@@ -51,35 +51,23 @@
 	</div>
 	<div class = "tbl-content">
 		<table id="myTable2" cellpadding="0" cellspacing="0" border="0">
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td><a href="/housestark">House Stark of Winterfell</a></td>
-                    <td>The North</td>
-                    <td>"Winter is Coming"</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td><a href="/housebaratheon">House Baratheon of King's Landing</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td><a href="/housebaratheon">House Baratheon of King's Landing</a></td>
-					<td>The Crownlands</td>
-					<td>"Ours is the Fury"</td>
-					<td>Tommen Baratheon</td>
-					<td>Myrcella Baratheon</td>
-					<td>House Baratheon of Dragonstone</td>
-				</tr>
-				<tr>
-					<td>3</td>
-                    <td><a href="/houselannister">House Lannister of Casterly Rock</a></td>
-                    <td>The Westerlands</td>
-                    <td>"Hear Me Roar!"</td>
-                    <td>Cersei Lannister</td>
-                    <td>N/A</td>
-                    <td><a href="/housebaratheon">House Baratheon of King's Landing</td>
-				</tr>
-			</tbody>
+			{% block content %} 
+            <tbody>
+                {% for house in houses %}
+                <tr>
+                    <td>{{ house.id }}</td>
+                    <td><a href="{{ url_for('house', name=house.name)
+                    }}">{{ house.name }}</a></td>
+                    <td>{{ house.region }}</td>
+                    <td>{{ house.words }}</td>
+                    <td>{{ house.current_lord }}</td>
+                    <td>{{ house.title }}</td>
+                    <td>{{ house.overlord }}</td>
+                </tr>
+                {%  endfor %}
+                </tr>
+            </tbody>
+            {% endblock %}
 		</table>
 	</div>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>

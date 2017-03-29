@@ -21,7 +21,7 @@ class Episode(db.Model):
 
 """
 House model
-Attributes: name, region, words, current_lord, heir, overlord
+Attributes: name, region, words, current_lord, title, overlord
 """
 class House(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -29,15 +29,15 @@ class House(db.Model):
     region = db.Column(db.String)
     words = db.Column(db.String)
     current_lord = db.Column(db.String)
-    heir = db.Column(db.String)
+    title = db.Column(db.String)
     overlord = db.Column(db.String)
 
-    def __init__(self, name, region, words, current_lord, heir, overlord):
+    def __init__(self, name, region, words, current_lord, title, overlord):
         self.name = name
         self.region = region
         self.words = words
         self.current_lord = current_lord
-        self.heir = heir
+        self.title = title
         self.overlord = overlord
 
 """

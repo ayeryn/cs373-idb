@@ -22,19 +22,13 @@ def character(name):
 
 @application.route('/houses')
 def houses():
-    return render_template('houses.html')
+    houses = models.House.query.all()
+    return render_template('houses.html', houses=houses)
 
-@application.route('/housestark')
-def house_stark():
-    return render_template('house_stark.html')
-
-@application.route('/housebaratheon')
-def house_baratheon():
-    return render_template('house_baratheon.html')
-
-@application.route('/houselannister')
-def house_lannister():
-    return render_template('house_lannister.html')
+@application.route('/houses/<name>', methods=['GET', 'POST'])
+def house(name):
+    house = models.House.query.filter_by(name=name).first()
+    return render_template('house.html', house=house)
 
 @application.route('/episodes')
 def episodes():

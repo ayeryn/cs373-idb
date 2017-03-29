@@ -52,8 +52,14 @@ class Character(db.Model):
     mother = db.Column(db.String)
     spouse = db.Column(db.String)
     house = db.Column(db.String)
-    played_by = db.Column(db.String, unique=True)
+    actor = db.Column(db.String, unique=True)
 
-    def __init__(self, name):
+    def __init__(self, name, titles, father, mother, spouse, house, actor):
         self.name = name
+        self.titles = titles
+        self.father = father
+        self.mother = mother
+        self.spouse = spouse
+        self.house = house
+        self.actor = actor
 

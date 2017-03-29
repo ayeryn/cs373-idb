@@ -1,7 +1,6 @@
 
-from app import app as application
+from app import app as application, models, db
 from flask import render_template
-
 
 @application.route('/')
 def index():
@@ -13,19 +12,13 @@ def about():
 
 @application.route('/characters')
 def characters():
-    return render_template('characters.html')
+    characters = models.Character.query.all()
+    return render_template('characters.html', characters=characters)
 
-@application.route('/jonsnow')
-def jon_snow():
-    return render_template('jon_snow.html')
-
-@application.route('/cerseilannister')
-def cersei_lannister():
-    return render_template('cersei_lannister.html')
-
-@application.route('/tommenbaratheon')
-def tommen_baratheon():
-    return render_template('tommen_baratheon.html')
+@application.route('/characters/<name>', methods=['GET', 'POST'])
+def character(name):
+    character = models.Character.query.filter_by(name=name).first()
+    return render_template('character.html', character=character)
 
 @application.route('/houses')
 def houses():

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    
+    <title>{{ character.name }}</title>
+
+    <!-- Include CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/individual.css') }}">
+
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body id="ind-home">
+    <div id="nav-row">
+        <div ng-app>
+            <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
+        </div>
+    </div>
+    <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
+        <header class="title-header">
+          <h1>{{ character.name }}</h1>
+        </header>
+        <div class="container-fluid">
+            <div id="main-content">
+                <div class="row">
+                    <div class="col-md-offset-2 col-sm-8">
+                        <table class="info-table">
+                            <tr>
+                                <td>Titles</td>
+                                <td>{{ character.titles }}</td>
+                            </tr>
+                            <tr>
+                                <td>House</td>
+                                <td><a href="/housestark" class="hvr-pop
+                                link">{{ character.house }}</a></td>
+                            </tr>
+                            <tr>
+                                <td>Father</td>
+                                <td>{{ character.father }}</td>
+                            </tr>
+                            <tr>
+                                <td>Mother</td>
+                                <td>{{ character.mother }}</td>
+                            </tr>
+                            <tr>
+                                <td>Spouse</td>
+                                <td>{{ character.spouse }}</td>
+                            </tr>
+                            <tr>
+                                <td>Played By</td>
+                                <td>{{ character.actor }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="return-link">
+                <div class="row"><a href="/characters" class="hvr-pop link">Back To All Characters</a></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    </body>
+
+    </html>

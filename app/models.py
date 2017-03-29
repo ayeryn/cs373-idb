@@ -48,11 +48,10 @@ class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     titles = db.Column(db.String, unique=True)
-    aliases = db.Column(db.String, unique=True)
     father = db.Column(db.String)
     mother = db.Column(db.String)
     spouse = db.Column(db.String)
-    allegiances = db.Column(db.String)
+    house = db.Column(db.String)
     played_by = db.Column(db.String, unique=True)
 
     def __init__(self, name):

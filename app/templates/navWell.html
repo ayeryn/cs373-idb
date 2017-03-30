@@ -2,62 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Navigation Well">
-    <meta name="author" content="Sarah Gorring">
-
     <!-- Include CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
 
-    <!-- Include Bootstrap CDN -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <title>You Know Nothing</title>
 </head>
 
 <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-fixed-top nav" id="top-nav">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <div class="container">
-            <div class="navbar-header">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button class="navbar-toggle" onclick="mobileMenu()">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">You Know Nothing</a>
+                <a class="navbar-brand page-scroll" href="/">You know nothing</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right" id="top-nav">
-                    <li class="active"><a class="hvr-underline-from-center" href="/">Home</a></li>
-                    <li><a class="hvr-underline-from-center" href="/about">About</a></li>
-                    <li><a class="hvr-underline-from-center" href="/episodes">Episodes</a></li>
-                    <li><a class="hvr-underline-from-center" href="/houses">Houses</a></li>
-                    <li><a class="hvr-underline-from-center" href="/characters">Characters</a></li>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="/"></a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll hvr-underline-from-center" href="/about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll hvr-underline-from-center" href="/episodes">Episodes</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll hvr-underline-from-center" href="/houses">Houses</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll hvr-underline-from-center" href="/characters">Characters</a>
+                    </li>
                 </ul>
-            <div>
+            </div>
         </div>
     </nav>
+    <script>
+    function mobileMenu() {
+        var x = document.getElementById('navbar-collapse-1');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+    $(function() {
+        $('a.page-scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--     // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    // <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    // <script src="../../dist/js/bootstrap.min.js"></script> -->
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--     // <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top'
+    })
+
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+    </script>
 </body>
 
 </html>

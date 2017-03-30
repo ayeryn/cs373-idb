@@ -1,0 +1,73 @@
+html{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#home {
+    margin:0;
+    background-color: #fff;
+    height: inherit;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#nav-row {
+    width:100%;
+    background-color: black;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    height: calc(100% - 100px);
+}
+
+
+@font-face {
+    font-family: got-font;
+    src: url(got.ttf);
+}
+
+#navbar a:hover {
+	color: #a2482e;
+	background-color: black;
+}
+.title-header {
+    font-family: got-font;
+    text-align: center;
+	color: #a2482e;
+    vertical-align: middle;
+    width: 100%;
+    border-color: black;
+    padding-top: 10px;
+}
+
+.navbar-brand {
+	font-family: got-font;
+	color: #9E8469;
+}
+
+.navbar-brand:hover{
+	color: #a2482e;
+}
+
+.navbar-fixed-top {
+    width: 100%;
+}
+
+.nav{
+	background-color: black;
+	color: #9E8469;
+}
+
+#top-nav{
+    margin-bottom: 0;
+    position: inherit;
+}
+
+.navbar-collapse a{
+	color: #9E8469;
+}

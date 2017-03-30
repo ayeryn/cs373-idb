@@ -15,10 +15,10 @@ def get_characters():
         c = models.Character(name=values['name'],
                              titles=', '.join(values['titles']), father=values['father'],
                              mother=values['mother'], spouse=values['spouse'],
-                             house=values['house'], actor=values['actor'])
-
-	db.session.add(c)
-	db.session.commit()
+                             house=values['house'], actor=values['actor'],
+                             imageLink=values['imageLink'])
+        db.session.add(c)
+        db.session.commit()
 
 def get_houses():
     r = requests.get("https://api.got.show/api/houses/")
@@ -29,8 +29,8 @@ def get_houses():
         values.update(house)
         c = models.House(name=values['name'],
                          region=values['region'], words=values['words'],
-                         current_lord=values['current_lord'], title=values['title'],overlord=values['overlord'])
-
+                         current_lord=values['current_lord'], title=values['title'],
+                         overlord=values['overlord'], imageLink=values['imageLink'])
         db.session.add(c)
         db.session.commit()
 

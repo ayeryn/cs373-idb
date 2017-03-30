@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
+
     <title>House Stark of Winterfell</title>
 
     <!-- Include CSS stylesheet -->
@@ -41,13 +41,8 @@
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-sm-offset-2 col-sm-6">
+                    <div class="col-sm-offset-2 col-md-6">
                         <table class="info-table">
-                            <tr>
-                                {% if house.imageLink %}
-                                  <img src="https://api.got.show/{{ house.imageLink }}" class="centered">
-                                {% endif %}
-                            </tr>
                             <tr>
                                 <td>Region</td>
                                 <td>{{ house.region }}</td>
@@ -69,6 +64,11 @@
                                 <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="col-md-3">
+                        {% if house.imageLink %}
+                        <img src="https://api.got.show/{{ house.imageLink }}" class="centered">
+                        {% endif %}
                     </div>
                 </div>
             </div>

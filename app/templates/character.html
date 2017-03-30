@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
+
     <title>{{ character.name }}</title>
 
     <!-- Include CSS stylesheet -->
@@ -41,14 +41,8 @@
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-md-offset-2 col-sm-8">
+                    <div class="col-md-offset-2 col-md-5">
                         <table class="info-table">
-                            <tr>
-                              {% if character.imageLink %}
-                                <img
-                                src="https://api.got.show/{{character.imageLink}}", class="centered">
-                              {% endif %}
-                            </tr>
                             <tr>
                                 <td>Titles</td>
                                 <td>{{ character.titles }}</td>
@@ -75,6 +69,11 @@
                                 <td>{{ character.actor }}</td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="col-md-3">
+                        {% if character.imageLink %}
+                          <img src="https://api.got.show/{{character.imageLink}}", class="centered">
+                        {% endif %}
                     </div>
                 </div>
             </div>

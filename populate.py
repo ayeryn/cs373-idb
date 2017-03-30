@@ -17,8 +17,8 @@ def get_characters():
                              mother=values['mother'], spouse=values['spouse'],
                              house=values['house'], actor=values['actor'],
                              imageLink=values['imageLink'])
-	db.session.add(c)
-	db.session.commit()
+        db.session.add(c)
+        db.session.commit()
 
 def get_houses():
     r = requests.get("https://api.got.show/api/houses/")

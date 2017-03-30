@@ -30,14 +30,16 @@ class House(db.Model):
     current_lord = db.Column(db.String)
     title = db.Column(db.String)
     overlord = db.Column(db.String)
+    imageLink = db.Column(db.String, unique=True)
 
-    def __init__(self, name, region, words, current_lord, title, overlord):
+    def __init__(self, name, region, words, current_lord, title, overlord, imageLink):
         self.name = name
         self.region = region
         self.words = words
         self.current_lord = current_lord
         self.title = title
         self.overlord = overlord
+        self.imageLink = imageLink
 
 """
 Characters model
@@ -52,8 +54,9 @@ class Character(db.Model):
     spouse = db.Column(db.String)
     house = db.Column(db.String)
     actor = db.Column(db.String, unique=True)
+    imageLink = db.Column(db.String, unique=True)
 
-    def __init__(self, name, titles, father, mother, spouse, house, actor):
+    def __init__(self, name, titles, father, mother, spouse, house, actor, imageLink):
         self.name = name
         self.titles = titles
         self.father = father
@@ -61,4 +64,4 @@ class Character(db.Model):
         self.spouse = spouse
         self.house = house
         self.actor = actor
-
+        self.imageLink = imageLink

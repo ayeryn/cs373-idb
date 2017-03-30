@@ -15,7 +15,8 @@ def get_characters():
                 c = models.Character(name=values['name'],
                                     titles=', '.join(values['titles']), father=values['father'],
                                     mother=values['mother'], spouse=values['spouse'],
-                                    house=values['house'], actor=values['actor'])
+                                    house=values['house'], actor=values['actor'],
+                                    imageLink=values['imageLink'])
 
 		db.session.add(c)
 		db.session.commit()
@@ -27,7 +28,10 @@ def get_houses():
     for house in data:
                 values = attr.copy()
                 values.update(house)
-                c = models.House(name=values['name'],region=values['region'], words=values['words'],current_lord=values['current_lord'], title=values['title'],overlord=values['overlord'])
+                c = models.House(name=values['name'],
+                                 region=values['region'], words=values['words'],
+                                 current_lord=values['current_lord'], title=values['title'],
+                                 overlord=values['overlord'], imageLink=values['imageLink'])
 
         	db.session.add(c)
         	db.session.commit()

@@ -44,6 +44,11 @@
                     <div class="col-sm-offset-2 col-sm-6">
                         <table class="info-table">
                             <tr>
+                                {% if house.imageLink %}
+                                  <img src="https://api.got.show/{{ house.imageLink }}" class="centered">
+                                {% endif %}
+                            </tr>
+                            <tr>
                                 <td>Region</td>
                                 <td>{{ house.region }}</td>
                             </tr>
@@ -64,9 +69,6 @@
                                 <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142" alt="">
                     </div>
                 </div>
             </div>

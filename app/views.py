@@ -40,15 +40,5 @@ def episode(name):
     episode = models.Episode.query.filter_by(name=name).first()
     return render_template('episode.html', episode=episode)
 
-@application.route('/s1e1')
-def s1e1():
-    return render_template('episodes1e1.html')
 
-@application.route('/s1e2')
-def s1e2():
-    return render_template('episodes1e2.html')
-
-@application.route('/s1e3')
-def s1e3():
-    return render_template('episodes1e3.html')
 

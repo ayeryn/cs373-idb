@@ -1,5 +1,5 @@
-from app import app, db, models
-from populate import get_episodes
+from app import app as application, db, models
 
 if __name__ == "__main__":
-    	app.run(debug=True)
+    application.run(debug=True)
+

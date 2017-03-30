@@ -44,12 +44,18 @@
                     <div class="col-md-offset-2 col-sm-8">
                         <table class="info-table">
                             <tr>
+                              {% if character.imageLink %}
+                                <img
+                                src="https://api.got.show/{{character.imageLink}}", class="centered">
+                              {% endif %}
+                            </tr>
+                            <tr>
                                 <td>Titles</td>
                                 <td>{{ character.titles }}</td>
                             </tr>
                             <tr>
                                 <td>House</td>
-                                <td><a href="/housestark" class="hvr-pop
+                                <td><a href="/houses/{{ character.house }}" class="hvr-pop
                                 link">{{ character.house }}</a></td>
                             </tr>
                             <tr>

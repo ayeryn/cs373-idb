@@ -67,13 +67,30 @@
 }
 
 #twitter-widget-0{
-	max-height: 450px;
+	margin-left: 40px;
 }
 
-.typed-text{
-
+a.twitter-timeline {
+  /* Buttonish */
+  display: inline-block;
+  padding: 6px 12px 6px 30px;
+  margin: 10px;
+  /* Text */
+  font: normal 12px/18px Helvetica, Arial, sans-serif;
+  color: #333;
+  white-space: nowrap;
 }
 
+a.twitter-timeline:hover,
+a.twitter-timeline:focus {
+  background-color: #dedede;
+}
+
+/* Color Highlight for keyboard navigation */
+a.twitter-timeline:focus {
+  outline: none;
+  border-color: #0089cb;
+}
 .typed-cursor{
    	opacity: 1;
     -webkit-animation: blink 0.7s infinite;

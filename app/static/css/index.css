@@ -14,6 +14,11 @@
 	color: black;
 }
 
+.row.col-md-7{
+	float: left;
+	position: absolute;
+}
+
 .lighter{
 	color: #a2482e;
 }
@@ -61,13 +66,7 @@
 	z-index: 2;
 }
 
-.twitter{
-	margin-left: 35px;
-	width: 40%;
-	margin-right: 10px;
-}
-
-a.twitter-timeline {
+/*a.twitter-timeline {
   /* Buttonish */
   display: inline-block;
   padding: 6px 12px 6px 30px;
@@ -93,7 +92,7 @@ a.twitter-timeline:focus {
 a.twitter-timeline:focus {
   outline: none;
   border-color: #0089cb;
-}
+}*/
 
 .typed-cursor{
    	opacity: 1;

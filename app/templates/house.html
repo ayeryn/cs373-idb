@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
-    <title>House Stark of Winterfell</title>
+
+    <title>{{house.name}}</title>
 
     <!-- Include CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -34,41 +34,47 @@
             <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
         </div>
     </div>
-    <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
+    <div class="col-md-offset-1 col-md-10">
         <header class="title-header">
             <h1>{{house.name}}</h1>
         </header>
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-sm-offset-2 col-sm-6">
-                        <table class="info-table">
-                            <tr>
-                                {% if house.imageLink %}
-                                  <img src="https://api.got.show/{{ house.imageLink }}" class="centered">
-                                {% endif %}
-                            </tr>
-                            <tr>
-                                <td>Region</td>
-                                <td>{{ house.region }}</td>
-                            </tr>
-                            <tr>
-                                <td>Words</td>
-                                <td>{{ house.words }}</td>
-                            </tr>
-                            <tr>
-                                <td>Current Lord</td>
-                                <td>{{ house.current_lord }}</td>
-                            </tr>
-                            <tr>
-                                <td>Title</td>
-                                <td>{{ house.title }}</td>
-                            </tr>
-                            <tr>
-                                <td>Over Lord</td>
-                                <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
-                            </tr>
-                        </table>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="pull-center">
+                            {% if house.imageLink %}
+                            <img src="https://api.got.show/{{ house.imageLink }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-6">
+                        <div class="pull-center">
+                            <div class="text-left">
+                                <table class="info-table">
+                                    <tr>
+                                        <td>Region</td>
+                                        <td>{{ house.region }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Words</td>
+                                        <td>{{ house.words }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Current Lord</td>
+                                        <td>{{ house.current_lord }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Title</td>
+                                        <td>{{ house.title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Over Lord</td>
+                                        <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

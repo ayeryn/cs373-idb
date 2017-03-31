@@ -66,6 +66,14 @@
 	z-index: 2;
 }
 
+#twitter-widget-0{
+	max-height: 450px;
+}
+
+.typed-text{
+
+}
+
 .typed-cursor{
    	opacity: 1;
     -webkit-animation: blink 0.7s infinite;

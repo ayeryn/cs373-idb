@@ -30,9 +30,8 @@ got:
 
 clean:
 	rm -f  .coverage
-	rm -f  *.pyc
+	rm -f  *pyc
 	rm -rf __pycache__
-	rm -f  app/*.pyc
 
 config:
 	git config -l

@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
-    <title>Winter Is Coming</title>
+
+    <title>{{episode.name}}</title>
 
     <!-- Include CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -34,34 +34,36 @@
             <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
         </div>
     </div>
-    <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
+    <div class="col-md-offset-1 col-md-10">
         <header class="title-header">
             <h1>{{episode.name}}</h1>
         </header>
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-md-offset-2 col-sm-8">
-                        <table class="info-table">
-                            <tr>
-                                <td>Season</td>
-                                <td>{{episode.season}}</td>
-                            </tr>
-                            <tr>
-                                <td>Previous Episode</td>
-                                <td><a href="/episodes/{{episode.predecessor}}" class="hvr-pop link">{{ episode.predecessor }}</a></td>
-                            </tr>
-                            <tr>
-                                <td>Next Episode</td>
-                                <td><a href="/episodes/{{episode.successor}}" class="hvr-pop link">{{ episode.successor }}</a></td>
-
-
-                            </tr>
-                            <tr>
-                                <td>Characters</td>
-                                <td></td>
-                            </tr>
-                        </table>
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-sm-8">
+                        <div class="pull-center">
+                            <div class="text-left">
+                                <table class="info-table">
+                                    <tr>
+                                        <td>Season</td>
+                                        <td>{{episode.season}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Previous Episode</td>
+                                        <td><a href="/episodes/{{episode.predecessor}}" class="hvr-pop link">{{ episode.predecessor }}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Next Episode</td>
+                                        <td><a href="/episodes/{{episode.successor}}" class="hvr-pop link">{{ episode.successor }}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Characters</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

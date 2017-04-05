@@ -56,7 +56,7 @@
         <table id="myTable2" cellpadding="0" cellspacing="0" border="0">
           {% block content %} 
             <tbody>
-                {% for character in characters %}
+                {% for character in characters.items %}
                 <tr>
                     <td>{{ character.id }}</td>
                     <td><a href="{{ url_for('character', name=character.name)
@@ -75,13 +75,15 @@
         </table>
     </div>
     <div class="page">
-        <ul class="pagination">
+    {% if characters.has_prev %}<a href="{{ url_for('characters', page=characters.prev_num) }}">&lt;&lt; Newer posts</a>{% else %}&lt;&lt; Newer posts{% endif %} | 
+    {% if characters.has_next %}<a href="{{ url_for('characters', page=characters.next_num) }}">Older posts &gt;&gt;</a>{% else %}Older posts &gt;&gt;{% endif %}
+<!--         <ul class="pagination">
           <li><a class="active">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
-        </ul>
+        </ul> -->
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
       <!-- Latest compiled and minified JavaScript -->

@@ -11,8 +11,8 @@ def about():
     return render_template('about.html')
 
 @application.route('/characters')
-def characters():
-    characters = models.Character.query.all().paginate(1,5, False).items
+def characters(page=1):
+    characters = models.Character.query.paginate(page, 20, False)
     return render_template('characters.html', characters=characters)
 
 @application.route('/characters/<name>', methods=['GET', 'POST'])

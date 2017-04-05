@@ -26,6 +26,7 @@ check:
     echo "success";
 
 got:
+	pip install anapioficeandfire
 	python run.py
 
 clean:

@@ -10,8 +10,10 @@ def index():
 def about():
     return render_template('about.html')
 
-@application.route('/characters')
+@application.route('/characters', methods=['GET', 'POST'])
+@application.route('/characters/<int:page>', methods=['GET', 'POST'])
 def characters(page=1):
+    print(page)
     characters = models.Character.query.paginate(page, 20, False)
     return render_template('characters.html', characters=characters)
 

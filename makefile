@@ -1,6 +1,6 @@
 FILES :=                              \
     apiary.apib                       \
-    IDB1.log                          \
+    IDB2.log                          \
     models.html                       \
     app/models.py                     \
     app/tests.py                      \

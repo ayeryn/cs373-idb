@@ -44,21 +44,24 @@
         <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
         <script src="typed.js"></script>
         <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            Typed.new(".element", {
-                strings: ["You know nothing, Jon Snow.", "When you play a Game of Thrones, you win or you die.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today", "Hodor", "I drink and I know things"],
-                typeSpeed: 75,
-                backSpeed: 35,
-                backDelay: 1250,
-                loop: true,
+
+            document.addEventListener("DOMContentLoaded", function(){
+                Typed.new(".element", {
+                    strings: ["You know nothing, Jon Snow.", "When you play the Game of Thrones, you win or you die.","Chaos isn't a pit. Chaos is a ladder.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today.", "Hodor", "I drink and I know things", "We go forward, only forward.", "The man who passes the sentence should swing the sword."],
+                    typeSpeed: 75,
+                    backSpeed: 35,
+                    backDelay: 1250,
+                    loop: true,
+                });
             });
         });
         </script>
         <span class="element"></span>
     </div>
+
     <div class="row">
         <!-- START THE FEATURETTES -->
-            <div class="col-md-7 col-md-push-5">
+            <div class="col-md-6 col-md-push-5">
                 <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
                 <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
 <!--             </div>
@@ -86,10 +89,11 @@
                 </div>
             </div>
             <div>
-                <div class="col-md-5 col-md-pull-7" id="twitter">
+                <div class="col-md-4 col-md-pull-6" id="twitter">
                     <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones" data-width="525" data-height="700">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
+
     </div>
     <!-- /END THE FEATURETTES -->
 

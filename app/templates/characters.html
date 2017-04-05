@@ -74,17 +74,31 @@
             {% endblock %}
         </table>
     </div>
-    <div class="page">
-    {% if characters.has_prev %}<a href="{{ url_for('characters', page=characters.prev_num) }}">&lt;&lt; Newer posts</a>{% else %}&lt;&lt; Newer posts{% endif %} | 
-    {% if characters.has_next %}<a href="{{ url_for('characters', page=characters.next_num) }}">Older posts &gt;&gt;</a>{% else %}Older posts &gt;&gt;{% endif %}
-<!--         <ul class="pagination">
-          <li><a class="active">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-        </ul> -->
-    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+        {% if characters.has_prev %}
+        <li class="page-item">
+          <a class="page-link" href="{{ url_for('characters', page=characters.prev_num) }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        {% endif %} 
+        <li class="page-item active"><a class="page-link" href="{{ url_for('characters', page=characters.page) }}">{{characters.page}}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num) }}">{{characters.next_num}}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+1}}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+2}}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+3}}</a></li>
+        {% if characters.has_next %}<li class="page-item">
+          <a class="page-link" href="{{ url_for('characters', page=characters.next_num) }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>{% endif %}
+      </ul>
+    </nav>
+
     <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

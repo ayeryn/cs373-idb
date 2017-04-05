@@ -39,7 +39,7 @@ th{
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   color: #FBE3A7;
   text-transform: uppercase;
 }
@@ -50,9 +50,18 @@ td{
   text-align: left;
   vertical-align:middle;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   color: #FBE3A7;
   border-bottom: solid 2px rgba(255,255,255,0.1);
+}
+
+td a{
+  color: #000;
+  font-weight: 400;
+}
+
+td a:hover{
+  color: #a2482e;
 }
 
 /* for custom scrollbar for webkit browser*/

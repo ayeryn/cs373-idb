@@ -12,7 +12,7 @@ def about():
 
 @application.route('/characters')
 def characters():
-    characters = models.Character.query.all()
+    characters = models.Character.query.all().paginate(1,5, False).items
     return render_template('characters.html', characters=characters)
 
 @application.route('/characters/<name>', methods=['GET', 'POST'])

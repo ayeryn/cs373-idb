@@ -100,7 +100,7 @@ a.twitter-timeline:focus {
 }
 
 .col-md-push-5{
-	margin-left: 15px;
+	text-align: center;
 }
 
 @keyframes blink{

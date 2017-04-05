@@ -1,8 +1,7 @@
 body{
   background: #000000; /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A2482E , #000000); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A2482E , #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+  background: -webkit-linear-gradient(to right, #A2482E , #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A2482E , #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
   margin: 50px;
 }
 
@@ -22,17 +21,19 @@ table{
 }
 
 .tbl-header{
-  background-color: rgba(255,255,255,0.3);
+  background-color: #000;
   margin-left: 5%;
   margin-right: 5%;
  }
+
 .tbl-content{
-  height:300px;
+  height: 550px;
   overflow-x:auto;
   margin-top: 0px;
   border: 1px solid #FBE3A7;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: #5D3F2D;
 }
 
 th{
@@ -43,6 +44,7 @@ th{
   color: #FBE3A7;
   text-transform: uppercase;
 }
+
 td{
   padding: 20px 15px;
   padding-left: 15px;

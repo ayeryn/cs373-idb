@@ -30,7 +30,8 @@ got:
 	python run.py
 
 unit-tests:
-	python app/tests.py
+	python runTests.py
+	#python app/tests.py
 
 clean:
 	rm -f  .coverage

@@ -75,14 +75,9 @@ html body {
 	margin-left: calc(50% - 77px);
 }
 
+
 /* Things to move to style.css */
 .section-header {
 	font-family: got-font;
 	text-align: center;
-}
-
-.row.text-center > div {
-    display: inline-block;
-    float: none;
-	padding-bottom: 20px;
 }

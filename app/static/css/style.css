@@ -3,6 +3,11 @@ html{
     overflow-x: hidden;
 }
 
+.row.text-center > div {
+    display: inline-block;
+    float: none;
+}
+
 #home {
     margin:0;
     background-color: #fff;

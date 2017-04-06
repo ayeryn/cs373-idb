@@ -84,4 +84,3 @@ def get_episodes():
         db.session.commit()
 
 
-get_episodes()

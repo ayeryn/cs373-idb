@@ -22,6 +22,16 @@ class Episode(db.Model):
         self.successor = successor
         self.imageLink = imageLink
 
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'season': self.season,
+           'predecessor': self.predecessor,
+           'successor':self.successor,
+        }
+
 """
 House model
 Attributes: name, region, words, current_lord, title, overlord
@@ -45,6 +55,16 @@ class House(db.Model):
         self.overlord = overlord
         self.imageLink = imageLink
 
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'current_lord':self.current_lord,
+           'region': self.region,
+           'title':self.title,
+           'overlord':self.overlord,
+        }
 """
 Characters model
 Attributes: name, titles, aliases, father, mother, spouse, allegiance, played_by
@@ -69,3 +89,16 @@ class Character(db.Model):
         self.house = house
         self.actor = actor
         self.imageLink = imageLink
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'titles':self.titles,
+           'father': self.father,
+           'mother':self.mother,
+           'spouse':self.spouse,
+           'house':self.house,
+           'actor':self.actor
+        }

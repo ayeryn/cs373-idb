@@ -11,12 +11,14 @@ class Episode(db.Model):
     predecessor = db.Column(db.String, unique=True)
     successor = db.Column(db.String, unique=True)
     characters = db.Column(db.String)
+    imageLink = db.Column(db.String, unique=True)
 
-    def __init__(self, name, season, predecessor, successor):
+    def __init__(self, name, season, predecessor, successor, imageLink):
         self.name = name
         self.season = season
         self.predecessor = predecessor
         self.successor = successor
+        self.imageLink = imageLink
 
 """
 House model

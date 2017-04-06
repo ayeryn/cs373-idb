@@ -41,8 +41,15 @@
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-sm-8">
+                    <div class="col-xs-12 col-sm-12 col-md-4">
                         <div class="pull-center">
+                          {% if episode.imageLink %}
+                          <img src="{{episode.imageLink}}", class="centered">
+                          {% endif %} 
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-6">
+                         <div class="pull-center">
                             <div class="text-left">
                                 <table class="info-table">
                                     <tr>

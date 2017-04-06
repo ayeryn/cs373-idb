@@ -58,20 +58,35 @@
                                     </tr>
                                     <tr>
                                         <td>House</td>
-                                        <td><a href="/houses/{{character.house}}" class="hvr-pop
-                                            link">{{ character.house }}</a></td>
+                                        {% if character.house %}
+                                        <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
+                                        {% else %}
+                                        <td>{{ character.house }}</td>
+                                        {% endif %}
                                         </tr>
                                         <tr>
                                             <td>Father</td>
+                                            {% if character.father %}
+                                            <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
+                                            {% else %}
                                             <td>{{ character.father }}</td>
+                                            {% endif %}
                                         </tr>
                                         <tr>
                                             <td>Mother</td>
+                                            {% if character.mother %}
+                                            <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
+                                            {% else %}
                                             <td>{{ character.mother }}</td>
+                                            {% endif %}
                                         </tr>
                                         <tr>
                                             <td>Spouse</td>
+                                            {% if character.spouse %}
+                                            <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
+                                            {% else %}
                                             <td>{{ character.spouse }}</td>
+                                            {% endif %}
                                         </tr>
                                         <tr>
                                             <td>Played By</td>

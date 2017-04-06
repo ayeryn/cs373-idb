@@ -68,6 +68,36 @@
 			{% endblock %}
 		</table>
 	</div>
+<<<<<<< HEAD
+=======
+	<div class = "tbl-content">
+		<table id="myTable2" cellpadding="0" cellspacing="0" border="0">
+			{% block content %}
+			<tbody>
+				{% for house in houses.items %}
+				<tr>
+					<td>{{ house.id }}</td>
+					<td><a href="{{ url_for('house', name=house.name) }}">{{ house.name }}</a></td>
+					<td>{{ house.region }}</td>
+					<td>{{ house.words }}</td>
+          {% if house.current_lord %}
+					<td><a href="characters/{{ house.current_lord }}">{{ house.current_lord }}</a></td>
+          {% else %}
+					<td>{{ house.current_lord }}</td>
+          {% endif %} 
+					<td>{{ house.title }}</td>
+          {% if house.overlord %}
+					<td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
+          {% else %}
+					<td>{{ house.overlord }}</td>
+          {% endif %}
+				</tr>
+				{%  endfor %}
+			</tr>
+		</tbody>
+		{% endblock %}
+	</table>
+>>>>>>> 002cb364315dfdb5b2ad109615fa15433915df09
 </div>
 
 <div class="row text-center" style="margin:30px">

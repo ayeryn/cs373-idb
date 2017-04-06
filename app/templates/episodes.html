@@ -55,8 +55,16 @@
 					<td>{{ episode.id }}</td>
 					<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
 					<td>{{ episode.season }}</td>
+          {% if episode.predecessor %}
+					<td><a href="{{ url_for('episode', name=episode.predecessor)}}">{{ episode.predecessor }}</a></td>
+          {% else %}
 					<td>{{ episode.predecessor}}</td>
-					<td>{{ episode.successor }}</td>
+          {% endif %}
+          {% if episode.successor %}
+					<td><a href="{{ url_for('episode', name=episode.successor)}}">{{ episode.successor }}</a></td>
+          {% else %}
+					<td>{{ episode.successor}}</td>
+          {% endif %}
 					<td>-</td>
 				</tr>
 				{%  endfor %}

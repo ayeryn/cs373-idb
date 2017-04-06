@@ -1,6 +1,6 @@
 from io import StringIO
 from unittest import main, TestCase
-import models
+from app import models
 
 #
 # Do Function/File imports here once they exist
@@ -19,16 +19,16 @@ class TestModels(TestCase):
     # ---------
 
     def test_episode_insert(self):
-        test_episode = {"name": "TestEpisode", "season": "3", "previous_episode": "TestPrevEp",
-                        "next_episode": "TestNextEp", "characters": "Jon Snow, Benjen Stark, Eddard Stark"}
+        test_episode = {"name": "TestEpisode", "season": "3", "predecessor": "TestPrevEp",
+                        "successor": "TestNextEp", "characters": "Jon Snow, Benjen Stark, Eddard Stark"}
         
         ep = models.Episode(**test_episode)
         self.session.add(ep)
         result = self.session.query(Episode).filter(Episode.name == "TestEpisode").first()
 
         self.assertEqual(result.season, "3")
-        self.assertEqual(result.next_episode, "TestNextEp")
-        self.assertEqual(result.previous_episode, "TestPrevEp")
+        self.assertEqual(result.predecessor, "TestNextEp")
+        self.assertEqual(result.successor, "TestPrevEp")
         self.assertEqual(result.characters, "Jon Snow, Benjen Stark, Eddard Stark")
 
 
@@ -51,7 +51,7 @@ class TestModels(TestCase):
     # -------
 
     def test_house_insert(self):
-        test_house = {"name": "TestHouse", "region": "Norf", "words": "DA KING OF DA NORF", "current_lord": "TestLord", "heir": "TestHeir", "overlord": "TestOverLord"}
+        test_house = {"name": "TestHouse", "region": "Norf", "words": "DA KING OF DA NORF", "current_lord": "TestLord",  "overlord": "TestOverLord"}
 
         h = models.House(**test_house)
         self.session.add(h)
@@ -60,7 +60,6 @@ class TestModels(TestCase):
         self.assertEqual(result.region, "Norf")
         self.assertEqual(result.words, "DA KING OF DA NORF")
         self.assertEqual(result.current_lord, "TestLord")
-        self.assertEqual(result.heir, "TestHeir")
         self.assertEqual(result.overlord, "TestOverLord")
 
 
@@ -85,8 +84,7 @@ class TestModels(TestCase):
 
     def test_character_insert(self):
         test_character = {"name": "Kieran", "titles": "Lord of the Python Tests", "aliases": "-",
-                        "father": "OOP", "mother": "JavaScript", "spouse" : "Madam Tests.py",
-                        "allegiances" : "House Java, House HTMl, House CSS", "played_by" : "Himself"}
+                        "father": "OOP", "mother": "JavaScript", "spouse" : "Madam Tests.py", "actor" : "Himself"}
         
         c = models.Character(**test_character)
         self.session.add(c)
@@ -97,8 +95,7 @@ class TestModels(TestCase):
         self.assertEqual(result.father, "OOP")
         self.assertEqual(result.mother, "JavaScript")
         self.assertEqual(result.spouse, "Madam Tests.py")
-        self.assertEqual(result.allegiances, "House Java, House HTMl, House CSS")
-        self.assertEqual(result.played_by, "Himself")
+        self.assertEqual(result.actor, "Himself")
 
 
 	def test_character_delete(self):

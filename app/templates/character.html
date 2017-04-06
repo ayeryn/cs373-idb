@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    
+
     <title>{{ character.name }}</title>
 
     <!-- Include CSS stylesheet -->
@@ -34,56 +34,61 @@
             <nav class="navbar" style="margin: 0;">{% include 'navWell.html' %}</nav>
         </div>
     </div>
-    <div class="col-md-offset-1 col-md-10" style="background-color: black; margin-top: 30px; height: calc(100% - 110px);">
+    <div class="col-md-offset-1 col-md-10">
         <header class="title-header">
-          <h1>{{ character.name }}</h1>
+            <h1>{{ character.name }}</h1>
         </header>
         <div class="container-fluid">
             <div id="main-content">
                 <div class="row">
-                    <div class="col-md-offset-2 col-sm-8">
-                        <table class="info-table">
-                            <tr>
-                              {% if character.imageLink %}
-                                <img
-                                src="https://api.got.show/{{character.imageLink}}", class="centered">
-                              {% endif %}
-                            </tr>
-                            <tr>
-                                <td>Titles</td>
-                                <td>{{ character.titles }}</td>
-                            </tr>
-                            <tr>
-                                <td>House</td>
-                                <td><a href="/housestark" class="hvr-pop
-                                link">{{ character.house }}</a></td>
-                            </tr>
-                            <tr>
-                                <td>Father</td>
-                                <td>{{ character.father }}</td>
-                            </tr>
-                            <tr>
-                                <td>Mother</td>
-                                <td>{{ character.mother }}</td>
-                            </tr>
-                            <tr>
-                                <td>Spouse</td>
-                                <td>{{ character.spouse }}</td>
-                            </tr>
-                            <tr>
-                                <td>Played By</td>
-                                <td>{{ character.actor }}</td>
-                            </tr>
-                        </table>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="pull-center">
+                            {% if character.imageLink %}
+                            <img src="https://api.got.show/{{character.imageLink}}", class="centered">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-6">
+                        <div class="pull-center">
+                            <div class="text-left">
+                                <table class="info-table">
+                                    <tr>
+                                        <td>Titles</td>
+                                        <td>{{ character.titles }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>House</td>
+                                        <td><a href="/housestark" class="hvr-pop
+                                            link">{{ character.house }}</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Father</td>
+                                            <td>{{ character.father }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mother</td>
+                                            <td>{{ character.mother }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Spouse</td>
+                                            <td>{{ character.spouse }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Played By</td>
+                                            <td>{{ character.actor }}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="return-link">
+                    <div class="row"><a href="/characters" class="hvr-pop link">Back To All Characters</a></div>
+                </div>
             </div>
-            <div class="return-link">
-                <div class="row"><a href="/characters" class="hvr-pop link">Back To All Characters</a></div>
-            </div>
-        </div>
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    </body>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+        </body>
 
-    </html>
+        </html>

@@ -1,6 +1,6 @@
 FILES :=                              \
     apiary.apib                       \
-    IDB1.log                          \
+    IDB2.log                          \
     models.html                       \
     app/models.py                     \
     app/tests.py                      \
@@ -25,10 +25,15 @@ check:
     fi;                                           \
     echo "success";
 
+got:
+	pip install anapioficeandfire
+	python run.py
+
 clean:
 	rm -f  .coverage
 	rm -f  *.pyc
 	rm -rf __pycache__
+	rm -f  app/*.pyc
 
 config:
 	git config -l
@@ -50,4 +55,4 @@ status:
 test: check
 
 log:
-	git log > IDB1.log
+	git log > IDB2.log

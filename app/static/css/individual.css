@@ -68,12 +68,14 @@ img {
 
 .pull-center{
     text-align: center;
+    width: 100%;
 }
 
 .text-left {
     padding-top: 30px;
     display: inline-block;
     text-align: left;
+    width: 100%;
 }
 
 /* Desktop adjustements */
@@ -92,11 +94,12 @@ img {
 
     .pull-center{
         padding-left: 70px;
+        width: 100%;
     }
 
     .text-left{
-        padding-left:100px;
         padding-top: 0;
+        width: 100%;
     }
 
 }

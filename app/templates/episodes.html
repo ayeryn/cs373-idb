@@ -39,6 +39,7 @@
 						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></th>
 						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
 						<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
+						<th> Episode Number<i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
 						<th> Previous Episode <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
 						<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
 						<th> Characters <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
@@ -53,6 +54,7 @@
 						<td>{{ episode.id }}</td>
 						<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
 						<td>{{ episode.season }}</td>
+						<td>{{ episode.nr }}</td>
 						{% if episode.predecessor %}
 						<td><a href="{{ url_for('episode', name=episode.predecessor)}}">{{ episode.predecessor }}</a></td>
 						{% else %}

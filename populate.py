@@ -78,7 +78,8 @@ def get_episodes():
         episode_data = json.loads(episode_r.content)
         if not 'image' in episode_data:
             episode_data['image'] = {'medium': None}
-        c = models.Episode(name=values['name'],season=values['season'], predecessor=values['predecessor'],successor=values['successor'],
+        c = models.Episode(name=values['name'],season=values['season'], nr=values['nr'], 
+                           predecessor=values['predecessor'],successor=values['successor'],
                            imageLink = episode_data['image']['medium'])
         db.session.add(c)
         db.session.commit()

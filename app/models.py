@@ -10,17 +10,19 @@ class Episode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     season = db.Column(db.Integer)
+    nr = db.Column(db.Integer)
     predecessor = db.Column(db.String, unique=True)
     successor = db.Column(db.String, unique=True)
     characters = db.Column(db.String)
     imageLink = db.Column(db.String, unique=True)
 
-    def __init__(self, name, season, predecessor, successor, imageLink):
+    def __init__(self, name, season, nr, predecessor, successor, imageLink):
         self.name = name
         self.season = season
         self.predecessor = predecessor
         self.successor = successor
         self.imageLink = imageLink
+        self.nr = nr
 
     @property
     def serialize(self):

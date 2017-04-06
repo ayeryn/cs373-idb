@@ -55,4 +55,4 @@ status:
 test: check
 
 log:
-	git log > IDB1.log
+	git log > IDB2.log

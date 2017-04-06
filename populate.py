@@ -69,11 +69,10 @@ def get_episodes():
     r = requests.get("https://api.got.show/api/episodes/")
     data = json.loads(r.content)
     attr = dict.fromkeys(dir(models.Episode))
-    index = 1
     for episode in data:
         values = attr.copy()
         values.update(episode)
-        episode_number = index % 10
+        episode_number = episode['nr']
         url = "http://api.tvmaze.com/shows/82/episodebynumber?season=" + str(values['season']) + "&number=" + str(episode_number)
         episode_r = requests.get(url)
         episode_data = json.loads(episode_r.content)
@@ -83,5 +82,6 @@ def get_episodes():
                            imageLink = episode_data['image']['medium'])
         db.session.add(c)
         db.session.commit()
-        index += 1
 
+
+get_episodes()

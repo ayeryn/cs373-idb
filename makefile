@@ -29,6 +29,9 @@ got:
 	pip install anapioficeandfire
 	python run.py
 
+unit-tests:
+	python app/tests.py
+
 clean:
 	rm -f  .coverage
 	rm -f  *pyc

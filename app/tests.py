@@ -1,6 +1,6 @@
 from io import StringIO
 from unittest import main, TestCase
-from app import models
+import models
 
 #
 # Do Function/File imports here once they exist

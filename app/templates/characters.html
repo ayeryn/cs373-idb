@@ -36,7 +36,7 @@
     <h3 class = "page-title">Characters</h3>
     <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <div class="table-responsive">
-            <table class="table model-table" style="margin: 0;">
+            <table id="data-table" class="table model-table" style="margin: 0;">
                 <thead>
                     <tr>
                         <th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
@@ -49,8 +49,6 @@
                         <th> Played By <i id="arrow" class="fa fa-caret-down"  onclick="sortTable(8); myFunction(8)"></i></th>
                     </tr>
                 </thead>
-            </table>
-            <table id="myTable2" class="table model-table">
                 {% block content %}
                 <tbody>
                     {% for character in characters.items %}
@@ -88,7 +86,7 @@
             {% endblock %}
         </table>
     </div>
-    
+
     <div class="row text-center" style="margin:30px">
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">

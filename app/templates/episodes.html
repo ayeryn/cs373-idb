@@ -31,40 +31,40 @@
 		</div>
 	</div>
 	<h3 class = "page-title">Episodes</h3>
-	<div class = "tbl-header">
-		<table cellpadding="0" cellspacing="0" border="0">
-			<thead>
-				<tr>
-					<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></th>
-					<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
-					<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
-					<th> Previous Episode <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
-					<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
-					<th> Characters <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
+	<div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+		<div class="table-responsive">
+			<table class="table model-table" style="margin:0;">
+				<thead>
+					<tr>
+						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></th>
+						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
+						<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
+						<th> Previous Episode <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
+						<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
+						<th> Characters <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
+					</tr>
+				</thead>
+			</table>
+			<table id="myTable2" class="table model-table">
+				{% block content %}
+				<tbody>
+					{% for episode in episodes.items %}
+					<tr>
+						<td>{{ episode.id }}</td>
+						<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
+						<td>{{ episode.season }}</td>
+						<td>{{ episode.predecessor}}</td>
+						<td>{{ episode.successor }}</td>
+						<td>-</td>
+					</tr>
+					{%  endfor %}
 				</tr>
-			</thead>
-		</table>
-	</div>
+			</tbody>
+			{% endblock %}
+			</table>
 
-	<div class = "tbl-content">
-		<table id = "myTable2" cellpadding="0" cellspacing="0" border="0">
-			{% block content %}
-			<tbody>
-				{% for episode in episodes.items %}
-				<tr>
-					<td>{{ episode.id }}</td>
-					<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
-					<td>{{ episode.season }}</td>
-					<td>{{ episode.predecessor}}</td>
-					<td>{{ episode.successor }}</td>
-					<td>-</td>
-				</tr>
-				{%  endfor %}
-			</tr>
-		</tbody>
-		{% endblock %}
-	</table>
-</div>
+		</div>
+	</div>
 
 <div class="row text-center" style="margin:30px">
 	<nav aria-label="Page navigation example">

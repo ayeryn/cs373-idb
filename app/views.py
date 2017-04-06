@@ -10,9 +10,10 @@ def index():
 def about():
     return render_template('about.html')
 
-@application.route('/characters')
-def characters():
-    characters = models.Character.query.all()
+@application.route('/characters', methods=['GET', 'POST'])
+@application.route('/characters/<int:page>', methods=['GET', 'POST'])
+def characters(page=1):
+    characters = models.Character.query.paginate(page, 20, False)
     return render_template('characters.html', characters=characters)
 
 @application.route('/characters/<name>', methods=['GET', 'POST'])
@@ -20,9 +21,10 @@ def character(name):
     character = models.Character.query.filter_by(name=name).first()
     return render_template('character.html', character=character)
 
-@application.route('/houses')
-def houses():
-    houses = models.House.query.all()
+@application.route('/houses', methods=['GET', 'POST'])
+@application.route('/houses/<int:page>', methods=['GET', 'POST'])
+def houses(page=1):
+    houses = models.House.query.paginate(page, 20, False)
     return render_template('houses.html', houses=houses)
 
 @application.route('/houses/<name>', methods=['GET', 'POST'])
@@ -30,9 +32,10 @@ def house(name):
     house = models.House.query.filter_by(name=name).first()
     return render_template('house.html', house=house)
 
-@application.route('/episodes')
-def episodes():
-    episodes = models.Episode.query.all()
+@application.route('/episodes', methods=['GET', 'POST'])
+@application.route('/episodes/<int:page>', methods=['GET', 'POST'])
+def episodes(page=1):
+    episodes = models.Episode.query.paginate(page, 20, False)
     return render_template('episodes.html', episodes=episodes)
 
 @application.route('/episodes/<name>', methods=['GET', 'POST'])

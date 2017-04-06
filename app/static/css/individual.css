@@ -68,15 +68,17 @@ img {
 
 .pull-center{
     text-align: center;
+    width: 100%;
 }
 
 .text-left {
     padding-top: 30px;
     display: inline-block;
     text-align: left;
+    width: 100%;
 }
 
-/* Mobile adjustements */
+/* Desktop adjustements */
 @media(min-width:768px) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
     .col-sm-7, .col-sm-8, .col-sm-9,.col-sm-10, .col-sm-11, .col-sm-12,
@@ -86,17 +88,14 @@ img {
         min-height: calc(100% - 110px);
     }
 
-    .container-fluid {
-        /*margin-top: 30px;*/
-    }
-
     .pull-center{
         padding-left: 70px;
+        width: 100%;
     }
 
     .text-left{
-        padding-left:100px;
         padding-top: 0;
+        width: 100%;
     }
 
 }

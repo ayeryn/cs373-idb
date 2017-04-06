@@ -45,72 +45,71 @@
         <script src="typed.js"></script>
         <script>
 
-            document.addEventListener("DOMContentLoaded", function(){
-                Typed.new(".element", {
-                    strings: ["You know nothing, Jon Snow.", "When you play the Game of Thrones, you win or you die.","Chaos isn't a pit. Chaos is a ladder.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today.", "Hodor", "I drink and I know things", "We go forward, only forward.", "The man who passes the sentence should swing the sword."],
-                    typeSpeed: 75,
-                    backSpeed: 35,
-                    backDelay: 1250,
-                    loop: true,
-                });
+        document.addEventListener("DOMContentLoaded", function(){
+            Typed.new(".element", {
+                strings: ["You know nothing, Jon Snow.", "When you play the Game of Thrones, you win or you die.","Chaos isn't a pit. Chaos is a ladder.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today.", "Hodor", "I drink and I know things", "We go forward, only forward.", "The man who passes the sentence should swing the sword."],
+                typeSpeed: 75,
+                backSpeed: 35,
+                backDelay: 1250,
+                loop: true,
             });
         });
-        </script>
-        <span class="element"></span>
-    </div>
+    });
+    </script>
+    <span class="element"></span>
+</div>
 
-    <div class="row">
-        <!-- START THE FEATURETTES -->
-            <div class="col-md-6 col-md-push-5">
-                <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
-                <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
-<!--             </div>
-            <div class="col-md-7 col-md-push-5"> -->
-                <!-- <div class="row"> -->
-                <div class="col-lg-4">
-                    <img class="img" src="{{url_for('static',
-                    filename='css/images/1490230031_Streamline-19.png')}}" alt="Lannister Sigil" width="100" height="100">
-                    <a href="/episodes"><h2 class="hvr-underline-from-center">Episodes</h2></a>
-                    <p>Catch up on what is happening in the world Ice and Fire by recounting all of your favorite episodes.</p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="img" src="{{url_for('static',
-                    filename='css/images/1490230015_Streamline-57.png')}}" alt="Lannister Sigil" width="100" height="100">
-                    <a href="/houses"><h2 class="hvr-underline-from-center">Houses</h2></a>
-                    <p>Dive into the history of these ancient houses.</p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="img" src="{{url_for('static',
-                    filename='css/images/1490230041_Streamline-62.png')}}" alt="person" width="100" height="100">
-                    <a href="/characters"><h2 class="hvr-underline-from-center" >Characters</h2></a>
-                    <p>Learn more about the lives of your favorite charaters, and see connections that you weren't able to see before.</p>
-                </div>
+<div class="row">
+    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
+        <div class="tail">
+            <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="icon" src="{{url_for('static',
+                filename='css/images/1490230031_Streamline-19.png')}}" alt="Lannister Sigil" >
+                <a href="/episodes"><h2 class="hvr-underline-from-center">Episodes</h2></a>
+                <p>Catch up on what is happening in the world Ice and Fire by recounting all of your favorite episodes.</p>
             </div>
-            <div>
-                <div class="col-md-4 col-md-pull-6" id="twitter">
-                    <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones" data-width="525" data-height="700">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+            <div class="col-lg-4">
+                <img class="icon" src="{{url_for('static',
+                filename='css/images/1490230015_Streamline-57.png')}}" alt="Lannister Sigil">
+                <a href="/houses"><h2 class="hvr-underline-from-center">Houses</h2></a>
+                <p>Dive into the history of these ancient houses.</p>
             </div>
-
+            <div class="col-lg-4">
+                <img class="icon" src="{{url_for('static',
+                filename='css/images/1490230041_Streamline-62.png')}}" alt="person">
+                <a href="/characters"><h2 class="hvr-underline-from-center" >Characters</h2></a>
+                <p>Learn more about the lives of your favorite charaters, and see connections that you weren't able to see before.</p>
+            </div>
+        </div>
     </div>
-    <!-- /END THE FEATURETTES -->
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right"><a class="foot" href="#">Back to top</a></p>
-        </footer>
-
+    <div class="col-lg-4 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-4 col-md-offset-1">
+        <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones" data-width="450" data-height="750">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <!-- /.container -->
+</div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</div>
+<!-- /END THE FEATURETTES -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a class="foot" href="#">Back to top</a></p>
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 
 </body>
 

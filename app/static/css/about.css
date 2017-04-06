@@ -1,5 +1,6 @@
 html body {
 	background: #9E8469;
+	width: 100%;
 }
 
 .members {
@@ -20,7 +21,7 @@ html body {
 
 .group-member {
 	display: inline-block;
-	width: 16em;
+	width: 80%;
 	vertical-align: top;
 }
 
@@ -42,7 +43,7 @@ html body {
 }
 
 .group-member img {
-	width: 100%;
+	width: 90%;
 	border-radius: 90%;
 	padding-top: 10%;
 	padding-bottom: 10%;
@@ -73,6 +74,7 @@ html body {
 	border-radius: 10px;
 	margin-left: calc(50% - 77px);
 }
+
 
 /* Things to move to style.css */
 .section-header {

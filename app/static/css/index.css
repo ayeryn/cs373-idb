@@ -1,3 +1,8 @@
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+.col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+	margin-top: 20px;
+}
+
 .index{
 	background-color: #9E8469;
 	font-family: serif;
@@ -48,14 +53,6 @@
 	padding-top: 5px;
 }
 
-.col-md-push-5{
-	padding-top: 45px;
-	text-align: center;
-}
-
-.col-md-push-5 p{
-	padding-right: 25px;
-}
 
 .scroll{
 	color:black;
@@ -66,8 +63,9 @@
 	z-index: 2;
 }
 
-#twitter-widget-0{
-	margin-left: 40px;
+#twitter{
+	width: 450px;
+	height: 600px;
 }
 
 a.twitter-timeline {
@@ -99,8 +97,13 @@ a.twitter-timeline:focus {
     top: 200px;
 }
 
-.col-md-push-5{
-	text-align: center;
+.tail{
+	height: 200px;
+}
+
+.icon{
+	width: 100px;
+	height: 100px;
 }
 
 @keyframes blink{
@@ -117,4 +120,16 @@ a.twitter-timeline:focus {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+/* Desktop adjustements */
+@media (min-width: 1195px) {
+	.tail{
+		height: 400px;
+		padding-top: 30px;
+	}
+
+	.sink{
+		padding-bottom: 30px;
+	}
 }

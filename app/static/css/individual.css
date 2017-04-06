@@ -20,7 +20,7 @@ img {
 #ind-home {
     margin:0;
     padding: 0;
-    background-color: #141311;
+    background-color: black;
     height: 100%;
     width: 100%;
 }
@@ -43,8 +43,8 @@ img {
     padding-bottom: 30px;
 }
 
-.info-table td:nth-child(1) {width: 30%}
-.info-table td:nth-child(2) {width: 70%}
+.info-table td:nth-child(1) {width: 50%}
+.info-table td:nth-child(2) {width: 50%}
 
 .link {
     color: #A2482E;
@@ -96,6 +96,10 @@ img {
     .text-left{
         padding-top: 0;
         width: 100%;
+    }
+
+    #ind-home {
+        background-color: #141311;
     }
 
 }

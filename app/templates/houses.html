@@ -33,41 +33,48 @@
 		</div>
 	</div>
 	<h3 class = "page-title">Houses</h3>
-	<div class="tbl-header">
-		<table cellpadding="0" cellspacing="0" border="0">
-			<thead>
-				<tr>
-					<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
-					<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></i></th>
-					<th> Region <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
-					<th> Words <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
-					<th> Current Lord <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
-					<th> Title <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
-					<th> Overlord <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
+	<div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+		<div class="table-responsive">
+			<table class="table model-table" style="margin: 0;">
+				<thead>
+					<tr>
+						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
+						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></i></th>
+						<th> Region <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
+						<th> Words <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
+						<th> Current Lord <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
+						<th> Title <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
+						<th> Overlord <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
+					</tr>
+				</thead>
+			</table>
+			<table id="myTable2" class="table model-table">
+				{% block content %}
+				<tbody>
+					{% for house in houses.items %}
+					<tr>
+						<td>{{ house.id }}</td>
+						<td><a href="{{ url_for('house', name=house.name) }}">{{ house.name }}</a></td>
+						<td>{{ house.region }}</td>
+						<td>{{ house.words }}</td>
+						{% if house.current_lord %}
+						<td><a href="characters/{{ house.current_lord }}">{{ house.current_lord }}</a></td>
+						{% else %}
+						<td>{{ house.current_lord }}</td>
+						{% endif %}
+						<td>{{ house.title }}</td>
+						{% if house.overlord %}
+						<td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
+						{% else %}
+						<td>{{ house.overlord }}</td>
+						{% endif %}
+					</tr>
+					{%  endfor %}
 				</tr>
-			</thead>
+			</tbody>
+			{% endblock %}
 		</table>
 	</div>
-	<div class = "tbl-content">
-		<table id="myTable2" cellpadding="0" cellspacing="0" border="0">
-			{% block content %}
-			<tbody>
-				{% for house in houses.items %}
-				<tr>
-					<td>{{ house.id }}</td>
-					<td><a href="{{ url_for('house', name=house.name)
-					}}">{{ house.name }}</a></td>
-					<td>{{ house.region }}</td>
-					<td>{{ house.words }}</td>
-					<td>{{ house.current_lord }}</td>
-					<td>{{ house.title }}</td>
-					<td>{{ house.overlord }}</td>
-				</tr>
-				{%  endfor %}
-			</tr>
-		</tbody>
-		{% endblock %}
-	</table>
 </div>
 
 <div class="row text-center" style="margin:30px">

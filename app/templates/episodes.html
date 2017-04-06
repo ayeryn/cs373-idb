@@ -62,39 +62,8 @@
 			</tbody>
 			{% endblock %}
 			</table>
-
-<<<<<<< HEAD
 		</div>
 	</div>
-=======
-	<div class = "tbl-content">
-		<table id = "myTable2" cellpadding="0" cellspacing="0" border="0">
-			{% block content %}
-			<tbody>
-				{% for episode in episodes.items %}
-				<tr>
-					<td>{{ episode.id }}</td>
-					<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
-					<td>{{ episode.season }}</td>
-          {% if episode.predecessor %}
-					<td><a href="{{ url_for('episode', name=episode.predecessor)}}">{{ episode.predecessor }}</a></td>
-          {% else %}
-					<td>{{ episode.predecessor}}</td>
-          {% endif %}
-          {% if episode.successor %}
-					<td><a href="{{ url_for('episode', name=episode.successor)}}">{{ episode.successor }}</a></td>
-          {% else %}
-					<td>{{ episode.successor}}</td>
-          {% endif %}
-					<td>-</td>
-				</tr>
-				{%  endfor %}
-			</tr>
-		</tbody>
-		{% endblock %}
-	</table>
-</div>
->>>>>>> 002cb364315dfdb5b2ad109615fa15433915df09
 
 <div class="row text-center" style="margin:30px">
 	<nav aria-label="Page navigation example">

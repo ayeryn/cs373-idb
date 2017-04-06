@@ -88,10 +88,6 @@ img {
         min-height: calc(100% - 110px);
     }
 
-    .container-fluid {
-        /*margin-top: 30px;*/
-    }
-
     .pull-center{
         padding-left: 70px;
         width: 100%;

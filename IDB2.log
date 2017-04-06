@@ -1,3 +1,557 @@
+commit aaa978a013f1ec31fe71f5a5f1bbd2912f39884a
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Apr 5 20:13:04 2017 -0500
+
+    changed IDB1.log to IDB2.log
+
+commit c9fb74c6f82faff5a2697de59bda353a73434257
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Wed Apr 5 17:41:00 2017 -0500
+
+    literally fighting with pycs lmao
+
+commit 84d708729a22a49191adfeac6cea1dfbf772cb8f
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Wed Apr 5 15:10:15 2017 -0500
+
+    Added and styled Run Unit tests button to About. Not functional yet.
+
+commit 0eed16b21c977840282a3faa271e22f6d5380587
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Wed Apr 5 14:43:44 2017 -0500
+
+    quick fix for make got command
+
+commit 8a5793122e4dd0361b1fb5c73befadb83dec422b
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Wed Apr 5 14:10:54 2017 -0500
+
+    Updated makefile to reflect changes to required files for IDB2
+
+commit 32a69952a0837c99a97f7aa23fdc43cc41a7fb70
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Apr 5 13:45:29 2017 -0500
+
+    pagination working, but navigation very ugly
+
+commit 7bd4949828ff65467328e5ed8f2bb42090397d6e
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Apr 5 13:18:42 2017 -0500
+
+    updated table styling
+
+commit 5717921961c167de2ff0ee730f70fc88e74c94aa
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Apr 5 09:57:28 2017 -0500
+
+    pagination working of r characters, styling needed
+
+commit d37398a986803934e211d41c9527240cf032688c
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Tue Apr 4 23:48:17 2017 -0500
+
+    begining of pagination, only one page
+
+commit 2318551e388e5ecd9b13de3d57a06808379b5dcb
+Merge: 03a02bd 31d2cbe
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Tue Apr 4 20:04:19 2017 -0500
+
+    fixing merge conflictsin index
+
+commit 31d2cbebe3eed5510791fbb3397034ec06456dd6
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Tue Apr 4 20:02:35 2017 -0500
+
+    fixing merge issues
+
+commit 03a02bd5f631db49d404f24d2eb2be3ff5a82e9c
+Merge: 33ab27c 7a31328
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Tue Apr 4 14:48:19 2017 -0500
+
+    merge ui with dev
+
+commit e99dc75eebff0788b268ec8413156098b3f9ead0
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Tue Apr 4 11:34:43 2017 -0500
+
+    updated soacing on splash, need to center text
+
+commit 7a313286d95e9d8ef9415c4639fa019ec45e5503
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Sun Apr 2 00:50:13 2017 -0500
+
+    modified .gitignore for all pyc and DS_Store files
+
+commit 879799f034539d7ae764c9fa4e29a530514eb41f
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Sat Apr 1 17:38:15 2017 -0500
+
+    removed .pyc
+
+commit f91dbfcbd41deba59ea0a7f534aa9eb5eb3e79c4
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Fri Mar 31 17:44:33 2017 -0500
+
+    updated requirements to include anapioficeandfire
+
+commit 567f8a15aae7e869ed69b571f209c6988ff63b81
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 17:14:10 2017 -0500
+
+    styling added to twitter widget
+
+commit dc2489d362d6feda9e4cc271ffcb5f191daec225
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 16:59:15 2017 -0500
+
+    updated height of twitter
+
+commit 13d738728306fc0cae4ecc7b943207ee17113ea8
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Fri Mar 31 16:36:39 2017 -0500
+
+    changed heir column to title
+
+commit 784f1347b9ff67c427e4146d6665f73188e8c4a1
+Merge: 194e5d1 1cbe978
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Fri Mar 31 16:34:30 2017 -0500
+
+    database changes for house
+
+commit 194e5d1955d9d27d7fba7b3d8fe2e7203adf3394
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Fri Mar 31 16:32:02 2017 -0500
+
+    attempt at merging data from two apis for houses
+
+commit 4a7069b508a5a206e7291ecdf86519c0966ae21a
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 16:28:52 2017 -0500
+
+    added styling to twitter
+
+commit b8ff781a2cb90b662ff63380cf368891a4c2f863
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 16:19:51 2017 -0500
+
+    twitter in line with text
+
+commit 863c641533ee955299fae973f721b6dbc65b4763
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 15:57:50 2017 -0500
+
+    added margin to twitter feed
+
+commit 56477c07021bb9da02991121e4aaaa1bc208a211
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Fri Mar 31 14:41:40 2017 -0500
+
+    moved twitter feed to use entire left side of screen below picture
+
+commit bd51fd2519871fdf71f5609ca5db11a4af4cf3c6
+Merge: d7c95fa 1cbe978
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 30 18:18:50 2017 -0500
+
+    merge
+
+commit 1cbe9781e238dcb70b7d5c41e6506ead71c1e357
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 18:15:20 2017 -0500
+
+    fixed typo lol
+
+commit 79761def5da808c0fd7da1eaef54f0d51f93acdb
+Merge: d10e749 5683402
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 18:10:04 2017 -0500
+
+    resolved conflicts with ui
+
+commit 56834025e6fe280109e4d5033bccd12797d1ada9
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 18:09:14 2017 -0500
+
+    Fixed #42 and made individual pages mobile friendly with pictures
+
+commit d7c95faca32d033eff5a264fd9ace04d1247c528
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 30 17:46:14 2017 -0500
+
+    added twitter feed to splash page, needs styling
+
+commit 33ab27cea8cce2add4b8e9c38435bd80fe396d01
+Merge: 561e946 d10e749
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 30 17:02:13 2017 -0500
+
+    pull
+
+commit 01033c3306c9fc73e24a68e5031e788e87e4a494
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:32:52 2017 -0500
+
+    moved images to the right of the page instead of on top of info table
+
+commit d10e74924933b84072f79f7e1c00abef36722f9e
+Merge: c7b9db3 1918994
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 16:28:21 2017 -0500
+
+    Merge pull request #41 from ayeryn/db
+    
+    updated run file and added house linking for characters
+
+commit 1918994f064925d653f88fbab10c754edb3e0dd2
+Merge: fa445b7 c7b9db3
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 16:28:13 2017 -0500
+
+    Merge branch 'dev' into db
+
+commit fa445b7ecdcafaa72a4cafbef93f5ee265664a63
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 16:27:13 2017 -0500
+
+    updated run file and added house linking for characters
+
+commit c7b9db3e48ffeebdead9b9c03a5938dd70993bfb
+Merge: 87909e9 6ba6dce
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 16:20:03 2017 -0500
+
+    merge
+
+commit 87909e9c5d6e34cba0e4d730c3a6204e90efcaf4
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 16:19:23 2017 -0500
+
+    don't forget both brackets
+
+commit 6ba6dce14ad05aa42067fd38a5377e1d629bed52
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:12:39 2017 -0500
+
+    Delete views.pyc
+
+commit bcac7af849c02c5c9fba6c024314091e02159805
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:12:34 2017 -0500
+
+    Delete models.pyc
+
+commit 7765f1988bea927b6d587868abd444842067ca32
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:12:27 2017 -0500
+
+    Delete __init__.pyc
+
+commit 4aba813b534070d5556f5b2e2140433212fe1692
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:12:13 2017 -0500
+
+    Delete config.pyc
+
+commit 85493fc32b37475a638101a02508f18c72155719
+Merge: 4e64501 6663227
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:11:03 2017 -0500
+
+    deleted extra pyc
+
+commit 4e64501cc802cdfad94ad2c779576212f4e17269
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 30 16:09:22 2017 -0500
+
+    added .pyc to .gitignore
+
+commit 6663227ad448f5778ff9dc6731430a8f7fb7b79a
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 15:59:19 2017 -0500
+
+    changing app to application bc for some reason, config has it to where aws can't recognize it otherwise
+
+commit f125979b4aabef386998b0c34a0c9998118e597d
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 15:55:58 2017 -0500
+
+    fixed populate spacing
+
+commit 8ae2841e7b5303f2df4e23103bfe76b462cde000
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-19-76.public.utexas.edu>
+Date:   Thu Mar 30 15:52:37 2017 -0500
+
+    fixed populate spacing and updated db with imagelinks
+
+commit 47c0e7627563ada53f9db6d3c53740dcbb7df13f
+Merge: 6221295 1f8da5f
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 15:45:25 2017 -0500
+
+    Merge pull request #38 from ayeryn/db
+    
+    added pics to char and houses
+
+commit 1f8da5f6f89bf78b6d739b463d3d5ef688fb3aae
+Merge: 356aa1f 6221295
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 15:45:06 2017 -0500
+
+    Merge branch 'dev' into db
+
+commit 356aa1f1cbeedcbfb5c4c42726303f5582129434
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 15:43:52 2017 -0500
+
+    Delete application.pyc
+
+commit 3fa8350abbc0ff2972c7514d9fdbeac55180f303
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Mar 30 15:43:42 2017 -0500
+
+    Delete application.py
+
+commit c26ea79d9502d4cf591049f7d20db8075eef4c56
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Thu Mar 30 15:18:09 2017 -0500
+
+    added pics to char and houses
+
+commit 6221295beb198263e8555f435b0bff2514e3b7df
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Thu Mar 30 13:59:45 2017 -0500
+
+    moved back application.py -> run.py per convention but updated eb python config so run.py will be recongnized as file to run and static paths moved
+
+commit 8295d6a123bab406a424c84eae9423d692f7525f
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Thu Mar 30 13:46:58 2017 -0500
+
+    changes to applciaiton for config reasons
+
+commit 6577fcec10f8da9117b24616164ff6f5257a8cae
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Thu Mar 30 13:34:55 2017 -0500
+
+    fixed uneven spacing in populate
+
+commit 8c79cc1d79f9f854ce2d1ace3aac20497def662a
+Author: Peyton Sarmiento <peytonsarmiento@Peytons-MacBook-Pro.local>
+Date:   Thu Mar 30 13:27:38 2017 -0500
+
+    changed run.py -> application.py for aws purposes
+
+commit 561e9461a8138543d99c08962313a5e87ebc8f03
+Merge: 1a87f74 5533114
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 29 19:14:39 2017 -0500
+
+    fixing merge conflicts
+
+commit 5533114534155308cd735a29bb710f27cd7d8ef9
+Merge: e34c612 b6ee19c
+Author: Apurva Gorti <apurva.gorti@gmail.com>
+Date:   Wed Mar 29 19:05:53 2017 -0500
+
+    Merge pull request #36 from ayeryn/db
+    
+    Db
+
+commit b6ee19c88cafb51c247cf809e95e24595ef8d157
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Wed Mar 29 19:04:23 2017 -0500
+
+    Update navWell.html
+
+commit d551882b3ce6ee2a5251a57952c6f78cd40c3e90
+Author: Apurva Gorti <apurva.gorti@gmail.com>
+Date:   Wed Mar 29 19:01:36 2017 -0500
+
+    Update views.py
+
+commit 1c942307de9c65f8bf1b5c2fec6b50553427ffcb
+Author: Apurva Gorti <apurvagorti@wireless-10-147-54-221.public.utexas.edu>
+Date:   Wed Mar 29 18:49:02 2017 -0500
+
+    database populated with episode data wahoo ayayayay
+
+commit 482ae89b69128d59716971730ac75eab76846bbf
+Author: Apurva Gorti <apurvagorti@wireless-10-147-54-221.public.utexas.edu>
+Date:   Wed Mar 29 18:16:55 2017 -0500
+
+    database populated for houses woohoooooooo
+
+commit 93cf59dd385fdaf4c8874f32b2a88089ddce1fcd
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-146-218-162.public.utexas.edu>
+Date:   Wed Mar 29 17:47:24 2017 -0500
+
+    db and dynamically html characters
+
+commit 51eebc13d05557596d4e71653fc7e395d866ec33
+Author: Apurva Gorti <apurvagorti@wireless-10-147-54-221.public.utexas.edu>
+Date:   Wed Mar 29 16:19:42 2017 -0500
+
+    attempt adding characters to db
+
+commit ed987d00ca1208ecd356017737e123d9dcae91dc
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-12-114.public.utexas.edu>
+Date:   Wed Mar 29 14:55:12 2017 -0500
+
+    changed a lot of stuff with restructuring files and folders
+
+commit e3da5f9bdc74e790b22062009cd07257d1d81612
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-12-114.public.utexas.edu>
+Date:   Wed Mar 29 14:30:26 2017 -0500
+
+    updated requirements
+
+commit eb8118b532bc790e617bd1921fe034542b45362f
+Merge: 025eb6d f3dde90
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-12-114.public.utexas.edu>
+Date:   Wed Mar 29 14:27:49 2017 -0500
+
+    merge
+
+commit 025eb6df09a538a7c13e3dead0c46a634a35f9d4
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-12-114.public.utexas.edu>
+Date:   Wed Mar 29 14:26:54 2017 -0500
+
+    start of creating db
+
+commit f3dde90a963b3cbd24ff12aa4def0f45e90a817e
+Author: Apurva Gorti <apurvagorti@wireless-10-147-54-221.public.utexas.edu>
+Date:   Wed Mar 29 14:26:41 2017 -0500
+
+    updates for db to config and models
+
+commit e34c612e27605b329b38b2c996a6c5771553e3f7
+Author: Apurva Gorti <apurvagorti@wireless-10-147-56-8.public.utexas.edu>
+Date:   Thu Mar 23 21:16:59 2017 -0500
+
+    final updates to about page
+
+commit 37b6015f2e184cc8080fd3bebcd4f49a13f9fc11
+Merge: 97efac5 40f1ac3
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:50:04 2017 -0500
+
+    Merge branch 'master' into dev
+
+commit 97efac54cba62a146eb39e6a5b1f08e7bea21aff
+Merge: d6c559b 3dcaae6
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:48:58 2017 -0500
+
+    Merge branch 'dev' of https://github.com/ayeryn/cs373-idb into dev
+
+commit d6c559b4f6c9638ac9d90e5ad3ec66e24193610f
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:48:52 2017 -0500
+
+    making all pages mobile-first
+
+commit 40f1ac30000756fd60f678d2026d7161f3b79a90
+Author: Apurva Gorti <apurva.gorti@gmail.com>
+Date:   Thu Mar 23 20:44:34 2017 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 3dcaae66625db502f70710036f3d07ec48e0385a
+Author: Apurva Gorti <apurvagorti@wireless-10-147-56-8.public.utexas.edu>
+Date:   Thu Mar 23 20:37:32 2017 -0500
+
+    fixed mistake in column for Tommen Baratheon
+
+commit b994b2370fffb11158006725717cc5090d2468c1
+Merge: c157c95 c645f50
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:16:13 2017 -0500
+
+    Merge branch 'dev' of https://github.com/ayeryn/cs373-idb into dev
+
+commit c157c95dd30bb033af011728a665b13d1648daca
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:16:08 2017 -0500
+
+    replaced nav bar in all pages with mobile-friendly version
+
+commit a2c6965d5a9d3cec4f1b6ac8ba5956854a738106
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 20:06:49 2017 -0500
+
+    fixed #23
+
+commit c645f50af27c362f93f75560b7c7c9bea7c91c44
+Author: Apurva Gorti <apurvagorti@wireless-10-147-56-8.public.utexas.edu>
+Date:   Thu Mar 23 20:02:41 2017 -0500
+
+    fixed typo in episodes page
+
+commit 3539c7c21d1afa05d6595b0b492930ecb29b0c56
+Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
+Date:   Thu Mar 23 19:41:47 2017 -0500
+
+    Moved models.html to main directory as per project specifications
+
+commit 64b6ac8d50873fa1c78810a27d9d33486c98bd56
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 19:32:41 2017 -0500
+
+    mobile nav bar styling works but js needs tweaking
+
+commit b0fc753be67018fec93f43fdba2a8678121ac9be
+Merge: b274f3c 5ec4be3
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 19:20:36 2017 -0500
+
+    resolved conflicts
+
+commit 5ec4be3f590bf1804590b76ff94ae49304537fe5
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 19:19:14 2017 -0500
+
+    styling fully works for mobile but js needs fixing
+
+commit 7d594df0d80dba4b2667679dcc87f6db59a1d09b
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 18:41:02 2017 -0500
+
+    added Travis build status to README
+
+commit 313e3f45165914bfff33d14adf0fd052fb46396e
+Merge: a0fc4de b274f3c
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 18:34:00 2017 -0500
+
+    Merge pull request #20 from ayeryn/dev and fixed #24
+
+commit b274f3c388d00b0a515834fdef717116b400e3a4
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Thu Mar 23 18:14:34 2017 -0500
+
+    change models.html path in makefile
+
+commit 62481612d5e6b994df105893cc18cb9b869ff15b
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Thu Mar 23 18:11:26 2017 -0500
+
+    added models.html
+
+commit 54c3d6ab5a940096de36962e105ea7b4cc36b512
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 17:47:28 2017 -0500
+
+    added make log in makefile
+
+commit ae168bf04f9106d8083910e75cdf8938d248dd00
+Author: Apurva Gorti <apurvagorti@Apurvas-MacBook-Pro.local>
+Date:   Thu Mar 23 17:42:54 2017 -0500
+
+    IDB1 log
+
 commit 6ae44624887ce6fbcbb4fd9233c9f06c7118b953
 Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
 Date:   Thu Mar 23 17:36:32 2017 -0500
@@ -106,6 +660,18 @@ Author: Eryn Li <erynli@utexas.edu>
 Date:   Thu Mar 23 11:55:39 2017 -0500
 
     ecapsulated nav bar using #nav-row and fixed horizontal overflow on homepage
+
+commit 1a87f74038a1959ebbf5590591efabf2b1456f09
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Thu Mar 23 11:20:34 2017 -0500
+
+    added phrases to scroll on splash
+
+commit a0fc4dee4463380effd5baf1ca62999130f1cf37
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Mar 23 10:55:37 2017 -0500
+
+    Adding apiary to github
 
 commit b37737377f58315e477cabc5f00c5eb7c24bb018
 Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
@@ -663,6 +1229,12 @@ Date:   Wed Mar 22 11:59:22 2017 -0500
 
     navWell moved to templates
 
+commit 36b02b6c87a6fdbc4699b45b83c7efd25b4c2066
+Author: Sarah Gorring <sarahgorring@gmail.com>
+Date:   Wed Mar 22 11:57:50 2017 -0500
+
+    removed NavWell, will add it to dev branch
+
 commit 65e5c808c8b78d75d0d1a32f9894a37b5c7ee0d6
 Merge: 54be7d6 770fd5f
 Author: Eryn Li <erynli@utexas.edu>
@@ -682,11 +1254,23 @@ Date:   Tue Mar 21 22:40:35 2017 -0500
 
     basic flask app
 
+commit b12b1e435af55a877e40cb5049093d77048d0356
+Author: Sarah Gorring <sarah95@cs.utexas.edu>
+Date:   Tue Mar 21 21:56:29 2017 -0500
+
+    added navigation well
+
 commit 70f4189a60ae00f6843c07f5d5e85d953021ab6e
 Author: Eryn Li <erynli@utexas.edu>
 Date:   Tue Mar 21 21:40:57 2017 -0500
 
     made templates folder for static templates
+
+commit 22bfa1a80ad13f06a259bd705533dac51e1ebe70
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Tue Mar 21 20:38:50 2017 -0500
+
+    Update README.md
 
 commit 9538471125beb62489d893e2e8fa4401f3e33cee
 Author: Eryn Li <erynli@utexas.edu>

@@ -37,7 +37,7 @@ def test_episode_delete(db):
 
 
 def test_episode_unique(db):
-    episodes = db.session.query(models.Episodes).all()
+    episodes = db.session.query(models.Episode).all()
     for x in range(0, len(episodes)):
         for y in range(x + 1, len(episodes)):
             TESTOR.assertNotEqual(episodes[x].name, episodes[y].name)

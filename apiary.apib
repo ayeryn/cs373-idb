@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://youknownothing.fyi/api/
 
 # SWEGoT
 
@@ -14,78 +14,44 @@ SWEGoT is a simple API allowing avid fans of the Game of Thrones to view data ab
         {
             "episodes": [
                 {
-                    "id": 1
-                    "name": "Winter Is Coming",
-                    "season": "1",
-                    "previous_episode": "N/A",
-                    "next_episode": "The Kingsroad",
-                    "characters": 
-                    [
-                        
-                        { 
-                            "id":2,
-                            "name":"Cersei Lannister"
-                        },
-                        { 
-                            "id":3,
-                            "name":"Tommen Baratheon"
-                        },
-                        { 
-                            "id":1,
-                            "name":"Jon Snow"
-                        }
-                    ]
+                    "name": "The Kingsroad", 
+                    "predecessor": "Winter Is Coming", 
+                    "season": 1, 
+                    "successor": "Lord Snow"
+                }, 
+                {
+                    "name": "Lord Snow", 
+                    "predecessor": "The Kingsroad", 
+                    "season": 1, 
+                    "successor": "Cripples, Bastards, and Broken Things"
+                }, 
+                {
+                    "name": "Winter Is Coming", 
+                    "predecessor": null, 
+                    "season": 1, 
+                    "successor": "The Kingsroad"
                 },
                 {
-                    "id": 2
-                    "name": "The Kingsroad",
-                    "season": "1",
-                    "previous_episode": "Winter Is Comin",
-                    "next_episode": "Lord Snow",
-                    "characters": 
-                    [
-                        { 
-                            "id":2,
-                            "name":"Cersei Lannister"
-                        },
-                        { 
-                            "id":1,
-                            "name":"Jon Snow"
-                        }
-                    ]
-                },
-                {
-                    "id": 3
-                    "name": "Lord Snow",
-                    "season": "1",
-                    "previous_episode": "The Kingsroad",
-                    "next_episode": "Cripples, Basatrds, and Broken Things",
-                    "characters": 
-                    [
-                        { 
-                            "id":1,
-                            "name":"Jon Snow"
-                        }
-                    ]
+                    ...
                 }
             ]
         }
         
-## Specific Episode [/episodes/{id}]
+## Specific Episode [/episodes/{name}]
 
 ### Get information about a specific episode [GET]
 + Parameters
-    + id (number) - ID of the episode in the form of an integer
+    + name (String) - name of the specific episode
 
 + Response 200 (application/json)
 
         {
-            "id": 1
-            "name": "Winter Is Coming",
-            "season": "1",
-            "previous_episode": "N/A",
-            "next_episode": "The Kingsroad",
-            "characters": []
+            "episode": {
+                "name": "Winter Is Coming", 
+                "predecessor": null, 
+                "season": 1, 
+                "successor": "The Kingsroad"
+            }
         }
         
 ## Houses Collection [/houses]
@@ -96,60 +62,49 @@ SWEGoT is a simple API allowing avid fans of the Game of Thrones to view data ab
 
         {
             "houses": [
-                {
-                    "id": 1
-                    "name": "House Stark of Winterfell",
-                    "region": "The North",
-                    "words": "Winter Is Coming",
-                    "current_lord": "N/A",
-                    "heir": "N/A",
-                    "overlord": 
-                        {
-                            "id": 2,
-                            "name": "House Baratheon of King's Landing"
-                        }
-                },
-                {
-                    "id": 2
-                    "name": "House Baratheon of King's Landing",
-                    "region": "The Crownlands",
-                    "words": "Ours is the Fury",
-                    "current_lord": "Tommen Baratheon",
-                    "heir": "Myrcella Baratheon",
-                    "overlord": "N/A"
-                },
-                {
-                    "id": 3
-                    "name": "House Lannister of Casterly Rock",
-                    "region": "The Westerlands",
-                    "words": "Hear Me Roar!",
-                    "current_lord": "Cersei Lannister",
-                    "heir": "N/A",
-                    "overlord": 
-                        {
-                            "id": 2,
-                            "name": "House Baratheon of King's Landing"
-                        }
-                }
+                    {
+                        "current_lord": null, 
+                        "name": "Henly (House Ashford)", 
+                        "overlord": null, 
+                        "region": null, 
+                        "title": null
+                    }, 
+                    {
+                        "current_lord": null, 
+                        "name": "Norren (House Mooton)", 
+                        "overlord": null, 
+                        "region": null, 
+                        "title": "Maester"
+                    }, 
+                    {
+                        "current_lord": null, 
+                        "name": "House of the Undying servitor", 
+                        "overlord": null, 
+                        "region": null, 
+                        "title": null
+                    }, 
+                    {
+                        ...
+                    }
             ]
         }
 
-## Specific House [/houses/{id}]
+## Specific House [/houses/{name}]
 
 ### Get information about a specific house [GET]
 + Parameters
-    + id (number) - ID of the house in the form of an integer
+    + name (String) - name of the specific house 
 
 + Response 200 (application/json)
 
         {
-            "id": 1
-            "name": "House Stark of Winterfell",
-            "region": "The North",
-            "words": "Winter Is Coming",
-            "current_lord": "N/A",
-            "heir": "N/A",
-            "overlord": "House Baratheon of King's Landing"
+            "house": {
+                "current_lord": null, 
+                "name": "House Stark", 
+                "overlord": "House Baratheon of King's Landing", 
+                "region": "North", 
+                "title": "King in the North"
+            }
         }
         
 ## Characters Collection [/characters]
@@ -161,85 +116,55 @@ SWEGoT is a simple API allowing avid fans of the Game of Thrones to view data ab
         {
             "characters": [
                 {
-                    "id": 1
-                    "name": "Jon Snow",
-                    "titles": "Lord Commander of the Night's Watch",
-                    "aliases": "Lord Snow", "Ned Stark's Bastard", "The Snow of Winterfell", "The Crow-Come-Over", "The 998th Lord Commander of the Night's Watch", "The Bastard of Winterfell", "The Black Bastard of the Wall", "Lord Crow",
-                    "father": "N/A",
-                    "mother": "N/A",
-                    "spouse": "N/A",
-                    "allegiances":
-                    [
-                        {
-                            "id": 1,
-                            "name": "House Stark of Winterfell"
-                        }
-                    ],
-                    "played_by": "Kit Harrington"
+                    "actor": null, 
+                    "father": null, 
+                    "house": "House Hightower", 
+                    "mother": null, 
+                    "name": "Abelar Hightower", 
+                    "spouse": null, 
+                    "titles": "Ser"
+                }, 
+                {
+                    "actor": null, 
+                    "father": null, 
+                    "house": "House Frey", 
+                    "mother": null, 
+                    "name": "Addam Frey", 
+                    "spouse": null, 
+                    "titles": "Ser"
+                }, 
+                {
+                    "actor": null, 
+                    "father": null, 
+                    "house": null, 
+                    "mother": null, 
+                    "name": "Addam", 
+                    "spouse": null, 
+                    "titles": "Ser"
                 },
                 {
-                    "id": 2
-                    "name": "Cersei Lannister",
-                    "titles": "Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent",
-                    "aliases": "N/A",
-                    "father": "N/A",
-                    "mother": "N/A",
-                    "spouse": "Robert Baratheon",
-                    "allegiances":
-                    [
-                        {
-                            "id": 1,
-                            "name": "House Lannister of Casterly Rock"
-                        }
-                    ],
-                    "played_by": "Lena Headey"
-                },
-                {
-                    "id": 3
-                    "name": "Tommen Baratheon",
-                    "titles": "King of the Andals, the Rhoynar and the First Men, Lord of the Seven Kingdoms",
-                    "aliases": "The Boy King",
-                    "father": "Robert I Baratheon",
-                    "mother": 
-                        {
-                            "id": 2,
-                            "name": Cersei Lannister
-                        },
-                    "spouse": "Margaery Tyrell",
-                    "allegiances":
-                    [
-                        {
-                            "id": 1,
-                            "name": "House Baratheon of King's Landing"
-                        }
-                    ],
-                    "played_by": "Callum Wharry, Dean-Charles Chapman"
+                    ...
                 }
-            ]
-        }
+        ]
+    }
 
 ## Specific Character [/characters/{id}]
 
 ### Get information about a specific character [GET]
 + Parameters
-    + id (number) - ID of the character in the form of an integer
+    + name (String) - name of the specific character
 
 + Response 200 (application/json)
 
         {
-            "id": 2
-            "name": "Cersei Lannister",
-            "titles": "Light of the West, Queen Dowager, Protector of the Realm, Lady of Casterly Rock, Queen Regent",
-            "aliases": "N/A",
-            "father": "N/A",
-            "mother": "N/A",
-            "spouse": "Robert Baratheon",
-            "allegiances":
-            [
-                {
-                    "id": 1,
-                    "name": "House Lannister of Casterly Rock"
-                }
-            ],
-            "played_by": "Lena Headey"
+            "character": {
+                "actor": null, 
+                "father": null, 
+                "house": "House Stark", 
+                "mother": null, 
+                "name": "Jon Snow", 
+                "spouse": null, 
+                "titles": "Lord Commander of the Night&apos;s Watch"
+            }
         }
+}

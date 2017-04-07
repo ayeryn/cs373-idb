@@ -88,13 +88,13 @@
 				</a>
 			</li>
 			{% endif %}
-			<li class="page-item active"><a class="page-link" href="{{ url_for('houses', page=houses.page) }}">{{houses.page}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num) }}">{{houses.next_num}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+1}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+2}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+3}}</a></li>
+			<li class="page-item active"><a class="page-link page-number" href="{{ url_for('houses', page=houses.page) }}">{{houses.page}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}">{{houses.next_num}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+1}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+2}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+3}}</a></li>
 			{% if houses.has_next %}<li class="page-item">
-				<a class="page-link" href="{{ url_for('houses', page=houses.next_num) }}" aria-label="Next">
+				<a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}" aria-label="Next">
 					<span aria-hidden="true">&raquo;</span>
 					<span class="sr-only">Next</span>
 				</a>

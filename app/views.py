@@ -1,6 +1,7 @@
 
 from app import app as application, models, db
 from flask import render_template, jsonify
+import os
 
 @application.route('/')
 def index():
@@ -9,6 +10,12 @@ def index():
 @application.route('/about')
 def about():
     return render_template('about.html')
+
+@application.route('/test')
+def test():
+    time = os.system('python runTests.py')
+    if time:
+        return render_template('test.html', time=time)
 
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])

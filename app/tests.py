@@ -9,13 +9,12 @@ from models import db
 #
 
 TESTOR = TestCase('__init__')
-
 # ---------
 # Episodes
 # ---------
 
 def test_episode_insert(db):
-    test_episode = {"name": "TestEpisode", "season": "3", "predecessor": "TestPrevEp",
+    test_episode = {"name": "TestEpisode", "season": "3", "nr": "1002", "predecessor": "TestPrevEp",
                     "successor": "TestNextEp", "imageLink": "-"}
     
     ep = models.Episode(**test_episode)
@@ -23,6 +22,7 @@ def test_episode_insert(db):
     result = db.session.query(models.Episode).filter(models.Episode.name == "TestEpisode").first()
 
     TESTOR.assertEqual(result.season, "3")
+    TESTOR.assertEqual(result.nr, "1002")
     TESTOR.assertEqual(result.predecessor, "TestPrevEp")
     TESTOR.assertEqual(result.successor, "TestNextEp")
 
@@ -35,10 +35,11 @@ def test_episode_delete(db):
     TESTOR.assertEqual(test_episode, None)
 
 
-def test_next_episode(db):
+def test_episode_unique(db):
     episodes = db.session.query(models.Episode).all()
-    for x in range(0, len(episodes) - 1):
-        TESTOR.assertEqual(episodes[x].successor, episodes[x + 1].name)
+    for x in range(0, len(episodes)):
+        for y in range(x + 1, len(episodes)):
+            TESTOR.assertNotEqual(episodes[x].name, episodes[y].name)
 
 
 # -------
@@ -107,6 +108,24 @@ def test_character_unique(db):
     for x in range(0, len(characters)):
         for y in range(x + 1, len(characters)):
             TESTOR.assertNotEqual(characters[x].name, characters[y].name)
+
+# ---------
+# run tests
+# ---------
+
+def test():
+    start = time.time()
+    test_episode_insert(db)
+    test_episode_delete(db)
+    test_episode_unique(db)
+    test_house_insert(db)
+    test_house_delete(db)
+    test_house_unique(db)
+    test_character_insert(db)
+    test_character_delete(db)
+    test_character_unique(db)
+    end = time.time()
+    return end-start
 
 # ----
 # main

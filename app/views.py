@@ -13,9 +13,8 @@ def about():
 
 @application.route('/test')
 def test():
-    time = os.system('python runTests.py')
-    if time:
-        return render_template('test.html', time=time)
+    os.system('python runTests.py')
+    return render_template('test.html')
 
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])

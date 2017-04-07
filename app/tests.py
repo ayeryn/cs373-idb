@@ -9,7 +9,6 @@ from models import db
 #
 
 TESTOR = TestCase('__init__')
-
 # ---------
 # Episodes
 # ---------
@@ -109,6 +108,24 @@ def test_character_unique(db):
     for x in range(0, len(characters)):
         for y in range(x + 1, len(characters)):
             TESTOR.assertNotEqual(characters[x].name, characters[y].name)
+
+# ---------
+# run tests
+# ---------
+
+def test():
+    start = time.time()
+    test_episode_insert(db)
+    test_episode_delete(db)
+    test_episode_unique(db)
+    test_house_insert(db)
+    test_house_delete(db)
+    test_house_unique(db)
+    test_character_insert(db)
+    test_character_delete(db)
+    test_character_unique(db)
+    end = time.time()
+    return end-start
 
 # ----
 # main

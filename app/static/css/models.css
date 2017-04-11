@@ -1,31 +1,38 @@
 body{
     background: #000000; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A2482E , #000000); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A2482E , #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #7ba2bf , #8da8c5); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #7ba2bf ,#8da8c5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 50px;
+    min-height: 100%;
+    background-attachment: fixed;
 }
 
 .page-title{
-    font-size: 30px;
-    color: #FBE3A7;
+    font-size: 35px;
+    color: #fcf5e5;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 15px;
+    font-family: got-font;
 }
 
 .model-table{
-    background-color: #5D3F2D;
+    background-color: #000000
     margin-bottom: 0;
     width: 80%;
+}
+
+tbody tr:hover {
+    background-color:rgba(252, 245, 229, 0.32);
 }
 
 th{
     padding: 20px 15px;
     text-align: left;
-    font-weight: 500;
-    font-size: 14px;
-    color: #FBE3A7;
+    font-weight: 600;
+    font-size: 16px;
+    color:#fcf5e5;
     text-transform: uppercase;
 }
 
@@ -33,20 +40,21 @@ td{
     padding: 20px 15px;
     padding-left: 15px;
     text-align: left;
-    vertical-align:middle;
+    vertical-align: middle;
     font-weight: 300;
-    font-size: 14px;
-    color: #FBE3A7;
-    border-bottom: solid 2px rgba(255,255,255,0.1);
+    font-size: 16px;
+    color: #fcf5e5;
+    /* border-bottom: solid 2px rgba(255, 255, 255, 0.1); */
 }
 
 td a{
-    color: #000;
-    font-weight: 400;
+    color:#fcf5e5;
+    font-weight: 500;
+    
 }
 
 td a:hover{
-    color: #a2482e;
+    color: #fcf5e5;
 }
 
 .page-number{
@@ -55,7 +63,7 @@ td a:hover{
 }
 
 .pagination .active > a {
-    background-color: #FBE3A7 !important;
+    background-color: #fcf5e5 !important;
 }
 
 /* for custom scrollbar for webkit browser*/
@@ -74,3 +82,8 @@ td a:hover{
 @-moz-document url-prefix() {
     fieldset { display: table-cell; }
 }
+
+
+
+
+

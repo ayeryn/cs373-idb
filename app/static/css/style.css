@@ -18,7 +18,7 @@ html{
 
 #nav-row {
     width:100%;
-    background-color: black;
+    background-color: #31404c;
 }
 
 .container-fluid {
@@ -38,12 +38,12 @@ html{
 
 #navbar a:hover {
 	color: #a2482e;
-	background-color: black;
+	background-color: #31404c;
 }
 .title-header {
     font-family: got-font;
     text-align: center;
-	color: #a2482e;
+	  color: #a2482e;
     vertical-align: middle;
     width: 100%;
     border-color: black;
@@ -56,23 +56,32 @@ html{
 }
 
 .navbar-brand:hover{
+	background-color: #31404c;
 	color: #a2482e;
 }
 
 .navbar-fixed-top {
     width: 100%;
+    background-color: #31404c;
 }
 
 .nav{
-	background-color: black;
+	background-color: #31404c;
 	color: #9E8469;
 }
 
 #top-nav{
-    margin-bottom: 0;
-    position: inherit;
+  margin-bottom: 0;
+  position: inherit;
+  background-color: #31404c;
 }
 
 .navbar-collapse a{
 	color: #9E8469;
+  background-color: #31404c;
 }
+
+.navbar-default .navbar-collapse{
+  background-color: #31404c;
+}
+

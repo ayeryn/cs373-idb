@@ -25,48 +25,102 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+  }
+  </style>
 </head>
-
-<body class="index">
-    <header>
+   <header>
         <div id="nav-row">
             <div ng-app>
                 <nav class="navbar" style="margin:0;">{% include 'navWell.html' %}</nav>
             </div>
         </div>
     </header>
-    <div>
-        <img class="background-img" src="{{url_for('static', filename='css/images/background.jpg')}}">
-    </div>
-    <div class="scroll typed-text">
-        <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
-        <script src="typed.js"></script>
-        <script>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
 
-        document.addEventListener("DOMContentLoaded", function(){
-            Typed.new(".element", {
-                strings: ["You know nothing, Jon Snow.", "When you play the Game of Thrones, you win or you die.","Chaos isn't a pit. Chaos is a ladder.", "What's dead may never die.", "Valar Morghulis", "What do we say to the god of death? Not today.", "Hodor", "I drink and I know things", "We go forward, only forward.", "The man who passes the sentence should swing the sword."],
-                typeSpeed: 75,
-                backSpeed: 35,
-                backDelay: 1250,
-                loop: true,
-            });
-        });
-    });
-    </script>
-    <span class="element"></span>
-</div>
-
-<div class="row">
-    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
-        <div class="tail">
-            <h2 class="featurette-heading">You know nothing... <span class="lighter">but we're here to help.</span></h2>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="{{ url_for ('static', filename='images/kingslanding.jpg') }}" alt="Chania">
+      <div class="header-text hidden-xs">
+        <div class="col-md-12 text-center">
+            <h2 class="featurette-heading">You know nothing... but we're here to help.</h2>
             <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
         </div>
+      </div>
+    </div>
 
-        <div class="row">
+    <div class="item">
+      <img src="{{ url_for ('static', filename='images/castleblack.jpg') }}" alt="Chania">
+      <div class="header-text hidden-xs">
+        <div class="col-md-12 text-center">
+            <h2 class="featurette-heading">You know nothing... but we're here to help.</h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for ('static', filename='images/mereen.jpg') }}" alt="Chania">
+      <div class="header-text hidden-xs">
+        <div class="col-md-12 text-center">
+            <h2 class="featurette-heading">You know nothing... but we're here to help.</h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for ('static', filename='images/braavos.png') }}" alt="Chania">
+      <div class="header-text hidden-xs">
+        <div class="col-md-12 text-center">
+            <h2 class="featurette-heading">You know nothing... but we're here to help.</h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for ('static', filename='images/dorne.jpg') }}" alt="Chania">
+      <div class="header-text hidden-xs">
+        <div class="col-md-12 text-center">
+            <h2 class="featurette-heading">You know nothing... but we're here to help.</h2>
+            <p class="lead">Navigating through the world of fire and ice can be complicated, but it doesn't have to be. This site will help you navigate the ins and outs of everything Game of Thrones so well you'll basically become an expert!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<footer class ="footer">
+    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
+
+        <div class="footer navbar-bottom">
             <div class="col-lg-4">
                 <img class="icon" src="{{url_for('static',
                 filename='css/images/1490230031_Streamline-19.png')}}" alt="Lannister Sigil" >
@@ -88,10 +142,11 @@
         </div>
     </div>
 
-    <div class="col-lg-4 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-4 col-md-offset-1">
-        <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones" data-width="450" data-height="750">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
+        <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones"
+        data-width="450" data-height="450">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-</div>
+</footer>
 
 </div>
 <!-- /END THE FEATURETTES -->

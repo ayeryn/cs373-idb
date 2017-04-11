@@ -8,17 +8,29 @@ class Episode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     season = db.Column(db.Integer)
+    nr = db.Column(db.Integer)
     predecessor = db.Column(db.String, unique=True)
     successor = db.Column(db.String, unique=True)
     characters = db.Column(db.String)
     imageLink = db.Column(db.String, unique=True)
 
-    def __init__(self, name, season, predecessor, successor, imageLink):
+    def __init__(self, name, season, nr, predecessor, successor, imageLink):
         self.name = name
         self.season = season
         self.predecessor = predecessor
         self.successor = successor
         self.imageLink = imageLink
+        self.nr = nr
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'season': self.season,
+           'predecessor': self.predecessor,
+           'successor':self.successor,
+        }
 
 """
 House model
@@ -43,6 +55,16 @@ class House(db.Model):
         self.overlord = overlord
         self.imageLink = imageLink
 
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'current_lord':self.current_lord,
+           'region': self.region,
+           'title':self.title,
+           'overlord':self.overlord,
+        }
 """
 Characters model
 Attributes: name, titles, aliases, father, mother, spouse, allegiance, played_by
@@ -67,3 +89,16 @@ class Character(db.Model):
         self.house = house
         self.actor = actor
         self.imageLink = imageLink
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializeable format"""
+       return {
+           'name'         : self.name,
+           'titles':self.titles,
+           'father': self.father,
+           'mother':self.mother,
+           'spouse':self.spouse,
+           'house':self.house,
+           'actor':self.actor
+        }

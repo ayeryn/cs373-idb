@@ -62,7 +62,12 @@
                                     </tr>
                                     <tr>
                                         <td>Current Lord</td>
-                                        <td>{{ house.current_lord }}</td>
+                                        {% if house.current_lord %}
+				          	                    <td><a
+                                       href="/characters/{{ house.current_lord}}">{{ house.current_lord }}</a></td>
+                                        {% else %}
+					                              <td>{{ house.current_lord }}</td>
+                                        {% endif %} 
                                     </tr>
                                     <tr>
                                         <td>Title</td>
@@ -70,7 +75,11 @@
                                     </tr>
                                     <tr>
                                         <td>Over Lord</td>
-                                        <td><a href="/houses/{{house.overlord}}" class="hvr-pop link">{{ house.overlord }}</a></td>
+                                        {% if house.overlord %}
+					                              <td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
+                                        {% else %}
+					                              <td>{{ house.overlord }}</td>
+                                        {% endif %}
                                     </tr>
                                 </table>
                             </div>

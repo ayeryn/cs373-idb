@@ -1,4 +1,4 @@
-<!doctype html>
+ page-number<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@
     <h3 class = "page-title">Characters</h3>
     <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <div class="table-responsive">
-            <table class="table model-table" style="margin: 0;">
+            <table id="data-table" class="table model-table" style="margin: 0;">
                 <thead>
                     <tr>
                         <th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
@@ -49,20 +49,35 @@
                         <th> Played By <i id="arrow" class="fa fa-caret-down"  onclick="sortTable(8); myFunction(8)"></i></th>
                     </tr>
                 </thead>
-            </table>
-            <table id="myTable2" class="table model-table">
                 {% block content %}
                 <tbody>
                     {% for character in characters.items %}
                     <tr>
                         <td>{{ character.id }}</td>
-                        <td><a href="{{ url_for('character', name=character.name)
-                        }}">{{ character.name }}</a></td>
+                        <td>
+                            <a href="{{ url_for('character', name=character.name) }}">{{ character.name }}</a>
+                        </td>
                         <td>{{ character.titles }}</td>
+                        {% if character.father %}
+                        <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
+                        {% else %}
                         <td>{{ character.father }}</td>
+                        {% endif %}
+                        {% if character.mother %}
+                        <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
+                        {% else %}
                         <td>{{ character.mother }}</td>
+                        {% endif %}
+                        {% if character.spouse %}
+                        <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
+                        {% else %}
                         <td>{{ character.spouse }}</td>
+                        {% endif %}
+                        {% if character.house %}
                         <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
+                        {% else %}
+                        <td>{{ character.house }}</td>
+                        {% endif %}
                         <td>{{ character.actor }}</td>
                     </tr>
                     {%  endfor %}
@@ -83,13 +98,13 @@
                     </a>
                 </li>
                 {% endif %}
-                <li class="page-item active"><a class="page-link" href="{{ url_for('characters', page=characters.page) }}">{{characters.page}}</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num) }}">{{characters.next_num}}</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+1}}</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+2}}</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+3}}</a></li>
+                <li class="page-item active"><a class="page-link page-number" href="{{ url_for('characters', page=characters.page) }}">{{characters.page}}</a></li>
+                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}">{{characters.next_num}}</a></li>
+                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+1}}</a></li>
+                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+2}}</a></li>
+                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+3}}</a></li>
                 {% if characters.has_next %}<li class="page-item">
-                    <a class="page-link" href="{{ url_for('characters', page=characters.next_num) }}" aria-label="Next">
+                    <a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>

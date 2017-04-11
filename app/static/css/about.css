@@ -23,13 +23,14 @@ html body {
 	display: inline-block;
 	width: 80%;
 	vertical-align: top;
+	margin-top: 30px;
 }
 
 .group-member .member-name {
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
-	color: #EEEEEE;
+	color: black;
 }
 
 .group-member .member-bio {
@@ -45,7 +46,7 @@ html body {
 .group-member img {
 	width: 90%;
 	border-radius: 90%;
-	padding-top: 10%;
+	margin-top: 10%;
 	padding-bottom: 10%;
 }
 
@@ -53,6 +54,7 @@ html body {
 	display: inline-block;
 	width: 16em;
 	vertical-align: top;
+	margin-top: 30px;
 }
 
 .details a {
@@ -73,11 +75,4 @@ html body {
 	cursor: pointer;
 	border-radius: 10px;
 	margin-left: calc(50% - 77px);
-}
-
-
-/* Things to move to style.css */
-.section-header {
-	font-family: got-font;
-	text-align: center;
 }

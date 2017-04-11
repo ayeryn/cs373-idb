@@ -1,6 +1,7 @@
 
 from app import app as application, models, db
-from flask import render_template
+from flask import render_template, jsonify
+import os
 
 @application.route('/')
 def index():
@@ -9,6 +10,11 @@ def index():
 @application.route('/about')
 def about():
     return render_template('about.html')
+
+@application.route('/test')
+def test():
+    os.system('python runTests.py')
+    return render_template('test.html')
 
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])
@@ -43,5 +49,38 @@ def episode(name):
     episode = models.Episode.query.filter_by(name=name).first()
     return render_template('episode.html', episode=episode)
 
+@application.route('/api',methods=['GET'])
+def api():
+    redirect = "Check out https://app.apiary.io/swegot1 for supported API requests!"
+    return jsonify({'hello': redirect})
 
+@application.route('/api/episodes', methods=['GET'])
+def api_episodes():
+    episods = models.Episode.query.all()
+    return jsonify(episodes=[i.serialize for i in episods])
+
+@application.route('/api/houses', methods=['GET'])
+def api_houses():
+    hos = models.House.query.all()
+    return jsonify(houses=[i.serialize for i in hos])
+
+@application.route('/api/characters', methods=['GET'])
+def api_characters():
+    chars = models.Character.query.all()
+    return jsonify(characters=[i.serialize for i in chars])
+
+@application.route('/api/episodes/<name>', methods=['GET', 'POST'])
+def api_episode(name):
+    ep = models.Episode.query.filter_by(name=name).first()
+    return jsonify(episode=ep.serialize)
+
+@application.route('/api/characters/<name>', methods=['GET', 'POST'])
+def api_character(name):
+    ep = models.Character.query.filter_by(name=name).first()
+    return jsonify(character=ep.serialize)
+
+@application.route('/api/houses/<name>', methods=['GET', 'POST'])
+def api_house(name):
+    ep = models.House.query.filter_by(name=name).first()
+    return jsonify(house=ep.serialize)
 

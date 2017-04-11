@@ -1,119 +1,131 @@
+from app import app as application
 from io import StringIO
 from unittest import main, TestCase
 import models
+from models import db
 
 #
 # Do Function/File imports here once they exist
 #
 
+TESTOR = TestCase('__init__')
+# ---------
+# Episodes
+# ---------
+
+def test_episode_insert(db):
+    test_episode = {"name": "TestEpisode", "season": "3", "nr": "1002", "predecessor": "TestPrevEp",
+                    "successor": "TestNextEp", "imageLink": "-"}
+    
+    ep = models.Episode(**test_episode)
+    db.session.add(ep)
+    result = db.session.query(models.Episode).filter(models.Episode.name == "TestEpisode").first()
+
+    TESTOR.assertEqual(result.season, "3")
+    TESTOR.assertEqual(result.nr, "1002")
+    TESTOR.assertEqual(result.predecessor, "TestPrevEp")
+    TESTOR.assertEqual(result.successor, "TestNextEp")
+
+
+def test_episode_delete(db):
+    test_episode = db.session.query(models.Episode).filter(models.Episode.name == "TestEpisode").first()
+    db.session.delete(test_episode)
+
+    test_episode = db.session.query(models.Episode).filter(models.Episode.name == "TestEpisode").first()
+    TESTOR.assertEqual(test_episode, None)
+
+
+def test_episode_unique(db):
+    episodes = db.session.query(models.Episode).all()
+    for x in range(0, len(episodes)):
+        for y in range(x + 1, len(episodes)):
+            TESTOR.assertNotEqual(episodes[x].name, episodes[y].name)
+
+
+# -------
+# Houses
+# -------
+
+def test_house_insert(db):
+    test_house = {"name": "TestHouse", "region": "Norf", "words": "DA KING OF DA NORF", "current_lord": "TestLord", "title": "TestTitle", "overlord": "TestOverLord", "imageLink": "-"}
+
+    h = models.House(**test_house)
+    db.session.add(h)
+    result = db.session.query(models.House).filter(models.House.name == "TestHouse").first()
+
+    TESTOR.assertEqual(result.region, "Norf")
+    TESTOR.assertEqual(result.words, "DA KING OF DA NORF")
+    TESTOR.assertEqual(result.current_lord, "TestLord")
+    TESTOR.assertEqual(result.title, "TestTitle")
+    TESTOR.assertEqual(result.overlord, "TestOverLord")
+
+
+def test_house_delete(db):
+    test_house = db.session.query(models.House).filter(models.House.name == "TestHouse").first()
+    db.session.delete(test_house)
+
+    test_house = db.session.query(models.House).filter(models.House.name == "TestHouse").first()
+    TESTOR.assertEqual(test_house, None)
+
+
+def test_house_unique(db):
+    houses = db.session.query(models.House).all()
+    for x in range(0, len(houses)):
+        for y in range(x + 1, len(houses)):
+            TESTOR.assertNotEqual(houses[x].name, houses[y].name)
+
 
 # -----------
-# TestNetflix
+# Characters
 # -----------
 
+def test_character_insert(db):
+    test_character = {"name": "Kieran", "titles": "Lord of the Python Tests", "father": "OOP", 
+                    "mother": "JavaScript", "spouse" : "Madam Tests.py", "house": "Slytherin", "actor" : "Himself", "imageLink": "-"}
+    
+    c = models.Character(**test_character)
+    db.session.add(c)
+    result = db.session.query(models.Character).filter(models.Character.name == "Kieran").first()
 
-class TestModels(TestCase):
-
-    # ---------
-    # Episodes
-    # ---------
-
-    def test_episode_insert(self):
-        test_episode = {"name": "TestEpisode", "season": "3", "previous_episode": "TestPrevEp",
-                        "next_episode": "TestNextEp", "characters": "Jon Snow, Benjen Stark, Eddard Stark"}
-        
-        ep = models.Episode(**test_episode)
-        self.session.add(ep)
-        result = self.session.query(Episode).filter(Episode.name == "TestEpisode").first()
-
-        self.assertEqual(result.season, "3")
-        self.assertEqual(result.next_episode, "TestNextEp")
-        self.assertEqual(result.previous_episode, "TestPrevEp")
-        self.assertEqual(result.characters, "Jon Snow, Benjen Stark, Eddard Stark")
+    TESTOR.assertEqual(result.titles, "Lord of the Python Tests")
+    TESTOR.assertEqual(result.father, "OOP")
+    TESTOR.assertEqual(result.mother, "JavaScript")
+    TESTOR.assertEqual(result.spouse, "Madam Tests.py")
+    TESTOR.assertEqual(result.house, "Slytherin")
+    TESTOR.assertEqual(result.actor, "Himself")
 
 
-	def test_episode_delete(self):
-		test_episode = self.session.query(Episode).filter(Episode.name == "TestEpisode").first()
-		self.session.delete(test_episode)
+def test_character_delete(db):
+    test_character = db.session.query(models.Character).filter(models.Character.name == "Kieran").first()
+    db.session.delete(test_character)
 
-		test_episode = self.session.query(Episode).filter(Episode.name == "TestEpisode").first()
-		self.assertEqual(test_episode, None)
-
-
-	def test_next_episode(self):
-		episodes = self.session.query(Episode).all()
-		for x in range(0, len(episodes) - 1):
-			self.assertEqual(episodes[x].next_episode, episodes[x].name)
+    test_character = db.session.query(models.Character).filter(models.Character.name == "Kieran").first()
+    TESTOR.assertEqual(test_character, None)
 
 
-    # -------
-    # Houses
-    # -------
+def test_character_unique(db):
+    characters = db.session.query(models.Character).all()
+    for x in range(0, len(characters)):
+        for y in range(x + 1, len(characters)):
+            TESTOR.assertNotEqual(characters[x].name, characters[y].name)
 
-    def test_house_insert(self):
-        test_house = {"name": "TestHouse", "region": "Norf", "words": "DA KING OF DA NORF", "current_lord": "TestLord", "heir": "TestHeir", "overlord": "TestOverLord"}
+# ---------
+# run tests
+# ---------
 
-        h = models.House(**test_house)
-        self.session.add(h)
-        result = self.session.query(House).filter(House.name == "TestHouse").first()
-
-        self.assertEqual(result.region, "Norf")
-        self.assertEqual(result.words, "DA KING OF DA NORF")
-        self.assertEqual(result.current_lord, "TestLord")
-        self.assertEqual(result.heir, "TestHeir")
-        self.assertEqual(result.overlord, "TestOverLord")
-
-
-	def test_house_delete(self):
-		test_house = self.session.query(House).filter(House.name == "TestHouse").first()
-		self.session.delete(test_house)
-
-		test_house = self.session.query(House).filter(House.name == "TestHouse").first()
-		self.assertEqual(test_house, None)
-
-
-	def test_house_unique(self):
-		houses = self.session.query(House).all()
-		for x in range(0, len(houses)):
-			for y in range(0, len(houses)):
-				self.assertNotEqual(houses[x].name, houses[y].name)
-
-
-    # -----------
-    # Characters
-    # -----------
-
-    def test_character_insert(self):
-        test_character = {"name": "Kieran", "titles": "Lord of the Python Tests", "aliases": "-",
-                        "father": "OOP", "mother": "JavaScript", "spouse" : "Madam Tests.py",
-                        "allegiances" : "House Java, House HTMl, House CSS", "played_by" : "Himself"}
-        
-        c = models.Character(**test_character)
-        self.session.add(c)
-        result = self.session.query(Character).filter(Character.name == "Kieran").first()
-
-        self.assertEqual(result.titles, "Lord of the Python Tests")
-        self.assertEqual(result.aliases, "-")
-        self.assertEqual(result.father, "OOP")
-        self.assertEqual(result.mother, "JavaScript")
-        self.assertEqual(result.spouse, "Madam Tests.py")
-        self.assertEqual(result.allegiances, "House Java, House HTMl, House CSS")
-        self.assertEqual(result.played_by, "Himself")
-
-
-	def test_character_delete(self):
-		test_character = self.session.query(Character).filter(Character.name == "Kieran").first()
-		self.session.delete(test_character)
-
-		test_character = self.session.query(Character).filter(Character.name == "Kieran").first()
-		self.assertEqual(test_character, None)
-
-
-	def test_character_unique(self):
-		characters = self.session.query(Character).all()
-		for x in range(0, len(characters)):
-			for y in range(0, len(characters)):
-				self.assertNotEqual(characters[x].name, characters[y].name)
+def test():
+    start = time.time()
+    test_episode_insert(db)
+    test_episode_delete(db)
+    test_episode_unique(db)
+    test_house_insert(db)
+    test_house_delete(db)
+    test_house_unique(db)
+    test_character_insert(db)
+    test_character_delete(db)
+    test_character_unique(db)
+    end = time.time()
+    return end-start
 
 # ----
 # main

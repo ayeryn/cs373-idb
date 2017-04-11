@@ -35,7 +35,7 @@
 	<h3 class = "page-title">Houses</h3>
 	<div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
 		<div class="table-responsive">
-			<table class="table model-table" style="margin: 0;">
+			<table id="data-table" class="table model-table" style="margin: 0;">
 				<thead>
 					<tr>
 						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
@@ -47,20 +47,27 @@
 						<th> Overlord <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
 					</tr>
 				</thead>
-			</table>
-			<table id="myTable2" class="table model-table">
+			<!-- </table>
+			<table id="myTable2" class="table model-table"> -->
 				{% block content %}
 				<tbody>
 					{% for house in houses.items %}
 					<tr>
 						<td>{{ house.id }}</td>
-						<td><a href="{{ url_for('house', name=house.name)
-						}}">{{ house.name }}</a></td>
+						<td><a href="{{ url_for('house', name=house.name) }}">{{ house.name }}</a></td>
 						<td>{{ house.region }}</td>
 						<td>{{ house.words }}</td>
+						{% if house.current_lord %}
+						<td><a href="characters/{{ house.current_lord }}">{{ house.current_lord }}</a></td>
+						{% else %}
 						<td>{{ house.current_lord }}</td>
+						{% endif %}
 						<td>{{ house.title }}</td>
+						{% if house.overlord %}
+						<td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
+						{% else %}
 						<td>{{ house.overlord }}</td>
+						{% endif %}
 					</tr>
 					{%  endfor %}
 				</tr>
@@ -81,13 +88,13 @@
 				</a>
 			</li>
 			{% endif %}
-			<li class="page-item active"><a class="page-link" href="{{ url_for('houses', page=houses.page) }}">{{houses.page}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num) }}">{{houses.next_num}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+1}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+2}}</a></li>
-			<li class="page-item"><a class="page-link" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+3}}</a></li>
+			<li class="page-item active"><a class="page-link page-number" href="{{ url_for('houses', page=houses.page) }}">{{houses.page}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}">{{houses.next_num}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+1}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+2}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+3}}</a></li>
 			{% if houses.has_next %}<li class="page-item">
-				<a class="page-link" href="{{ url_for('houses', page=houses.next_num) }}" aria-label="Next">
+				<a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}" aria-label="Next">
 					<span aria-hidden="true">&raquo;</span>
 					<span class="sr-only">Next</span>
 				</a>

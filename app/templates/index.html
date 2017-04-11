@@ -120,7 +120,7 @@
 <footer class ="footer">
     <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
 
-        <div class="footer navbar-bottom">
+        <div class="bottom-column" >
             <div class="col-lg-4">
                 <img class="icon" src="{{url_for('static',
                 filename='css/images/1490230031_Streamline-19.png')}}" alt="Lannister Sigil" >
@@ -141,10 +141,13 @@
             </div>
         </div>
     </div>
+  </div>
 
-    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1">
-        <a class="twitter-timeline"  href="https://twitter.com/GameOfThrones"
-        data-width="450" data-height="450">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="col-lg-5 col-lg-offset-1 col-xs-offset-1 col-xs-10 col-md-5 col-md-offset-1" id="bottom-right">
+        <div class="timeline-Widget" >
+        <a class="twitter-timeline" id="twitter-bkgrd"  href="https://twitter.com/GameOfThrones"
+        data-width="450" data-height="500">Tweets by @GameOfThrones</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
     </div>
 </footer>
 

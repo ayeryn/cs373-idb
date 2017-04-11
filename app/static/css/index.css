@@ -67,9 +67,17 @@ html,body{
 	z-index: 2;
 }
 
+
+.timeline-Widget{
+  border-style: solid;
+  border-color: #a2482e;
+  width: 450px;
+  height: 505px;
+}
+
 #twitter{
 	width: 450px;
-	height: 600px;
+	height: 500px;
 }
 
 a.twitter-timeline {
@@ -189,4 +197,9 @@ a.twitter-timeline:focus {
   padding: 15px;
 }
 
+.bottom-column{
+ 	float: none;
+  display: table-cell;
+  vertical-align: bottom;
 }
+

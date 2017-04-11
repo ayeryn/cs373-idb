@@ -53,11 +53,11 @@
                             <div class="text-left">
                                 <table class="info-table">
                                     <tr>
-                                        <td>Titles</td>
+                                        <td>Titles:</td>
                                         <td>{{ character.titles }}</td>
                                     </tr>
                                     <tr>
-                                        <td>House</td>
+                                        <td>House:</td>
                                         {% if character.house %}
                                         <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
                                         {% else %}
@@ -65,7 +65,7 @@
                                         {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Father</td>
+                                            <td>Father:</td>
                                             {% if character.father %}
                                             <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
                                             {% else %}
@@ -73,7 +73,7 @@
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Mother</td>
+                                            <td>Mother:</td>
                                             {% if character.mother %}
                                             <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
                                             {% else %}
@@ -81,7 +81,7 @@
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Spouse</td>
+                                            <td>Spouse:</td>
                                             {% if character.spouse %}
                                             <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
                                             {% else %}
@@ -89,7 +89,7 @@
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Played By</td>
+                                            <td>Played By:</td>
                                             <td>{{ character.actor }}</td>
                                         </tr>
                                     </table>

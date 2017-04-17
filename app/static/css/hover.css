@@ -2181,6 +2181,7 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  color: #fcf8e3;
   overflow: hidden;
 }
 .hvr-underline-from-center:before {
@@ -2191,6 +2192,7 @@
   right: 50%;
   bottom: 0;
   background: #a2482e;
+  color: #fcf8e3;
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
@@ -2200,6 +2202,8 @@
   transition-timing-function: ease-out;
 }
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  background: #a2482e;
+  color: #fcf8e3;
   left: 0;
   right: 0;
 }

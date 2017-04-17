@@ -1,8 +1,16 @@
+body{
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7ba2bf , #31404c); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #7ba2bf ,#31404c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 50px;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
 .col-sm-7, .col-sm-8, .col-sm-9,.col-sm-10, .col-sm-11, .col-sm-12,
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
 .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
-    background-color: black;
 }
 
 .container-fluid{
@@ -20,10 +28,16 @@ img {
 #ind-home {
     margin:0;
     padding: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
     height: 100%;
     width: 100%;
 }
+
+td a {
+    color: #fcf5e5;
+    font-weight: 600;
+}
+
 
 #main-content {
     height: calc(100% - 80px);
@@ -32,9 +46,10 @@ img {
 
 .info-table{
     width: 100%;
-    font-family: serif;
-    font-size: 13pt;
-    color: #9E8469;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: 500;
+    color: #fcf5e5;
     border-collapse: collapse;
     vertical-align: top;
 }
@@ -47,17 +62,17 @@ img {
 .info-table td:nth-child(2) {width: 50%}
 
 .link {
-    color: #A2482E;
-    font-family: serif;
+    color: #31404c;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13pt;
 }
 
 .link:visited{
-    color: #A2482E;
+    color: #31404c;
 }
 
 .link:hover{
-    color: #A2482E;
+    color: #31404c;
 }
 
 .return-link {
@@ -103,3 +118,6 @@ img {
     }
 
 }
+
+
+

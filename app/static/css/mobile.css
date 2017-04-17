@@ -18,29 +18,29 @@ nav .container{
 
 .navbar-default .navbar-brand {
     font-family: got-font;
-    color: #9e8469;
+    color: #fcf5e5;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus{
     color: #A2482E;
-    background-color: black;
+    background-color: #31404c;
 }
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #9e8469;
-	background-color: black;
+    color: #fcf5e5;
+    background-color: #31404c;
 }
 
 .navbar-default .navbar-collapse {
     border-color: rgba(255,255,255,.02);
-    background-color: black;
+    background-color: #31404c;
 }
 
 .navbar-default .navbar-toggle {
     border-color: #9e8469;
-    color: #9e8469;
-    background-color: black;
+    color: #fcf5e5;
+    background-color: #31404c;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -49,19 +49,19 @@ nav .container{
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: black;
+    background-color: #31404c;
 }
 
 .navbar-default .nav li a {
     font-weight: 400;
     letter-spacing: 1px;
-    color: #9e8469;
+    color: #fcf5e5;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus{
     color: #A2482E;
-    background-color: black;
+    background-color: #31404c;
 }
 
 /*.navbar-default .nav li a:focus {
@@ -71,14 +71,14 @@ nav .container{
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
-    color: #9e8469;
-	background-color: black;
+    color: #fcf5e5;
+    background-color: #31404c;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #A2482E;
-    background-color: black;
+    background-color: #31404c;
 }
 
 @media(min-width:768px) {
@@ -104,7 +104,7 @@ nav .container{
 
     .navbar-default.navbar-shrink {
         padding: 0;
-        background-color: black;
+        background-color: #31404c;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -112,7 +112,7 @@ nav .container{
     }
 
     nav .container{
-        background-color: black;
+        background-color: #31404c;
         margin: 0;
         width: 100%;
         padding-left: 50px;

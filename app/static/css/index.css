@@ -4,9 +4,13 @@
 }
 
 .index{
-	background-color: #9E8469;
+	background-color: #31404c;
 	font-family: serif;
 	overflow-x: hidden;
+}
+
+html,body{
+  background-color: #fcf5e5;
 }
 
 .centered{
@@ -16,7 +20,7 @@
 }
 
 .featurette-heading{
-	color: black;
+	color: #fcf5e5;
 }
 
 .row.col-md-7{
@@ -63,9 +67,17 @@
 	z-index: 2;
 }
 
+
+.timeline-Widget{
+  border-style: solid;
+  border-color: #a2482e;
+  width: 450px;
+  height: 505px;
+}
+
 #twitter{
 	width: 450px;
-	height: 600px;
+	height: 500px;
 }
 
 a.twitter-timeline {
@@ -132,4 +144,62 @@ a.twitter-timeline:focus {
 	.sink{
 		padding-bottom: 30px;
 	}
+
+  .carousel{
+    width: 100%;
+	  height: 100%;
+  }
+
+	html,body{
+		height: 100%;
+	}
+	.carousel,.item,.active{
+		height: 100%;
+	}
+	.carousel-inner{
+		height: 100%;
+  	width: 100%;
+	}
+	.carousel .container {
+    width: 100%;
+    height: 100%; /*slider height*/
+   }
+  .carousel .item {
+    width: 100%; /*slider width*/
+    height: 100%; /*slider height*/
+  }
+  .carousel .item img {
+    width: 100%; /*img width*/
+    height: 100%; /*slider height*/
+  }
+  
+.header-text {
+    position: absolute;
+    top: 75%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fcf5e5;
+		background: rgba(0, 0, 0,0.65);
+	
 }
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+  padding: 10px;
+}
+
+.header-text h3 span {
+  background-color: #000;
+  padding: 15px;
+}
+
+.bottom-column{
+ 	float: none;
+  display: table-cell;
+  vertical-align: bottom;
+}
+

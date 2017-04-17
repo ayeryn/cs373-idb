@@ -22,7 +22,7 @@ def get_characters():
         db.session.commit()
 
 def get_houses():
-    r = requests.get("https://api.got.show/api/houses/")
+    r = requests.get("https://api.got.show/api/houses/", verify=False)
     data = json.loads(r.content)
     attr = dict.fromkeys(dir(models.House))
     api = anapioficeandfire.API()
@@ -60,6 +60,16 @@ def get_houses():
                 ho.title = str(apiHo.titles)
             if not ho.overlord and apiHo.overlord:
                 ho.overlord = str(apiHo.overlord)
+    updated_houses = models.House.query.all()
+    for h in updated_houses:
+        if not h.words:
+            h.words = "-"
+        if not h.current_lord:
+            h.current_lord = "-"
+        if not h.title:
+            h.title = "-"
+        if not h.overlord:
+            h.overlord = "-"
     db.session.commit()
 
     

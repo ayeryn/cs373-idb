@@ -94,4 +94,19 @@ def get_episodes():
         db.session.add(c)
         db.session.commit()
 
-
+def update_characters():
+    updated_chars = models.Character.query.all()
+    for c in updated_chars:
+        if not c.titles:
+            c.titles = "-"
+        if not c.mother:
+            c.mother = "-"
+        if not c.father:
+            c.father = "-"
+        if not c.spouse:
+            c.spouse = "-"
+        if not c.house:
+            c.house = "-"
+        if not c.actor:
+            c.actor = "-"
+    db.session.commit()

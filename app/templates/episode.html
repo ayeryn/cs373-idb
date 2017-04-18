@@ -78,6 +78,12 @@
                                     </tr>
                                     <tr>
                                         <td>Characters:</td>
+                                        <td>
+                                        {% for char in episode.characters%}
+                                            <li><a
+                                       href="/characters/{{ char.name}}">{{char.name}}</a></li>
+                                        {% endfor %}
+                                        </td>
                                         <td></td>
                                     </tr>
                                 </table>

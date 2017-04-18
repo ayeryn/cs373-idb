@@ -91,6 +91,8 @@ def get_episodes():
         c = models.Episode(name=values['name'],season=values['season'], nr=values['nr'], 
                            predecessor=values['predecessor'],successor=values['successor'],
                            imageLink = episode_data['image']['medium'])
+        for char in values['characters']:
+            c.characters.append(models.Character.query.filter(models.Character.name==char).first())
         db.session.add(c)
         db.session.commit()
 
@@ -109,11 +111,4 @@ def update_characters():
             c.house = "-"
         if not c.actor:
             c.actor = "-"
-    db.session.commit()
-
-def update_houses():
-    houses = models.House.query.all()
-    for h in houses:
-        if not h.region:
-            h.region = "-"
     db.session.commit()

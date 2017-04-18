@@ -93,6 +93,11 @@ td a {
     width: 100%;
 }
 
+li
+{
+list-style-type: none;
+}
+
 /* Desktop adjustements */
 @media(min-width:768px) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,

@@ -1,6 +1,6 @@
 FILES :=                              \
     apiary.apib                       \
-    IDB2.log                          \
+    IDB3.log                          \
     models.html                       \
     app/models.py                     \
     app/tests.py                      \
@@ -55,7 +55,7 @@ status:
 	git remote -v
 	git status
 
-test: check
+test: unit-tests check
 
 log:
-	git log > IDB2.log
+	git log > IDB3.log

@@ -58,22 +58,22 @@
                             <a href="{{ url_for('character', name=character.name) }}">{{ character.name }}</a>
                         </td>
                         <td>{{ character.titles }}</td>
-                        {% if character.father %}
+                        {% if character.father != "-"%}
                         <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
                         {% else %}
                         <td>{{ character.father }}</td>
                         {% endif %}
-                        {% if character.mother %}
+                        {% if character.mother != "-"%}
                         <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
                         {% else %}
                         <td>{{ character.mother }}</td>
                         {% endif %}
-                        {% if character.spouse %}
+                        {% if character.spouse != "-"%}
                         <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
                         {% else %}
                         <td>{{ character.spouse }}</td>
                         {% endif %}
-                        {% if character.house %}
+                        {% if character.house != "-"%}
                         <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
                         {% else %}
                         <td>{{ character.house }}</td>

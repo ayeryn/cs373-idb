@@ -57,13 +57,13 @@
 						<td><a href="{{ url_for('house', name=house.name) }}">{{ house.name }}</a></td>
 						<td>{{ house.region }}</td>
 						<td>{{ house.words }}</td>
-						{% if house.current_lord %}
+						{% if house.current_lord != "-" %}
 						<td><a href="characters/{{ house.current_lord }}">{{ house.current_lord }}</a></td>
 						{% else %}
 						<td>{{ house.current_lord }}</td>
 						{% endif %}
 						<td>{{ house.title }}</td>
-						{% if house.overlord %}
+						{% if house.overlord != "-" %}
 						<td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
 						{% else %}
 						<td>{{ house.overlord }}</td>

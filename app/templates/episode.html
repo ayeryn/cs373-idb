@@ -53,15 +53,15 @@
                             <div class="text-left">
                                 <table class="info-table">
                                     <tr>
-                                        <td>Season</td>
+                                        <td>Season:</td>
                                         <td>{{episode.season}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Episode Number</td>
+                                        <td>Episode Number:</td>
                                         <td>{{episode.nr}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Previous Episode</td>
+                                        <td>Previous Episode:</td>
                                         {% if episode.predecessor %}
 					                              <td><a href="{{ url_for('episode', name=episode.predecessor)}}">{{ episode.predecessor }}</a></td>
                                         {% else %}
@@ -69,7 +69,7 @@
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>Next Episode</td>
+                                        <td>Next Episode:</td>
                                         {% if episode.successor %}
 					                              <td><a href="{{ url_for('episode', name=episode.successor)}}">{{ episode.successor }}</a></td>
                                         {% else %}
@@ -77,7 +77,13 @@
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        <td>Characters</td>
+                                        <td>Characters:</td>
+                                        <td>
+                                        {% for char in episode.characters%}
+                                            <li><a
+                                       href="/characters/{{ char.name}}">{{char.name}}</a></li>
+                                        {% endfor %}
+                                        </td>
                                         <td></td>
                                     </tr>
                                 </table>

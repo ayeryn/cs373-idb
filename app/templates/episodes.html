@@ -42,7 +42,6 @@
 						<th> Episode Number<i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
 						<th> Previous Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
 						<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
-						<th> Characters <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></th>
 					</tr>
 				</thead>
 				{% block content %}
@@ -63,7 +62,6 @@
 						{% else %}
 						<td>{{ episode.successor}}</td>
 						{% endif %}
-						<td>-</td>
 					</tr>
 					{%  endfor %}
 				</tr>

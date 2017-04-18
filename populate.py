@@ -110,3 +110,10 @@ def update_characters():
         if not c.actor:
             c.actor = "-"
     db.session.commit()
+
+def update_houses():
+    houses = models.House.query.all()
+    for h in houses:
+        if not h.region:
+            h.region = "-"
+    db.session.commit()

@@ -63,7 +63,7 @@
 						<td>{{ house.current_lord }}</td>
 						{% endif %}
 						<td>{{ house.title }}</td>
-						{% if house.overlord %}
+						{% if house.overlord != "-" %}
 						<td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
 						{% else %}
 						<td>{{ house.overlord }}</td>

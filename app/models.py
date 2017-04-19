@@ -4,9 +4,9 @@ from app import db
 Episode model
 Attributes: name, season, predecessor, next episode, characters
 """
-characters = db.Table('characters',
-    db.Column('character_id', db.Integer, db.ForeignKey('character.id')),
-    db.Column('episode_id', db.Integer, db.ForeignKey('episode.id'))
+association_table = db.Table('association', 
+    db.Column('episode_id', db.Integer, db.ForeignKey('episode.id')),
+    db.Column('character_id', db.Integer, db.ForeignKey('character.id'))
 )
 
 class Episode(db.Model):
@@ -16,8 +16,7 @@ class Episode(db.Model):
     nr = db.Column(db.Integer)
     predecessor = db.Column(db.String, unique=True)
     successor = db.Column(db.String, unique=True)
-    characters = db.relationship('Character', secondary=characters,
-        backref=db.backref('episodes', lazy='dynamic'))
+    characters = db.relationship('Character',secondary=association_table)
     imageLink = db.Column(db.String, unique=True)
 
     def __init__(self, name, season, nr, predecessor, successor, imageLink):

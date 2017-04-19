@@ -16,6 +16,10 @@ def test():
     os.system('python runTests.py')
     return render_template('test.html')
 
+@application.route('/inebriate')
+def inebriate():
+    return render_template('inebriate.html')
+
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])
 def characters(page=1):

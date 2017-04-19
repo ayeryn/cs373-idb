@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Inebriate.me</title>
 
@@ -23,21 +26,28 @@
 </head>
 
 <body id="ind-home">
+    <header>
+        <div id="nav-row">
+            <div ng-app>
+                <nav class="navbar">{% include 'navWell.html' %}</nav>
+            </div>
+        </div>
+    </header>
 
     <div class="selected-character">
-        <img src="https://www.drupal.org/files/profile_default.png">
-        <button class="drink-button">Select Character Below</button>
+        <img id="selected-character-id" src="https://www.drupal.org/files/profile_default.png">
+        <button id="drink-button" class="drink-button">Select Character Below</button>
     </div>
 
     <div class="character-picker">
-        <img src="https://www.3dtotal.com/admin/new_cropper/gallery_736/drogo_f05.jpg" onclick="switch(1)">
-        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/c/c0/Arya_Stark_profile_Season4.jpg/revision/latest?cb=20140626201536" onclick="switch(2)">
-        <img src="http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2016/04/042216-cersei-lannister-lead-new.jpg?itok=8TPG8WNQ" onclick="switch(3)">
-        <img src="https://vignette4.wikia.nocookie.net/gameofthrones/images/8/88/Daenerys-0.jpg/revision/latest/scale-to-width-down/350?cb=20170106122450" onclick="switch(4)">
-        <img src="https://qph.ec.quoracdn.net/main-qimg-0c8c7540509baf623b5397b8a564f36c" onclick="switch(5)">
+        <img src="https://www.3dtotal.com/admin/new_cropper/gallery_736/drogo_f05.jpg" onclick="charSwitch(1)">
+        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/c/c0/Arya_Stark_profile_Season4.jpg/revision/latest?cb=20140626201536" onclick="charSwitch(2)">
+        <img src="http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2016/04/042216-cersei-lannister-lead-new.jpg?itok=8TPG8WNQ" onclick="charSwitch(3)">
+        <img src="https://vignette4.wikia.nocookie.net/gameofthrones/images/8/88/Daenerys-0.jpg/revision/latest/scale-to-width-down/350?cb=20170106122450" onclick="charSwitch(4)">
+        <img src="https://qph.ec.quoracdn.net/main-qimg-0c8c7540509baf623b5397b8a564f36c" onclick="charSwitch(5)">
     </div>
-
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="../static/js/inebriate.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </body>
 
  </html>

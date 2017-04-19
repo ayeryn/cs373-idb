@@ -23,8 +23,8 @@
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 10px;
-	margin-left: 15px;
 	margin-top: 10px;
+	width: 250px;
 }
 
 .character-picker {

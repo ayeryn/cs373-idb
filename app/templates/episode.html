@@ -62,7 +62,7 @@
                                     </tr>
                                     <tr>
                                         <td>Previous Episode:</td>
-                                        {% if episode.predecessor %}
+                                        {% if episode.predecessor != "-" %}
 					                              <td><a href="{{ url_for('episode', name=episode.predecessor)}}">{{ episode.predecessor }}</a></td>
                                         {% else %}
 					                              <td>{{ episode.predecessor}}</td>
@@ -70,7 +70,7 @@
                                     </tr>
                                     <tr>
                                         <td>Next Episode:</td>
-                                        {% if episode.successor %}
+                                        {% if episode.successor != "-" %}
 					                              <td><a href="{{ url_for('episode', name=episode.successor)}}">{{ episode.successor }}</a></td>
                                         {% else %}
 					                              <td>{{ episode.successor}}</td>

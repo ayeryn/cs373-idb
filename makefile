@@ -26,7 +26,7 @@ check:
     echo "success";
 
 got:
-	pip install anapioficeandfire
+	pip install -r requirements.txt
 	python run.py
 
 unit-tests:

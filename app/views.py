@@ -89,11 +89,11 @@ def api_house(name):
     return jsonify(house=ep.serialize)
 
 @application.route('/<model>/<attribute>/<int:page>/<ascending>', methods=['GET', 'POST'])
-def sort_by(model, attribute, page =1, ascending = True):
+def sort_by(model="characters", attribute="id", page=1, ascending=False):
     if ascending:
-        table = models.Episode.query.order_by(attribute).paginate(page, 10, False)
+        table = models.characters.query.order_by(attribute).paginate(page, 10, False)
     else:
-        table = models.Episode.query.order_by(attribute.dec()).paginate(page, 10, False)
+        table = models.characters.query.order_by(attribute.dec()).paginate(page, 10, False)
     if model == characters:
         return render_template('characters.html', characters=table)
     elif medel == episodes:

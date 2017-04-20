@@ -39,7 +39,7 @@
             <table id="data-table" class="table model-table" style="margin: 0;">
                 <thead>
                     <tr>
-                        <th> # <a class="fa fa-caret-down" href="{{ url_for('characters/id/page/true', model=characters, attribute=id, page=characters.page, ascending=True) }}"></a></th>
+                        <th> # <a class="fa fa-caret-down" href="{{ url_for('characters', model=characters, attribute=name, page=characters.page, ascending=False) }}"></a></th>
                         <th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1)"></i></th>
                         <th> Titles <i class="fa fa-caret-down"  onclick="sortTable(2); myFunction(2);"></i></th>
                         <th> Father <i class="fa fa-caret-down"  onclick="sortTable(4); myFunction(4)"> </i></th>

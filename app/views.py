@@ -1,7 +1,9 @@
 
 from app import app as application, models, db
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 from flask_cors import CORS, cross_origin
+from sqlalchemy.orm import sessionmaker, scoped_session
+import sqlalchemy
 import os
 
 CORS(application)
@@ -24,10 +26,35 @@ def inebriate():
     alcohols = models.Alcohol.query.all()
     return render_template('inebriate.html', alcohols=alcohols)
 
+@application.route('/search', methods=['GET', 'POST'])
+def search():
+    query = request.form['search']
+	
+    engine = sqlalchemy.create_engine('sqlite:///app.db')
+    Session = scoped_session(sessionmaker(bind=engine))
+    s = Session()
+    
+    query = query.split(" ")
+    query = [" name LIKE \"%" + q +"%\"" for q in query]
+
+    and_query = " AND ".join(query)
+    or_query = " OR ".join(query)
+
+    and_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + and_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + and_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + and_query) 
+    
+    or_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + or_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + or_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + or_query) 
+
+    return render_template('search_results.html', and_res = and_results, or_res = or_results)
+    
+
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])
 def characters(page=1):
-    characters = models.Character.query.paginate(page, 17, False)
+    characters = models.Character.query.paginate(page, 10, False)
     return render_template('characters.html', characters=characters)
 
 @application.route('/characters/<name>', methods=['GET', 'POST'])
@@ -38,7 +65,7 @@ def character(name):
 @application.route('/houses', methods=['GET', 'POST'])
 @application.route('/houses/<int:page>', methods=['GET', 'POST'])
 def houses(page=1):
-    houses = models.House.query.paginate(page, 17, False)
+    houses = models.House.query.paginate(page, 10, False)
     return render_template('houses.html', houses=houses)
 
 @application.route('/houses/<name>', methods=['GET', 'POST'])
@@ -49,7 +76,7 @@ def house(name):
 @application.route('/episodes', methods=['GET', 'POST'])
 @application.route('/episodes/<int:page>', methods=['GET', 'POST'])
 def episodes(page=1):
-    episodes = models.Episode.query.paginate(page, 17, False)
+    episodes = models.Episode.query.paginate(page, 10, False)
     return render_template('episodes.html', episodes=episodes)
 
 @application.route('/episodes/<name>', methods=['GET', 'POST'])
@@ -91,4 +118,19 @@ def api_character(name):
 def api_house(name):
     ep = models.House.query.filter_by(name=name).first()
     return jsonify(house=ep.serialize)
+
+@application.route('/<model>/<attribute>/<int:page>/<ascending>', methods=['GET', 'POST'])
+def sort_by(model="characters", attribute="id", page=1, ascending=False):
+    if ascending:
+        table = models.characters.query.order_by(attribute).paginate(page, 10, False)
+    else:
+        table = models.characters.query.order_by(attribute.dec()).paginate(page, 10, False)
+    if model == characters:
+        return render_template('characters.html', characters=table)
+    elif medel == episodes:
+        return render_template('episodes.html', episodes=table)
+    elif model == house:
+        return render_template('houses.html', houses=table)
+
+    
 

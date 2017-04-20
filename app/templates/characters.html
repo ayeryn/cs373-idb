@@ -52,6 +52,7 @@
 						<th> Spouse</th>
 						<th> Allegiances</th>
 						<th> Played By</th>
+
 					</tr>
 				</thead>
 			<!-- </table>
@@ -78,8 +79,9 @@
 						{% else %}
 						<td>{{ character.spouse }}</td>
 						{% endif %}
-						{% if character.allegiances != "-" %}
-						<td><a href="{{ url_for('house', name=character.allegiances) }}">{{ character.allegiances  }}</a></td>
+						{% if character.house != "-" %}
+						<td><a href="{{ url_for('house', name=character.house) }}">{{
+                character.house  }}</a></td>
 						{% else %}
 						<td>{{ character.allegiances }}</td>
 						{% endif %}

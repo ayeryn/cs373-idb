@@ -107,3 +107,26 @@ class Character(db.Model):
            'house':self.house,
            'actor':self.actor
         }
+
+association2_table = db.Table('association2', 
+    db.Column('recipe_id', db.Integer, db.ForeignKey('recipe.id')),
+    db.Column('ingredient_id', db.Integer, db.ForeignKey('ingredient.id'))
+)
+
+class Alcohol(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String, unique = True)
+  recipes = db.relationship("Recipe")
+
+class Recipe(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  alcohol_id = db.Column(db.Integer, db.ForeignKey('alcohol.id'))
+  ingredients = db.relationship('Ingredient',secondary=association2_table)
+  link = db.Column(db.String)
+  name = db.Column(db.String)
+  image = db.Column(db.String)
+
+class Ingredient(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String, unique = True)
+

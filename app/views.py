@@ -88,13 +88,13 @@ def api_house(name):
     ep = models.House.query.filter_by(name=name).first()
     return jsonify(house=ep.serialize)
 
-@applicaion.route('/<model>/<attribute>/<int:page>/<ascending>', methods=['GET', 'POST'])
-def sort_by(model, attribute, page =1, ascending = true):
+@application.route('/<model>/<attribute>/<int:page>/<ascending>', methods=['GET', 'POST'])
+def sort_by(model, attribute, page =1, ascending = True):
     if ascending:
         table = models.Episode.query.order_by(attribute).paginate(page, 10, False)
     else:
-        table = 
-    if model == characters: models.Episode.query.order_by(attribute.dec()).paginate(page, 10, False)
+        table = models.Episode.query.order_by(attribute.dec()).paginate(page, 10, False)
+    if model == characters:
         return render_template('characters.html', characters=table)
     elif medel == episodes:
         return render_template('episodes.html', episodes=table)

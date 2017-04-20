@@ -1,7 +1,9 @@
 
 from app import app as application, models, db
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 from flask_cors import CORS, cross_origin
+from sqlalchemy.orm import sessionmaker, scoped_session
+import sqlalchemy
 import os
 
 CORS(application)
@@ -22,6 +24,31 @@ def test():
 @application.route('/inebriate')
 def inebriate():
     return render_template('inebriate.html')
+
+@application.route('/search', methods=['GET', 'POST'])
+def search():
+    query = request.form['search']
+	
+    engine = sqlalchemy.create_engine('sqlite:///app.db')
+    Session = scoped_session(sessionmaker(bind=engine))
+    s = Session()
+    
+    query = query.split(" ")
+    query = [" name LIKE \"%" + q +"%\"" for q in query]
+
+    and_query = " AND ".join(query)
+    or_query = " OR ".join(query)
+
+    and_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + and_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + and_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + and_query) 
+    
+    or_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + or_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + or_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + or_query) 
+
+    return render_template('search_results.html', and_res = and_results, or_res = or_results)
+    
 
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])

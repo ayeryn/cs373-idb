@@ -1,121 +1,120 @@
- page-number<!doctype html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
 
-    <title>Characters</title>
+	<title>Characters</title>
 
-    <!-- Include CSS stylesheet -->
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	<!-- Include CSS stylesheet -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 
-    <!-- Page Specific stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
+	<!-- Page Specific stylesheet -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
+	<!-- Include Bootstrap CDN -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Include Bootstrap CDN -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-    <div id="nav-row">
-        <div ng-app>
-            <nav class="navbar">{% include 'navWell.html' %}</nav>
-        </div>
-    </div>
-    <h3 class = "page-title">Characters</h3>
-    <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
-        <div class="table-responsive">
-            <table id="data-table" class="table model-table" style="margin: 0;">
-                <thead>
-                    <tr>
-                        <th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
-                        <th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1)"></i></th>
-                        <th> Titles <i class="fa fa-caret-down"  onclick="sortTable(2); myFunction(2);"></i></th>
-                        <th> Father <i class="fa fa-caret-down"  onclick="sortTable(4); myFunction(4)"> </i></th>
-                        <th> Mother <i class="fa fa-caret-down"  onclick="sortTable(5); myFunction(5)"></i></th>
-                        <th> Spouse <i class="fa fa-caret-down"  onclick="sortTable(6); myFunction(6)"></i></th>
-                        <th> Allegiances <i class="fa fa-caret-down"  onclick="sortTable(7); myFunction(7)"></i></th>
-                        <th> Played By <i id="arrow" class="fa fa-caret-down"  onclick="sortTable(8); myFunction(8)"></i></th>
-                    </tr>
-                </thead>
-                {% block content %}
-                <tbody>
-                    {% for character in characters.items %}
-                    <tr>
-                        <td>{{ character.id }}</td>
-                        <td>
-                            <a href="{{ url_for('character', name=character.name) }}">{{ character.name }}</a>
-                        </td>
-                        <td>{{ character.titles }}</td>
-                        {% if character.father != "-"%}
-                        <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
-                        {% else %}
-                        <td>{{ character.father }}</td>
-                        {% endif %}
-                        {% if character.mother != "-"%}
-                        <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
-                        {% else %}
-                        <td>{{ character.mother }}</td>
-                        {% endif %}
-                        {% if character.spouse != "-"%}
-                        <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
-                        {% else %}
-                        <td>{{ character.spouse }}</td>
-                        {% endif %}
-                        {% if character.house != "-"%}
-                        <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
-                        {% else %}
-                        <td>{{ character.house }}</td>
-                        {% endif %}
-                        <td>{{ character.actor }}</td>
-                    </tr>
-                    {%  endfor %}
-                </tr>
-            </tbody>
-            {% endblock %}
-        </table>
-    </div>
+	<div id="nav-row">
+		<div ng-app>
+			<nav class="navbar">{% include 'navWell.html' %}</nav>
+		</div>
+	</div>
+	<h3 class = "page-title">Characters</h3>
+	<div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+		<div class="table-responsive">
+			<table id="data-table" class="table model-table" style="margin: 0;">
+				<thead>
+					<tr>
+						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
+						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></i></th>
+						<th> Titles <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
+						<th> Father <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
+						<th> Mother <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
+						<th> Spuse <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
+						<th> Allegiances <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
+						<th> Played By <i class="fa fa-caret-down" onclick="sortTable(7); myFunction(7);"></i></th>
+					</tr>
+				</thead>
+			<!-- </table>
+			<table id="myTable2" class="table model-table"> -->
+				{% block content %}
+				<tbody>
+					{% for character in characters.items %}
+					<tr>
+						<td>{{ character.id }}</td>
+						<td><a href="{{ url_for('character', name=character.name) }}">{{ character.name }}</a></td>
+						<td>{{ character.titles }}</td>
+						{% if character.father != "-" %}
+						<td><a href="characters/{{ character.father }}">{{ character.father }}</a></td>
+						{% else %}
+						<td>{{ character.father }}</td>
+						{% endif %}
+						{% if character.mother != "-" %}
+						<td><a href="characters/{{ character.mother }}">{{ character.mother }}</a></td>
+						{% else %}
+						<td>{{ character.mother }}</td>
+						{% endif %}
+						{% if character.spouse != "-" %}
+						<td><a href="characters/{{ character.spouse }}">{{ character.spouse }}</a></td>
+						{% else %}
+						<td>{{ character.spouse }}</td>
+						{% endif %}
+						{% if character.allegiances != "-" %}
+						<td><a href="{{ url_for('house', name=character.allegiances) }}">{{ character.allegiances  }}</a></td>
+						{% else %}
+						<td>{{ character.allegiances }}</td>
+						{% endif %}
+						<td>{{ character.actor }}</td>
+					</tr>
+					{%  endfor %}
+				</tr>
+			</tbody>
+			{% endblock %}
+		</table>
+	</div>
+</div>
 
-    <div class="row text-center" style="margin:30px">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                {% if characters.has_prev %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ url_for('characters', page=characters.prev_num) }}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                {% endif %}
-                <li class="page-item active"><a class="page-link page-number" href="{{ url_for('characters', page=characters.page) }}">{{characters.page}}</a></li>
-                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}">{{characters.next_num}}</a></li>
-                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+1}}</a></li>
-                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+2}}</a></li>
-                <li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+3}}</a></li>
-                {% if characters.has_next %}<li class="page-item">
-                    <a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>{% endif %}
-            </ul>
-        </nav>
-    </div>
+<div class="row text-center" style="margin:30px">
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			{% if characters.has_prev %}
+			<li class="page-item">
+				<a class="page-link" href="{{ url_for('characters', page=characters.prev_num) }}" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+			</li>
+			{% endif %}
+			<li class="page-item active"><a class="page-link page-number" href="{{ url_for('characters', page=characters.page) }}">{{characters.page}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}">{{characters.next_num}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+1}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+2}}</a></li>
+			<li class="page-item"><a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num+1) }}">{{characters.next_num+3}}</a></li>
+			{% if characters.has_next %}<li class="page-item">
+				<a class="page-link page-number" href="{{ url_for('characters', page=characters.next_num) }}" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">Next</span>
+				</a>
+			</li>{% endif %}
+		</ul>
+	</nav>
+</div>
 
-    <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </html>

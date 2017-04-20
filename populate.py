@@ -94,7 +94,7 @@ def get_episodes():
         for char in values['characters']:
             c.characters.append(models.Character.query.filter(models.Character.name==char).first())
         db.session.add(c)
-        db.session.commit()
+    db.session.commit()
 
 def update_characters():
     updated_chars = models.Character.query.all()

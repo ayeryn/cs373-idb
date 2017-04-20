@@ -16,6 +16,10 @@ def test():
     os.system('python runTests.py')
     return render_template('test.html')
 
+@application.route('/inebriate')
+def inebriate():
+    return render_template('inebriate.html')
+
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])
 def characters(page=1):
@@ -84,8 +88,18 @@ def api_house(name):
     ep = models.House.query.filter_by(name=name).first()
     return jsonify(house=ep.serialize)
 
-@applicaion.route('/<attribute>')
-def sort_by(attribute):
-    ascending = true
+@applicaion.route('/<model>/<attribute>/<int:page>/<ascending>', methods=['GET', 'POST'])
+def sort_by(model, attribute, page =1, ascending = true):
+    if ascending:
+        table = models.Episode.query.order_by(attribute).paginate(page, 10, False)
+    else:
+        table = 
+    if model == characters: models.Episode.query.order_by(attribute.dec()).paginate(page, 10, False)
+        return render_template('characters.html', characters=table)
+    elif medel == episodes:
+        return render_template('episodes.html', episodes=table)
+    elif model == house:
+        return render_template('houses.html', houses=table)
+
     
 

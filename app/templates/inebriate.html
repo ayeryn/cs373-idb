@@ -36,18 +36,58 @@
 
     <div class="selected-character">
         <img id="selected-character-id" src="https://www.drupal.org/files/profile_default.png">
-        <button id="drink-button" class="drink-button">Select Character Below</button>
+         <button href="#myModal" class="drink-button" id="drink-button" data-toggle="modal" disabled>Select Character Below</button>
     </div>
 
-    <div class="character-picker">
-        <img src="https://www.3dtotal.com/admin/new_cropper/gallery_736/drogo_f05.jpg" onclick="charSwitch(1)">
-        <img src="http://vignette4.wikia.nocookie.net/gameofthrones/images/c/c0/Arya_Stark_profile_Season4.jpg/revision/latest?cb=20140626201536" onclick="charSwitch(2)">
-        <img src="http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2016/04/042216-cersei-lannister-lead-new.jpg?itok=8TPG8WNQ" onclick="charSwitch(3)">
-        <img src="https://vignette4.wikia.nocookie.net/gameofthrones/images/8/88/Daenerys-0.jpg/revision/latest/scale-to-width-down/350?cb=20170106122450" onclick="charSwitch(4)">
-        <img src="https://qph.ec.quoracdn.net/main-qimg-0c8c7540509baf623b5397b8a564f36c" onclick="charSwitch(5)">
+        <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to save changes you made to document before closing?</p>
+                    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
+    {% block content %}
+    {% for alcohol in alcohols%}
+    {% if alcohol.name == "whisky"%}
+    {%for r in alcohol.recipes%}
+    <p>{{ r.name }}</p>
+    {%endfor%}
+    {%endif%}
+    {%  endfor %}
+    {% endblock %}
+
+    <div class="character-picker">
+        <img src="{{ url_for ('static', filename='images/khal.jpg') }}" onclick="charSwitch(1);enableButton()">
+        <img src="{{ url_for ('static', filename='images/arya.jpg') }}" onclick="charSwitch(2)">
+        <img src="{{ url_for ('static', filename='images/cersei.jpg') }}" onclick="charSwitch(3)">
+        <img src="{{ url_for ('static', filename='images/dany.jpg') }}"onclick="charSwitch(4)">
+        <img src="{{ url_for ('static', filename='images/littlefinger.jpg') }}"onclick="charSwitch(5)">
+        <img src="{{ url_for ('static', filename='images/varys.jpg') }}" onclick="charSwitch(6)">
+        <img src="{{ url_for ('static', filename='images/sansa.jpg') }}" onclick="charSwitch(7)">
+        <img src="{{ url_for ('static', filename='images/tyrion.jpg') }}" onclick="charSwitch(8)">
+        <img src="{{ url_for ('static', filename='images/robert.jpg') }}"onclick="charSwitch(9)">
+        <img src="{{ url_for ('static', filename='images/jon.jpg') }}"onclick="charSwitch(10)">
+    </div>
+    <script>
+        function enableButton() {
+            document.getElementById("drink-button").disabled = false;
+        }
+    </script>
     <script type="text/javascript" src="../static/js/inebriate.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
  </html>

@@ -112,3 +112,34 @@ def update_characters():
         if not c.actor:
             c.actor = "-"
     db.session.commit()
+
+# Making use of other team's API #
+
+def get_ingredients():
+    r = requests.get("http://inebri8.me/api/ingredients/all")
+    data = json.loads(r.content)
+    for i in data:
+        n = models.Ingredient(name=i['name'])
+        db.session.add(n)
+    db.session.commit()
+
+def get_recipes():
+    r = requests.get("http://inebri8.me/api/recipes/all")
+    data = json.loads(r.content)
+    for c in data:
+        p = models.Recipe(name=c['title'], link=c['link'], image=c['image'])
+        for i in c['ingredients']:
+            p.ingredients.append(models.Ingredient.query.filter(models.Ingredient.name==i['name']).first())
+        db.session.add(p)
+    db.session.commit()
+
+def get_alc():
+    r = requests.get("http://inebri8.me/api/alcohol/all")
+    data = json.loads(r.content)
+    for alc in data:
+        a = models.Alcohol(name=alc['name'])
+        for r in alc['recipes']:
+            a.recipes.append(models.Recipe.query.filter(models.Recipe.name == r['title']).first())
+        db.session.add(a)
+    db.session.commit()
+

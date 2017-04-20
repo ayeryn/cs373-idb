@@ -3,15 +3,19 @@
     width: 50%;
     padding: 25px;
     margin-top: 10px;
-    margin-left: calc(50% - 125px);
+
 }
 
 .selected-character img {
-	width: 250px;
+	min-width: 250px;
 	height: 250px;
+
+	display: block;
+    margin: auto;
+    width: 40%;
 }
 
-.selected-character button {
+.drink-button{
 	background-color: #a2482e;
 	border: none;
 	color: white;
@@ -20,7 +24,7 @@
 	text-decoration: none;
 	display: block;
 	font-size: 16px;
-	margin: 4px 2px;
+	    margin: auto;
 	cursor: pointer;
 	border-radius: 10px;
 	margin-top: 10px;
@@ -31,12 +35,44 @@
 	margin: auto;
     width: 50%;
     padding: 25px;
-    margin-top: 20px;
-    margin-left: calc(50% - 265px);
+    margin-top: 10px;
+    vertical-align: middle;
 }
 
 .character-picker img {
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	cursor: pointer;
+	margin-bottom: 4px;
+}
+
+.drink-button:hover {
+	background: #843a25;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.vertical-center{
+	min-height:100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0px;
 }

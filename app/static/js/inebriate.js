@@ -1,24 +1,54 @@
 function charSwitch(x) {
 	switch (x) {
 		case 1:
-			document.getElementById("selected-character-id").src="https://www.3dtotal.com/admin/new_cropper/gallery_736/drogo_f05.jpg";
+			document.getElementById("selected-character-id").src="static/images/khal.jpg";
 			document.getElementById("drink-button").innerHTML="Khal Drogo wants Whiskey!";
+			document.getElementById("drink-button").disabled = false;
 			break;
 		case 2:
-			document.getElementById("selected-character-id").src="http://vignette4.wikia.nocookie.net/gameofthrones/images/c/c0/Arya_Stark_profile_Season4.jpg/revision/latest?cb=20140626201536";
+			document.getElementById("selected-character-id").src="static/images/arya.jpg";
 			document.getElementById("drink-button").innerHTML="Something with Vodka please!";
+			document.getElementById("drink-button").disabled = false;
 			break;
 		case 3:
-			document.getElementById("selected-character-id").src="http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2016/04/042216-cersei-lannister-lead-new.jpg?itok=8TPG8WNQ";
-			document.getElementById("drink-button").innerHTML="Only the best (Gin) for the Queen";
+			document.getElementById("selected-character-id").src="static/images/cersei.jpg";
+			document.getElementById("drink-button").innerHTML="Only the best Red Wine for the Queen";
+			document.getElementById("drink-button").disabled = false;
 			break;
 		case 4:
-			document.getElementById("selected-character-id").src="https://vignette4.wikia.nocookie.net/gameofthrones/images/8/88/Daenerys-0.jpg/revision/latest/scale-to-width-down/350?cb=20170106122450";
+			document.getElementById("selected-character-id").src="static/images/dany.jpg";
 			document.getElementById("drink-button").innerHTML="My dragons require Rum!";
+			document.getElementById("drink-button").disabled = false;
 			break;
 		case 5:
-			document.getElementById("selected-character-id").src="https://qph.ec.quoracdn.net/main-qimg-0c8c7540509baf623b5397b8a564f36c";
+			document.getElementById("selected-character-id").src="static/images/littlefinger.jpg";
 			document.getElementById("drink-button").innerHTML="You know how Little Finger does Tequilla...";
+			document.getElementById("drink-button").disabled = false;
+			break;
+		case 6:
+			document.getElementById("selected-character-id").src="static/images/varys.jpg";
+			document.getElementById("drink-button").innerHTML="I hear birds whispering something about gin...";
+			document.getElementById("drink-button").disabled = false;
+			break;
+		case 7:
+			document.getElementById("selected-character-id").src="static/images/sansa.jpg";
+			document.getElementById("drink-button").innerHTML="I guess I'll try some White Wine then";
+			document.getElementById("drink-button").disabled = false;
+			break;
+		case 8:
+			document.getElementById("selected-character-id").src="static/images/tyrion.jpg";
+			document.getElementById("drink-button").innerHTML="What's the strongest thing you have?";
+			document.getElementById("drink-button").disabled = false;
+			break;
+		case 9:
+			document.getElementById("selected-character-id").src="static/images/robert.jpg";
+			document.getElementById("drink-button").innerHTML="I'll take that port and pretty girl HAHA";
+			document.getElementById("drink-button").disabled = false;
+			break;
+		case 10:
+			document.getElementById("selected-character-id").src="static/images/jon.jpg";
+			document.getElementById("drink-button").innerHTML="Beer to cheers the King in the North! ";
+			document.getElementById("drink-button").disabled = false;
 			break;
 	}
 }

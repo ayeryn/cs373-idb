@@ -21,7 +21,8 @@ def test():
 
 @application.route('/inebriate')
 def inebriate():
-    return render_template('inebriate.html')
+    alcohols = models.Alcohol.query.all()
+    return render_template('inebriate.html', alcohols=alcohols)
 
 @application.route('/characters', methods=['GET', 'POST'])
 @application.route('/characters/<int:page>', methods=['GET', 'POST'])

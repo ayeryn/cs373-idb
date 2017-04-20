@@ -43,7 +43,7 @@
 						<th> Titles <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
 						<th> Father <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
 						<th> Mother <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
-						<th> Spuse <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
+						<th> Spouse <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
 						<th> Allegiances <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
 						<th> Played By <i class="fa fa-caret-down" onclick="sortTable(7); myFunction(7);"></i></th>
 					</tr>
@@ -72,8 +72,9 @@
 						{% else %}
 						<td>{{ character.spouse }}</td>
 						{% endif %}
-						{% if character.allegiances != "-" %}
-						<td><a href="{{ url_for('house', name=character.allegiances) }}">{{ character.allegiances  }}</a></td>
+						{% if character.house != "-" %}
+						<td><a href="{{ url_for('house', name=character.house) }}">{{
+                character.house  }}</a></td>
 						{% else %}
 						<td>{{ character.allegiances }}</td>
 						{% endif %}

@@ -143,8 +143,3 @@ def get_alc():
         db.session.add(a)
     db.session.commit()
 
-def add_epcount():
-    episodes = models.Episode.query.all()
-    for ep in episode:
-        for character in ep.characters
-

@@ -49,9 +49,9 @@
 						<th> Titles</th>
 						<th> Father</th>
 						<th> Mother</th>
-						<th> Spouse</th>
 						<th> Allegiances</th>
 						<th> Played By</th>
+						<th> Episode Count</th>
 
 					</tr>
 				</thead>
@@ -74,11 +74,6 @@
 						{% else %}
 						<td>{{ character.mother }}</td>
 						{% endif %}
-						{% if character.spouse != "-" %}
-						<td><a href="characters/{{ character.spouse }}">{{ character.spouse }}</a></td>
-						{% else %}
-						<td>{{ character.spouse }}</td>
-						{% endif %}
 						{% if character.house != "-" %}
 						<td><a href="{{ url_for('house', name=character.house) }}">{{
                 character.house  }}</a></td>
@@ -86,6 +81,7 @@
 						<td>{{ character.allegiances }}</td>
 						{% endif %}
 						<td>{{ character.actor }}</td>
+						<td>{{ character.count }}</td>
 					</tr>
 					{%  endfor %}
 				</tr>

@@ -32,6 +32,7 @@ got:
 	python run.py
 
 unit-tests:
+	pip install -r requirements.txt
 	python runTests.py
 	#python app/tests.py
 

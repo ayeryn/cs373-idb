@@ -1,3 +1,24 @@
+commit c62ec4121707029d2b340c558009aa41fcb9d5e2
+Merge: 9f8a7cc 413b843
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Apr 20 21:55:16 2017 -0500
+
+    Merge pull request #70 from ayeryn/dev
+    
+    Dev
+
+commit 9f8a7cc62e784148cebcad81044d25443558155e
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-196-87.public.utexas.edu>
+Date:   Thu Apr 20 21:54:59 2017 -0500
+
+    deleted old log
+
+commit 413b843e94f1495d73b53dcb7a7be4d2ff71086e
+Author: Peyton Sarmiento <peytonsarmiento@wireless-10-145-196-87.public.utexas.edu>
+Date:   Thu Apr 20 21:52:45 2017 -0500
+
+    log
+
 commit 89081d47d5f954d2b725b4aaa669906d5d4231b1
 Merge: 9e0ce46 46eee4c
 Author: Sarah Gorring <sarahgorring@gmail.com>
@@ -496,6 +517,21 @@ Date:   Tue Apr 11 16:15:05 2017 -0500
 
     changed landing page
 
+commit e2ee9240b88f31cd418c1780d211532fc3bef09e
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Apr 6 21:43:15 2017 -0500
+
+    updated log
+
+commit 943f30cd3058980bb03c950059d0b3f49e752441
+Merge: 13d4e59 4165f33
+Author: Peyton Sarmiento <peytonsarmiento@gmail.com>
+Date:   Thu Apr 6 21:24:14 2017 -0500
+
+    Merge pull request #49 from ayeryn/dev
+    
+    Dev
+
 commit 4165f33ecf4b32dbe439f52ced65ff3156e8cbd0
 Author: Peyton Sarmiento <peytonsarmiento@wireless-10-147-61-90.public.utexas.edu>
 Date:   Thu Apr 6 21:17:37 2017 -0500
@@ -532,6 +568,13 @@ Author: Kieran Vanderslice <ktvslice@cs.utexas.edu>
 Date:   Thu Apr 6 19:38:16 2017 -0500
 
     Added new ep test
+
+commit 13d4e59c7f49687d77a5cece9731f624e8de5bbb
+Merge: a91024e 121e29d
+Author: Eryn Li <erynli@utexas.edu>
+Date:   Thu Apr 6 19:38:10 2017 -0500
+
+    Merge branch 'master' of https://github.com/ayeryn/cs373-idb
 
 commit a91024e4a2a3350427063cbbfc11bd2a247b8c40
 Merge: b0b967a 36c6950
@@ -570,6 +613,12 @@ Author: Eryn Li <erynli@utexas.edu>
 Date:   Thu Apr 6 19:19:02 2017 -0500
 
     styling paginaiton bar
+
+commit 121e29db10a3334586bacd52adc4ccab9f47d08f
+Author: Apurva Gorti <apurva.gorti@gmail.com>
+Date:   Thu Apr 6 19:09:24 2017 -0500
+
+    Transferring API Description file from Apiary.io
 
 commit c197a4cd20e1c6174c1f98ac06f7d697422bdecc
 Merge: 2931994 3834616

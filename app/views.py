@@ -23,8 +23,9 @@ def test():
 
 @application.route('/inebriate')
 def inebriate():
+    names = ["whisky","grey goose vodka","red wine","light rum","tequila","gin","semi-dry riesling","bourbon","port","beer"]
     alcohols = models.Alcohol.query.all()
-    return render_template('inebriate.html', alcohols=alcohols)
+    return render_template('inebriate.html', alcohols=alcohols, names=names)
 
 @application.route('/search', methods=['GET', 'POST'])
 def search():

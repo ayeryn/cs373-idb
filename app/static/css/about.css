@@ -65,6 +65,10 @@ body{
 	color: black;
 }
 
+.details a:hover{
+	color: #a2482e;
+}
+
 .unit-tests button {
 	background-color: #a2482e;
 	border: none;

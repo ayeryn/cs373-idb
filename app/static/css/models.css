@@ -48,14 +48,17 @@ td{
 }
 
 td a{
-    color:#fcf5e5;
+    color:#fcf5e5 !important;
     font-weight: 500;
+    padding-left: 0px;
     
 }
 
 td a:hover{
     color: #fcf5e5;
 }
+
+
 
 .page-number{
     color: black !important;
@@ -64,6 +67,13 @@ td a:hover{
 
 .pagination .active > a {
     background-color: #fcf5e5 !important;
+}
+
+a{
+    color: #fcf5e5 !important;
+    font-weight: 700;
+    padding-left: 50px;
+    text-align: center;
 }
 
 /* for custom scrollbar for webkit browser*/

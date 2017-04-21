@@ -92,6 +92,7 @@
 			</tbody>
 			{% endblock %}
 		</table>
+        <div id="datatable">
         <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
         <script>
@@ -99,9 +100,11 @@
             $('#data-table').DataTable({
                 "bFilter": false,
                 "bInfo": false,
+                "sPaginationType": "full_numbers"
             });
         });
         </script>
+    </div>
 	</div>
 </div>
 

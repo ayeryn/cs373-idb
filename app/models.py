@@ -84,6 +84,7 @@ class Character(db.Model):
     house = db.Column(db.String)
     actor = db.Column(db.String, unique=True)
     imageLink = db.Column(db.String, unique=True)
+    count = db.Column(db.Integer)
 
     def __init__(self, name, titles, father, mother, spouse, house, actor, imageLink):
         self.name = name

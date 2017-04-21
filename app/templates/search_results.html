@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
 
-	<title>Houses</title>
+	<title>Search Results</title>
 
 	<!-- Include CSS stylesheet -->
 	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
@@ -25,6 +25,7 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 </head>
 <body>
 	<div id="nav-row">
@@ -34,7 +35,7 @@
 	</div>
     <div class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <div class="table-responsive">
-            <h3 class = "page-title">Exact Results</h3>
+            <h3 class = "page-title">Exact(AND) Results</h3>
             <table id="data-table" class="table model-table" style="margin: 0;">
                 {% block and_content %}
                 <tbody>
@@ -60,7 +61,7 @@
             </tbody>
             {% endblock %}
             </table>
-            <h3 class = "page-title">Similar Results</h3>
+            <h3 class = "page-title">Similar(OR) Results</h3>
             <table id="data-table" class="table model-table" style="margin: 0;">
                 {% block or_content %}
                 <tbody>

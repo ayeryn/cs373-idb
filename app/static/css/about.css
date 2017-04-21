@@ -31,10 +31,10 @@ body{
 }
 
 .group-member .member-name {
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-weight: bold;
 	text-align: center;
-	color: black;
+	color: #a2482e;
 }
 
 .group-member .member-bio {
@@ -62,8 +62,7 @@ body{
 }
 
 .details a {
-	/*color: #A2482E;*/
-	color: #FFFFFF;
+	color: black;
 }
 
 .unit-tests button {
@@ -80,3 +79,9 @@ body{
 	border-radius: 10px;
 	margin-left: calc(50% - 77px);
 }
+
+#buttons{
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+

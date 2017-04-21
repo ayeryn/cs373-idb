@@ -57,7 +57,7 @@ status:
 	git remote -v
 	git status
 
-test: unit-tests check
+test: check
 
 log:
 	git log > IDB3.log

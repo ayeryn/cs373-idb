@@ -1,5 +1,7 @@
 FILES :=                              \
     apiary.apib                       \
+    .gitignore                        \
+    .travis.yml                       \
     IDB3.log                          \
     models.html                       \
     app/models.py                     \

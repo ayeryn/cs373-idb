@@ -25,6 +25,11 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.js"></script>
+
 </head>
 <body>
 	<div id="nav-row">
@@ -38,20 +43,20 @@
 			<table id="data-table" class="table model-table" style="margin: 0;">
 				<thead>
 					<tr>
-						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></i></th>
-						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></i></th>
-						<th> Region <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></i></th>
-						<th> Words <i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></i></th>
-						<th> Current Lord <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></i></th>
-						<th> Title <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></i></th>
-						<th> Overlord <i class="fa fa-caret-down" onclick="sortTable(6); myFunction(6);"></i></th>
+						<th> #</th>
+						<th> Name</th>
+						<th> Region</th>
+						<th> Words</th>
+						<th> Current Lord</th>
+						<th> Title</th>
+						<th> Overlord</th>
 					</tr>
 				</thead>
 			<!-- </table>
 			<table id="myTable2" class="table model-table"> -->
 				{% block content %}
 				<tbody>
-					{% for house in houses.items %}
+					{% for house in houses %}
 					<tr>
 						<td>{{ house.id }}</td>
 						<td><a href="{{ url_for('house', name=house.name) }}">{{ house.name }}</a></td>
@@ -74,33 +79,18 @@
 			</tbody>
 			{% endblock %}
 		</table>
-	</div>
-</div>
+			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+	        <script>
+	        $(document).ready(function() {
+	            $('#data-table').DataTable({
+	                "bFilter": false,
+	                "bInfo": false,
+	            });
+	        });
+	        </script>
 
-<div class="row text-center" style="margin:30px">
-	<nav aria-label="Page navigation example">
-		<ul class="pagination justify-content-center">
-			{% if houses.has_prev %}
-			<li class="page-item">
-				<a class="page-link" href="{{ url_for('houses', page=houses.prev_num) }}" aria-label="Previous">
-					<span aria-hidden="true">&laquo;</span>
-					<span class="sr-only">Previous</span>
-				</a>
-			</li>
-			{% endif %}
-			<li class="page-item active"><a class="page-link page-number" href="{{ url_for('houses', page=houses.page) }}">{{houses.page}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}">{{houses.next_num}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+1}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+2}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num+1) }}">{{houses.next_num+3}}</a></li>
-			{% if houses.has_next %}<li class="page-item">
-				<a class="page-link page-number" href="{{ url_for('houses', page=houses.next_num) }}" aria-label="Next">
-					<span aria-hidden="true">&raquo;</span>
-					<span class="sr-only">Next</span>
-				</a>
-			</li>{% endif %}
-		</ul>
-	</nav>
+	</div>
 </div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>

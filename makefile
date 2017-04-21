@@ -1,5 +1,7 @@
 FILES :=                              \
     apiary.apib                       \
+    .gitignore                        \
+    .travis.yml                       \
     IDB3.log                          \
     models.html                       \
     app/models.py                     \
@@ -30,6 +32,7 @@ got:
 	python run.py
 
 unit-tests:
+	pip install -r requirements.txt
 	python runTests.py
 	#python app/tests.py
 
@@ -55,7 +58,7 @@ status:
 	git remote -v
 	git status
 
-test: unit-tests check
+test: check
 
 log:
 	git log > IDB3.log

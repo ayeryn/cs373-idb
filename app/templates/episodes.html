@@ -23,6 +23,11 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.js"></script>
+
 </head>
 <body>
 	<div id="nav-row">
@@ -36,17 +41,17 @@
 			<table id="data-table" class="table model-table" style="margin:0;">
 				<thead>
 					<tr>
-						<th> # <i class="fa fa-caret-down" onclick="sortTable(0); myFunction(0);"></th>
-						<th> Name <i class="fa fa-caret-down" onclick="sortTable(1); myFunction(1);"></th>
-						<th> Season <i class="fa fa-caret-down" onclick="sortTable(2); myFunction(2);"></th>
-						<th> Episode Number<i class="fa fa-caret-down" onclick="sortTable(3); myFunction(3);"></th>
-						<th> Previous Episode <i class="fa fa-caret-down" onclick="sortTable(4); myFunction(4);"></th>
-						<th> Next Episode <i class="fa fa-caret-down" onclick="sortTable(5); myFunction(5);"></th>
+						<th> #</th>
+						<th> Name</th>
+						<th> Season</th>
+						<th> Episode Number</th>
+						<th> Previous Episode</th>
+						<th> Next Episode</th>
 					</tr>
 				</thead>
 				{% block content %}
 				<tbody>
-					{% for episode in episodes.items %}
+					{% for episode in episodes %}
 					<tr>
 						<td>{{ episode.id }}</td>
 						<td><a href="{{ url_for('episode', name=episode.name)}}">{{ episode.name }}</a></td>
@@ -68,34 +73,18 @@
 			</tbody>
 			{% endblock %}
 			</table>
+			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+	        <script>
+	        $(document).ready(function() {
+	            $('#data-table').DataTable({
+	                "bFilter": false,
+	                "bInfo": false,
+	            });
+	        });
+        </script>
 		</div>
 	</div>
-
-<div class="row text-center" style="margin:30px">
-	<nav aria-label="Page navigation example">
-		<ul class="pagination justify-content-center">
-			{% if episodes.has_prev %}
-			<li class="page-item">
-				<a class="page-link page-number" href="{{ url_for('episodes', page=episodes.prev_num) }}" aria-label="Previous">
-					<span aria-hidden="true">&laquo;</span>
-					<span class="sr-only">Previous</span>
-				</a>
-			</li>
-			{% endif %}
-			<li class="page-item active"><a class="page-link page-number" href="{{ url_for('episodes', page=episodes.page) }}">{{episodes.page}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('episodes', page=episodes.next_num) }}">{{episodes.next_num}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('episodes', page=episodes.next_num+1) }}">{{episodes.next_num+1}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('episodes', page=episodes.next_num+1) }}">{{episodes.next_num+2}}</a></li>
-			<li class="page-item"><a class="page-link page-number" href="{{ url_for('episodes', page=episodes.next_num+1) }}">{{episodes.next_num+3}}</a></li>
-			{% if episodes.has_next %}<li class="page-item">
-				<a class="page-link page-number" href="{{ url_for('episodes', page=episodes.next_num) }}" aria-label="Next">
-					<span aria-hidden="true">&raquo;</span>
-					<span class="sr-only">Next</span>
-				</a>
-			</li>{% endif %}
-		</ul>
-	</nav>
-</div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/models.js') }}"></script>
 <!-- Latest compiled and minified JavaScript -->

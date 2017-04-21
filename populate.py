@@ -22,7 +22,7 @@ def get_characters():
         db.session.commit()
 
 def get_houses():
-    r = requests.get("https://api.got.show/api/houses/")
+    r = requests.get("https://api.got.show/api/houses/", verify=False)
     data = json.loads(r.content)
     attr = dict.fromkeys(dir(models.House))
     api = anapioficeandfire.API()
@@ -60,6 +60,16 @@ def get_houses():
                 ho.title = str(apiHo.titles)
             if not ho.overlord and apiHo.overlord:
                 ho.overlord = str(apiHo.overlord)
+    updated_houses = models.House.query.all()
+    for h in updated_houses:
+        if not h.words:
+            h.words = "-"
+        if not h.current_lord:
+            h.current_lord = "-"
+        if not h.title:
+            h.title = "-"
+        if not h.overlord:
+            h.overlord = "-"
     db.session.commit()
 
     
@@ -81,7 +91,55 @@ def get_episodes():
         c = models.Episode(name=values['name'],season=values['season'], nr=values['nr'], 
                            predecessor=values['predecessor'],successor=values['successor'],
                            imageLink = episode_data['image']['medium'])
+        for char in values['characters']:
+            c.characters.append(models.Character.query.filter(models.Character.name==char).first())
         db.session.add(c)
-        db.session.commit()
+    db.session.commit()
 
+def update_characters():
+    updated_chars = models.Character.query.all()
+    for c in updated_chars:
+        if not c.titles:
+            c.titles = "-"
+        if not c.mother:
+            c.mother = "-"
+        if not c.father:
+            c.father = "-"
+        if not c.spouse:
+            c.spouse = "-"
+        if not c.house:
+            c.house = "-"
+        if not c.actor:
+            c.actor = "-"
+    db.session.commit()
+
+# Making use of other team's API #
+
+def get_ingredients():
+    r = requests.get("http://inebri8.me/api/ingredients/all")
+    data = json.loads(r.content)
+    for i in data:
+        n = models.Ingredient(name=i['name'])
+        db.session.add(n)
+    db.session.commit()
+
+def get_recipes():
+    r = requests.get("http://inebri8.me/api/recipes/all")
+    data = json.loads(r.content)
+    for c in data:
+        p = models.Recipe(name=c['title'], link=c['link'], image=c['image'])
+        for i in c['ingredients']:
+            p.ingredients.append(models.Ingredient.query.filter(models.Ingredient.name==i['name']).first())
+        db.session.add(p)
+    db.session.commit()
+
+def get_alc():
+    r = requests.get("http://inebri8.me/api/alcohol/all")
+    data = json.loads(r.content)
+    for alc in data:
+        a = models.Alcohol(name=alc['name'])
+        for r in alc['recipes']:
+            a.recipes.append(models.Recipe.query.filter(models.Recipe.name == r['title']).first())
+        db.session.add(a)
+    db.session.commit()
 

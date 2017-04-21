@@ -53,15 +53,15 @@
                             <div class="text-left">
                                 <table class="info-table">
                                     <tr>
-                                        <td>Region</td>
+                                        <td>Region:</td>
                                         <td>{{ house.region }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Words</td>
+                                        <td>Words:</td>
                                         <td>{{ house.words }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Current Lord</td>
+                                        <td>Current Lord:</td>
                                         {% if house.current_lord %}
 				          	                    <td><a
                                        href="/characters/{{ house.current_lord}}">{{ house.current_lord }}</a></td>
@@ -70,11 +70,11 @@
                                         {% endif %} 
                                     </tr>
                                     <tr>
-                                        <td>Title</td>
+                                        <td>Title:</td>
                                         <td>{{ house.title }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Over Lord</td>
+                                        <td>Over Lord:</td>
                                         {% if house.overlord %}
 					                              <td><a href="{{ url_for('house', name=house.overlord) }}">{{ house.overlord }}</a></td>
                                         {% else %}
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="return-link">
-                <div class="row"><a href="/houses" class="hvr-pop link">Back To All Houses</a></div>
+                <div class="row"><a href="/houses" class="page-scroll hvr-underline-from-center">Back To All Houses</a></div>
             </div>
         </div>
     </div>

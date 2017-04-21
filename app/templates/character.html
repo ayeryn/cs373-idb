@@ -51,55 +51,57 @@
                     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-6">
                         <div class="pull-center">
                             <div class="text-left">
+                                <li class ="">
                                 <table class="info-table">
                                     <tr>
-                                        <td>Titles</td>
+                                        <td>Titles:</td>
                                         <td>{{ character.titles }}</td>
                                     </tr>
                                     <tr>
-                                        <td>House</td>
+                                        <td>House:</td>
                                         {% if character.house %}
-                                        <td><a href="/houses/{{ character.house }}" class="link">{{ character.house }}</a></td>
+                                        <td><a href="/houses/{{ character.house }}" class="page-scroll hvr-underline-from-center">{{ character.house }}</a></td>
                                         {% else %}
                                         <td>{{ character.house }}</td>
                                         {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Father</td>
+                                            <td>Father:</td>
                                             {% if character.father %}
-                                            <td><a href="{{ url_for('character', name=character.father) }}">{{ character.father }}</a></td>
+                                            <td><a href="{{ url_for('character', name=character.father) }}" class="page-scroll hvr-underline-from-center">{{ character.father }}</a></td>
                                             {% else %}
                                             <td>{{ character.father }}</td>
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Mother</td>
+                                            <td>Mother:</td>
                                             {% if character.mother %}
-                                            <td><a href="{{ url_for('character', name=character.mother) }}">{{ character.mother }}</a></td>
+                                            <td><a href="{{ url_for('character', name=character.mother) }}" class="page-scroll hvr-underline-from-center">{{ character.mother }}</a></td>
                                             {% else %}
                                             <td>{{ character.mother }}</td>
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Spouse</td>
+                                            <td>Spouse:</td>
                                             {% if character.spouse %}
-                                            <td><a href="{{ url_for('character', name=character.spouse) }}">{{ character.spouse }}</a></td>
+                                            <td><a href="{{ url_for('character', name=character.spouse) }}" class="page-scroll hvr-underline-from-center">{{ character.spouse }}</a></td>
                                             {% else %}
                                             <td>{{ character.spouse }}</td>
                                             {% endif %}
                                         </tr>
                                         <tr>
-                                            <td>Played By</td>
+                                            <td>Played By:</td>
                                             <td>{{ character.actor }}</td>
                                         </tr>
                                     </table>
+                                </li>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="return-link">
-                    <div class="row"><a href="/characters" class="hvr-pop link">Back To All Characters</a></div>
+                    <div class="row"><a href="/characters" class="page-scroll hvr-underline-from-center">Back To All Characters</a></div>
                 </div>
             </div>
 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Inebriate.me</title>
+
+    <!-- Include CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/individual.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inebriate.css') }}">
+
+    <!-- Include Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="nav-row">
+    <div ng-app>
+      <nav class="navbar">{% include 'navWell.html' %}</nav>
+    </div>
+  </div>
+
+    <div class="selected-character">
+        <img id="selected-character-id" src="https://www.drupal.org/files/profile_default.png">
+         <button href="#myModal" class="drink-button" id="drink-button" data-toggle="modal" disabled>Select Character Below</button>
+    </div>
+
+        <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modal-title"></h4>
+                </div>
+                <div class="modal-body" >
+                    <div id = "modal0">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[0] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal1">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[1] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal2">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[2] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal3">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[3] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal4">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[4] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal5">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[5] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal6">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[6] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal7">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[7] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal8">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[8] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                    <div id = "modal9">
+                            {% for alcohol in alcohols%}
+                                {% if alcohol.name == names[9] %}
+                                    {%for r in alcohol.recipes%}
+                                        <p><a href="{{ r.link }}">{{ r.name }}</a></p>
+                                    {%endfor%}
+                                {%endif%}
+                            {%  endfor %}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="character-picker">
+        <img src="{{ url_for ('static', filename='images/khal.jpg') }}" onclick="charSwitch(1); toggleVisibility('modal0')">
+        <img src="{{ url_for ('static', filename='images/arya.jpg') }}" onclick="charSwitch(2); toggleVisibility('modal1')">
+        <img src="{{ url_for ('static', filename='images/cersei.jpg') }}" onclick="charSwitch(3); toggleVisibility('modal2')">
+        <img src="{{ url_for ('static', filename='images/dany.jpg') }}"onclick="charSwitch(4); toggleVisibility('modal3')">
+        <img src="{{ url_for ('static', filename='images/littlefinger.jpg') }}"onclick="charSwitch(5); toggleVisibility('modal4')">
+        <img src="{{ url_for ('static', filename='images/varys.jpg') }}" onclick="charSwitch(6); toggleVisibility('modal5')">
+        <img src="{{ url_for ('static', filename='images/sansa.jpg') }}" onclick="charSwitch(7); toggleVisibility('modal6')">
+        <img src="{{ url_for ('static', filename='images/tyrion.jpg') }}" onclick="charSwitch(8); toggleVisibility('modal7')">
+        <img src="{{ url_for ('static', filename='images/robert.jpg') }}"onclick="charSwitch(9); toggleVisibility('modal8')">
+        <img src="{{ url_for ('static', filename='images/jon.jpg') }}"onclick="charSwitch(10); toggleVisibility('modal9')">
+    </div>
+    <script type="text/javascript" src="../static/js/inebriate.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+ </html>

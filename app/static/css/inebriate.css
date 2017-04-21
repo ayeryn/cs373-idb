@@ -1,0 +1,78 @@
+.selected-character {
+	margin: auto;
+    width: 50%;
+    padding: 25px;
+    margin-top: 10px;
+
+}
+
+.selected-character img {
+	min-width: 250px;
+	height: 250px;
+
+	display: block;
+    margin: auto;
+    width: 40%;
+}
+
+.drink-button{
+	background-color: #a2482e;
+	border: none;
+	color: white;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	    margin: auto;
+	cursor: pointer;
+	border-radius: 10px;
+	margin-top: 10px;
+	width: 250px;
+}
+
+.character-picker {
+	margin: auto;
+    width: 50%;
+    padding: 25px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.character-picker img {
+	width: 125px;
+	height: 125px;
+	cursor: pointer;
+	margin-bottom: 4px;
+}
+
+.drink-button:hover {
+	background: #843a25;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.vertical-center{
+	min-height:100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0px;
+}

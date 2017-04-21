@@ -1,7 +1,12 @@
 
 from app import app as application, models, db
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
+from flask_cors import CORS, cross_origin
+from sqlalchemy.orm import sessionmaker, scoped_session
+import sqlalchemy
 import os
+
+CORS(application)
 
 @application.route('/')
 def index():
@@ -16,10 +21,40 @@ def test():
     os.system('python runTests.py')
     return render_template('test.html')
 
+@application.route('/inebriate')
+def inebriate():
+    names = ["whisky","grey goose vodka","red wine","light rum","tequila","gin","semi-dry riesling","bourbon","port","beer"]
+    alcohols = models.Alcohol.query.all()
+    return render_template('inebriate.html', alcohols=alcohols, names=names)
+
+@application.route('/search', methods=['GET', 'POST'])
+def search():
+    query = request.form['search']
+	
+    engine = sqlalchemy.create_engine('sqlite:///app.db')
+    Session = scoped_session(sessionmaker(bind=engine))
+    s = Session()
+    
+    query = query.split(" ")
+    query = [" name LIKE \"%" + q +"%\"" for q in query]
+
+    and_query = " AND ".join(query)
+    or_query = " OR ".join(query)
+
+    and_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + and_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + and_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + and_query) 
+    
+    or_results = s.execute('SELECT name, "Character" AS type FROM Character WHERE' + or_query +
+			    ' UNION SELECT name, "House" AS type FROM House WHERE' + or_query + 
+			    ' UNION SELECT name, "Episode" AS type FROM Episode WHERE' + or_query) 
+
+    return render_template('search_results.html', and_res = and_results, or_res = or_results)
+    
+
 @application.route('/characters', methods=['GET', 'POST'])
-@application.route('/characters/<int:page>', methods=['GET', 'POST'])
-def characters(page=1):
-    characters = models.Character.query.paginate(page, 17, False)
+def characters():
+    characters = models.Character.query.all()
     return render_template('characters.html', characters=characters)
 
 @application.route('/characters/<name>', methods=['GET', 'POST'])
@@ -28,9 +63,8 @@ def character(name):
     return render_template('character.html', character=character)
 
 @application.route('/houses', methods=['GET', 'POST'])
-@application.route('/houses/<int:page>', methods=['GET', 'POST'])
-def houses(page=1):
-    houses = models.House.query.paginate(page, 17, False)
+def houses():
+    houses = models.House.query.all()
     return render_template('houses.html', houses=houses)
 
 @application.route('/houses/<name>', methods=['GET', 'POST'])
@@ -39,9 +73,8 @@ def house(name):
     return render_template('house.html', house=house)
 
 @application.route('/episodes', methods=['GET', 'POST'])
-@application.route('/episodes/<int:page>', methods=['GET', 'POST'])
-def episodes(page=1):
-    episodes = models.Episode.query.paginate(page, 17, False)
+def episodes():
+    episodes = models.Episode.query.all()
     return render_template('episodes.html', episodes=episodes)
 
 @application.route('/episodes/<name>', methods=['GET', 'POST'])
@@ -83,4 +116,8 @@ def api_character(name):
 def api_house(name):
     ep = models.House.query.filter_by(name=name).first()
     return jsonify(house=ep.serialize)
+
+
+
+    
 

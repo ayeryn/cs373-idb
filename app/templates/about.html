@@ -42,8 +42,8 @@
                     </div>
                     <div class="details">
                         <p><strong>Responsabilities:</strong> Frontend Page Content/Styling, Report</p>
-                        <p><strong>Commits:</strong> 50</p>
-                        <p><strong>Issues:</strong> 11</p>
+                        <p><strong>Commits:</strong> 61</p>
+                        <p><strong>Issues:</strong> 20</p>
                         <p><strong>Unit Tests:</strong> 0</p>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
                     </div>
                     <div class="details">
                         <p><strong>Responsabilities:</strong> Frontend Page Content/Styling, API, UML Diagram</p>
-                        <p><strong>Commits:</strong> 53</p>
-                        <p><strong>Issues:</strong> 9</p>
+                        <p><strong>Commits:</strong> 78</p>
+                        <p><strong>Issues:</strong> 14</p>
                         <p><strong>Unit Tests:</strong> 0</p>
                     </div>
                 </div>
@@ -72,8 +72,8 @@
                     </div>
                     <div class="details">
                         <p><strong>Responsabilities:</strong> Frontend Page Content/Styling</p>
-                        <p><strong>Commits:</strong> 64</p>
-                        <p><strong>Issues:</strong> 11</p>
+                        <p><strong>Commits:</strong> 68</p>
+                        <p><strong>Issues:</strong> 17</p>
                         <p><strong>Unit Tests:</strong> 0</p>
                     </div>
                 </div>
@@ -89,8 +89,8 @@
                     </div>
                     <div class="details">
                         <p><strong>Responsabilities:</strong> Backend, Deploying to AWS, Report</p>
-                        <p><strong>Commits:</strong> 54</p>
-                        <p><strong>Issues:</strong> 4</p>
+                        <p><strong>Commits:</strong> 78</p>
+                        <p><strong>Issues:</strong> 13</p>
                         <p><strong>Unit Tests:</strong> 0</p>
                     </div>
                 </div>
@@ -104,30 +104,35 @@
                     </div>
                     <div class="details">
                         <p><strong>Responsabilities:</strong> Frontend Page Content/Styling, Unit Testing </p>
-                        <p><strong>Commits:</strong> 47</p>
-                        <p><strong>Issues:</strong> 7</p>
+                        <p><strong>Commits:</strong> 50</p>
+                        <p><strong>Issues:</strong> 12</p>
                         <p><strong>Unit Tests:</strong> 9 </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-lg-pull-3 col-md-3 col-md-pull-3 col-sm-6 col-xs-12">
-                <div class="group-stats info-section">
+                <div class="group-stats info-section" id="stats">
                     <h3 class="title-header">Group Stats</h3>
                     <div class="details">
-                        <p><strong>Commits:</strong> Over 9000</p>
-                        <p><strong>Issues:</strong> Over 9000</p>
+                        <p><strong>Commits:</strong> 338 </p>
+                        <p><strong>Issues:</strong> 59 </p>
                         <p><strong>Unit Tests:</strong> 9 </p>
                         <a href="http://docs.swegot1.apiary.io/#">SWEGoT API</a>
+                        <br>
                         <a href="https://github.com/ayeryn/cs373-idb">Repo</a>
+                        <br>
                         <a href="https://github.com/ayeryn/cs373-idb/issues">Issues</a>
+                        <br>
                         <a href="https://github.com/ayeryn/cs373-idb/wiki">GH Wiki</a>
                     </div>
 
                     <h3 class="title-header">Data</h3>
                     <div class="details">
                         <a href="https://anapioficeandfire.com/">API of Ice and Fire</a>
+                        <p>WE got the information by importing a python library.</p>
                         <br>
                         <a href="https://api.got.show/doc/">GOT Show API</a>
+                        <p>We used GET request and prased the JSON formatted information. We</p>
                     </div>
 
                     <h3 class="title-header">Tools</h3>
@@ -139,11 +144,23 @@
         </div>
     </div>
 </div>
-
-<form action="/test" class="unit-tests">
-    <button class="button" type="submit">Run Unit Tests</button>
-</form>
-<p id="demo"></p>
+<div class="row">
+    <div class="col-md-4" id="buttons">
+        <form action="/test" target="_blank" class="unit-tests">
+            <button class="button" type="submit">Run Unit Tests</button>
+        </form>
+    </div>
+    <div class="col-md-4" id="buttons">
+        <a href="https://speakerdeck.com/ayeryn/you-know-nothing" class="unit-tests" target="_blank">
+            <button type="submit">Presentation</button>
+        </a>
+    </div>
+        <div class="col-md-4" id="buttons">
+        <form action="/inebriate" class="unit-tests">
+            <button type="submit">Inebriate Me!</button>
+        </form>
+    </div>
+</div>
 <script type="text/javascript" src="../static/js/about.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </body>

@@ -1,6 +1,8 @@
 FILES :=                              \
     apiary.apib                       \
-    IDB2.log                          \
+    .gitignore                        \
+    .travis.yml                       \
+    IDB3.log                          \
     models.html                       \
     app/models.py                     \
     app/tests.py                      \
@@ -26,10 +28,11 @@ check:
     echo "success";
 
 got:
-	pip install anapioficeandfire
+	pip install -r requirements.txt
 	python run.py
 
 unit-tests:
+	pip install -r requirements.txt
 	python runTests.py
 	#python app/tests.py
 
@@ -58,4 +61,4 @@ status:
 test: check
 
 log:
-	git log > IDB2.log
+	git log > IDB3.log

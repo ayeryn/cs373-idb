@@ -4,6 +4,11 @@ from app import db
 Episode model
 Attributes: name, season, predecessor, next episode, characters
 """
+association_table = db.Table('association', 
+    db.Column('episode_id', db.Integer, db.ForeignKey('episode.id')),
+    db.Column('character_id', db.Integer, db.ForeignKey('character.id'))
+)
+
 class Episode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
@@ -11,7 +16,7 @@ class Episode(db.Model):
     nr = db.Column(db.Integer)
     predecessor = db.Column(db.String, unique=True)
     successor = db.Column(db.String, unique=True)
-    characters = db.Column(db.String)
+    characters = db.relationship('Character',secondary=association_table)
     imageLink = db.Column(db.String, unique=True)
 
     def __init__(self, name, season, nr, predecessor, successor, imageLink):
@@ -79,6 +84,7 @@ class Character(db.Model):
     house = db.Column(db.String)
     actor = db.Column(db.String, unique=True)
     imageLink = db.Column(db.String, unique=True)
+    count = db.Column(db.Integer)
 
     def __init__(self, name, titles, father, mother, spouse, house, actor, imageLink):
         self.name = name
@@ -102,3 +108,26 @@ class Character(db.Model):
            'house':self.house,
            'actor':self.actor
         }
+
+association2_table = db.Table('association2', 
+    db.Column('recipe_id', db.Integer, db.ForeignKey('recipe.id')),
+    db.Column('ingredient_id', db.Integer, db.ForeignKey('ingredient.id'))
+)
+
+class Alcohol(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String, unique = True)
+  recipes = db.relationship("Recipe")
+
+class Recipe(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  alcohol_id = db.Column(db.Integer, db.ForeignKey('alcohol.id'))
+  ingredients = db.relationship('Ingredient',secondary=association2_table)
+  link = db.Column(db.String)
+  name = db.Column(db.String)
+  image = db.Column(db.String)
+
+class Ingredient(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String, unique = True)
+
